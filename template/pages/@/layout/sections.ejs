@@ -10,6 +10,19 @@
           %>
           <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
           <%
+          if (_.pageName === 'home' && opt.type === 'collection-shelf') {
+            %>
+            <%- await include('@/custom/skus', {
+              skus: [
+                'PG-RT36WBN-30X60-KIT50',
+                'ARA-5WBQ-PT-KIT10',
+                'XL-5050VE-KIT1',
+                'PS-R25WBF-KIT20'
+              ],
+              opt
+            }) %>
+            <%
+          }
         }
       }
     }

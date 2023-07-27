@@ -20,9 +20,6 @@
   <main role="main" id="main">
     <%- await include('@/layout/header') %>
     <%- await include('@/layout/sections') %>
-    <% if (_.pageName === 'home') { %>
-      <%- await include('@/custom/skus') %>
-    <% } %>
     <%- await include('@/layout/footer') %>
   </main>
 
