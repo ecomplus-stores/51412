@@ -1,0 +1,24 @@
+<%
+const search = new _.EcomSearch()
+let items
+try {
+  await search.setSkus([
+    'PG-RT36WBN-30X60-KIT50',
+    'ARA-5WBQ-PT-KIT10',
+    'XL-5050VE-KIT1',
+    'PS-R25WBF-KIT20'
+  ]).fetch(true)
+  items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+  console.error(err)
+  items = []
+}
+%>
+
+<% if (items.length) { %>
+  <ul>
+    <% items.forEach((item) => { %>
+      <li><%- item.name %> [<%- item.sku %>]</li>
+    <% }) %>
+  </ul>
+<% } %>
