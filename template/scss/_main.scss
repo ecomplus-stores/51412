@@ -1,2 +1,9 @@
 @import '#template/scss/main';
 @import 'custom-css/styles';
+
+// CUSTOM COMPONENTS
+@import '../custom-components/top-bar/styles';
+@import '../custom-components/header/styles';
+@import '../custom-components/main-navigation/styles';
+@import '../custom-components/information-bar/styles';
+

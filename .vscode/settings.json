@@ -1,5 +1,9 @@
 {
+    "css.lint.emptyRules": "ignore",
+    "html.validate.styles": false,
+    "workbench.editor.labelFormat": "short",
+    "editor.tabSize": 4,
     "emmet.includeLanguages": {
         "ejs": "html"
-    }
+    },
 }

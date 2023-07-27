@@ -1,0 +1,236 @@
+
+.header {
+    background: #fff;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+.header .header-wrapper {
+    padding: 13px 0 0 0;
+    display: flex;
+    align-items: self-end;
+    padding: 13px 0 18px 0;
+}
+
+// HEADER LOGO
+
+.header .header-logo {
+    padding: 0 0 5px 0;
+}
+
+// HEADER SEARCH
+
+.header .header-search {
+    width: 100%;
+    padding: 0 43px 0px 51px;
+}
+
+.header .header-search input#search-input {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 13px;
+    height: 38px;
+    padding: 0 45px 0 22px;
+    position: relative;
+    transition: all .5s;
+    width: 100%;
+    flex: 1;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    letter-spacing: -0.3px;
+}
+
+.header .header-search input#search-input::placeholder {
+    color: #444;
+    letter-spacing: -0.3px;
+}
+
+.header .header-search button.header__search-btn {
+    background: var(--cor-vermelho-1);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    color: #fff;
+    height: 38px;
+    line-height: 0;
+    padding: 0;
+    position: static;
+    transition: all .3s;
+    width: 46px;
+}
+
+.header .header-search button.header__search-btn:hover {
+    background: var(--cor-vermelho-2);
+}
+
+.header .header-search form#search-form {
+    display: flex;
+}
+
+// HEADER CEP
+.header .header-zip-code-content {
+    display: flex;
+    align-items: center;
+}
+
+.header .header-zip-code-content .header-zip-code-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #444;
+    text-decoration: none;
+    letter-spacing: -0.1px;
+    margin: 0px 4px 0 4px;
+    font-weight: 600;
+}
+
+.header .header-zip-code {
+    display: table;
+    margin: 0 0 8px auto;
+}
+
+.header .header-zip-code-content i.i-chevron-down:before {
+    position: relative;
+    left: -2px;
+}
+
+.header .header-zip-code-content i.i-chevron-down {
+    width: 12px;
+    font-weight: 700;
+    height: 8px;
+    line-height: 9px;
+}
+
+
+// HEADER ACTIONS
+.header .header-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.header .header-actions > div {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+}
+
+// HEADER ACCOUNT
+
+.header .header-account-wrapper {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 38px;
+    padding: 0 3px 0 0;
+    border-radius: 4px;
+    width: 195px;
+    justify-content: center;
+}
+
+.header .header-account-content {
+    color: #000;
+    font-size: 13px;
+    line-height: 15px;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+}
+
+.header .header-account-content a {
+    font-weight: 700;
+}
+
+.header .header-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1px -6px 0 0;
+}
+
+// HEADER CART
+.header .header-cart-wrapper {
+    position: relative;
+}
+
+.header .header-cart span#cart-count {
+    background: var(--cor-vermelho-2);
+    border-radius: 18px;
+    color: #fff;
+    display: block!important;
+    font-size: 11px;
+    font-weight: 600;
+    height: 18px;
+    line-height: 16px;
+    margin: 0;
+    padding-right: 0;
+    padding-top: 1px;
+    position: absolute;
+    right: -3px;
+    text-align: center;
+    top: -5px;
+    width: 18px;
+}
+
+.header .header-cart a#cart-button {
+    display: block;
+    padding-top: 2px;
+    color: #000;
+    padding-right: 8px;
+}
+
+// HEADER FAVORITES
+
+.header .header-favorites a {
+    display: block;
+    padding-top: 3px;
+    color: #000;
+}
+
+// HEADER CALL CENTER
+
+.header .header-call-center {
+    display: table;
+    margin: 0 0 0 auto;
+}
+
+.header .header-call-center-content {
+    align-items: center;
+    background: var(--cor-vermelho-1);
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    padding: 7px 18.5px 7px 17px;
+    transition: all .3s;
+}
+
+.header .header-call-center-content-title {
+    font-size: 12.5px;
+    font-weight: 600;
+    margin: 0 4.5px 0 6px;
+    letter-spacing: -0.1px;
+    position: relative;
+    top: 1px;
+}
+
+.header .header-call-center-content i.i-chevron-down:before {
+    left: -2px;
+    position: relative;
+}
+
+.header .header-call-center-content i.i-chevron-down {
+    font-weight: 700;
+    height: 8px;
+    line-height: 9px;
+    width: 11px;
+}
+
+.header .header-call-center-content:hover {
+    background: var(--cor-vermelho-2);
+}
