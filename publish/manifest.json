@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/icon_512x512.598523bb1f3fb5c7e9322d035b86c395.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_384x384.20629f09f115ed64a91b963049a51538.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_192x192.35f8567bcc3ef3ef6db1f75af5cf74ee.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_128x128.6631589da8319cb285bef631325599d4.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon_96x96.6fb6fa0c0ea8fe1897fce4f304e640bc.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    }
+  ],
+  "name": "Iluminim LED",
+  "short_name": "Iluminim LED",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "iluminim",
+  "background_color": "#ffffff",
+  "theme_color": "#a2373a"
+}
