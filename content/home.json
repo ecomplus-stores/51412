@@ -28,14 +28,15 @@
       "enabled": true
     },
     {
-      "type": "collection-shelf",
+      "page": 1,
+      "title": "MAIS VENDIDOS",
       "shuffle": true,
-      "collection_id": null,
-      "sort": "offers",
-      "title": "",
       "headless": false,
+      "type": "collection-shelf",
+      "link": "",
       "limit": 12,
-      "page": 1
+      "collection_id": null,
+      "sort": "sales"
     },
     {
       "type": "page-title",
