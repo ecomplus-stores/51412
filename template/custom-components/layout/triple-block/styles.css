@@ -1,0 +1,58 @@
+.triple-block {
+    margin: 0 0 25px 0;
+}
+
+.triple-block .triple-block-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.triple-block .triple-block-item-1,
+.triple-block .triple-block-item-2,
+.triple-block .triple-block-item-3 {
+    max-width: 407px;
+    width: 100%;
+}
+
+.triple-block .triple-block-item-countdown {
+    background: radial-gradient(circle, var(--cor-vermelho-2) 0, var(--cor-vermelho-3) 100%);
+    color: #ffff;
+    text-align: center;
+    padding: 18px 0;
+}
+
+.triple-block .triple-block-item-countdown-title {
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    margin: 0px 0 15px 0;
+    text-transform: uppercase;
+    line-height: 25px;
+}
+
+.triple-block .triple-block-item-countdown .countdown {
+    margin: 0;
+}
+
+.triple-block .triple-block-item-countdown .countdown-wrapper {
+    gap: 6px;
+}
+
+.triple-block .triple-block-item-countdown .countdown-item b {
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 23px;
+}
+
+.triple-block .triple-block-item-countdown .countdown-item span {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+
+.triple-block .triple-block-item-countdown .countdown-item-separator {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 0 0 6px 0;
+}

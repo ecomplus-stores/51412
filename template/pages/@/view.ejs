@@ -18,7 +18,14 @@
   <%- await include('@/layout/menu') %>
 
   <main role="main" id="main">
+    <% if (_.pageName === 'home') { %>
+      <%- await include('../custom-components/layout/top-bar/index') %>
+      <%- await include('../custom-components/layout/header/index') %>
+      <%- await include('../custom-components/layout/main-navigation/index') %>
+    <% } %>
+
     <%- await include('@/layout/header') %>
+
     <%- await include('@/layout/sections') %>
     <%- await include('@/layout/footer') %>
   </main>

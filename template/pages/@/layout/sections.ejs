@@ -17,7 +17,8 @@
                         <% } %>
 
                         <% if (_.pageName === 'home' && opt.type === 'banner-slider') { %>
-                            <%- await include('../custom-components/information-bar/index') %>
+                            <%- await include('../custom-components/layout/information-bar/index') %>
+                            <%- await include('../custom-components/layout/triple-block/index') %>
                         <% } %>
         <%          
                     }

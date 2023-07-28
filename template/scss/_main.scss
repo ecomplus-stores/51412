@@ -1,9 +1,13 @@
 @import '#template/scss/main';
 @import 'custom-css/styles';
 
-// CUSTOM COMPONENTS
-@import '../custom-components/top-bar/styles';
-@import '../custom-components/header/styles';
-@import '../custom-components/main-navigation/styles';
-@import '../custom-components/information-bar/styles';
+// HELPERS COMPONENTS
+@import '../custom-components/helpers/countdown/styles';
+
+// LAYOUT COMPONENTS
+@import '../custom-components/layout/top-bar/styles';
+@import '../custom-components/layout/header/styles';
+@import '../custom-components/layout/main-navigation/styles';
+@import '../custom-components/layout/information-bar/styles';
+@import '../custom-components/layout/triple-block/styles';
 

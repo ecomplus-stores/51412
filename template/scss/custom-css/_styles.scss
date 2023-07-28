@@ -1036,6 +1036,8 @@
 :root {
     --cor-vermelho-1: #a2373a;
     --cor-vermelho-2: #d00b11;
+    --cor-vermelho-3: #880000;
+    --cor-vermelho-4: #f00;
 
     --cor-preto-principal: #000;
     --cor-preto-1:#222;
@@ -1080,4 +1082,80 @@ body {
     width: 100%;
     max-width: 1360px;
     padding: 0 40px;
+}
+
+img {
+    max-width: 100%;
+}
+
+// GLIDE JS CAROUSEL
+
+.glide button.glide__arrow.glide__arrow--next {
+    right: 0px;
+    opacity: 1;
+}
+
+.glide button.glide__arrow {
+    font-size: 30px;
+    padding: 0;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    justify-content: center;
+    border-radius: 40px;
+    opacity: 1;
+    background: var(--cor-vermelho-2);
+    color: #fff;
+    transition: all 0.3s;
+}
+
+.glide button.glide__arrow:hover {
+    background: var(--cor-vermelho-4);
+}
+
+.glide button.glide__arrow i {
+    width: 10px;
+    display: block;
+    height: 17px;
+}
+
+.glide button.glide__arrow i.i-chevron-right:before {
+    position: relative;
+    top: -5px;
+    right: 9px;
+}
+
+.glide button.glide__arrow i.i-chevron-left:before {
+    position: relative;
+    top: -5px;
+    right: 11px;
+}
+
+.glide button.glide__arrow.glide__arrow--left {
+    left: 10px;
+}
+
+.glide button.glide__arrow.glide__arrow--right {
+    right: 10px;
+}
+
+.glide .glide__bullet {
+    width: 12px;
+    height: 12px;
+    margin: 1px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: none;
+    opacity: 1;
+    background: none;
+}
+
+.glide__bullets {
+    gap: 4px;
+    bottom: 15px;
+}
+
+.glide .glide__bullet--active {
+    background: #fff;
 }
