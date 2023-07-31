@@ -1,0 +1,14 @@
+.mini-banners {
+    margin: 0 0 25px 0;
+}
+
+.mini-banners .mini-banners-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.mini-banners .mini-banners-item a img {
+    display: block;
+    height: auto;
+}
