@@ -1,3 +1,18 @@
+<%
+const skus = ['PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20'];
+const search = new _.EcomSearch()
+let items = [];
+
+try {
+    await search.setSkus(skus).setSortOrder('news').fetch(true)
+
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+    console.error(err)
+}
+%>
+
+
 <div class="triple-block">
     <div class="container">
         <div class="triple-block-wrapper">
@@ -35,7 +50,10 @@
                     <%- await include('../../helpers/countdown/index') %>
                 </div>
                 <div class="triple-block-item-products">
-                    Produtos
+                    <%- await include(`../../helpers/test/index`, {
+                        prop: 'Prop de teste' 
+                    }) %>
+
                 </div>
             </div>
             <div class="triple-block-item triple-block-item-3">
@@ -69,6 +87,8 @@
         </div>
     </div>
 </div>
+ 
+
 
 
 <!-- ├── custom-components/

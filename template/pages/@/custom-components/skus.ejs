@@ -1,22 +1,26 @@
 <%
 const search = new _.EcomSearch()
-let items
+let items = [];
+
 try {
-  await search.setSkus(skus).setSortOrder('news').fetch(true)
-  items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+await search.setSkus(skus).setSortOrder('news').fetch(true)
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
 } catch (err) {
-  console.error(err)
-  items = []
+    console.error(err)
 }
 %>
 
 <% if (items.length) { %>
-  <ul>
-    <% items.forEach((item) => { %>
-      <li><%- item.name %> [<%- item.sku %>]</li>
-    <% }) %>
-  </ul>
-  <p>
-    Section que não é section depois da shelf <%- opt.collection_id || 'sem coleção' %> <%= opt.sort %>
-  </p>
+
+    
+    <span style="color: #000;">NOVA -> <%= teste %></span>
+
+    <ul>
+        <% items.forEach((item) => { %>
+            <li><%- item.name %> [<%- item.sku %>]</li>
+        <% }) %>
+    </ul>
+    <p>
+        Section que não é section depois da shelf <%- opt.collection_id || 'sem coleção' %> <%= opt.sort %>
+    </p>
 <% } %>

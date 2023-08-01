@@ -1,0 +1,61 @@
+.block-seo .block-seo-text .block-seo-text-title {
+    display: block;
+    font-size: 27px;
+    letter-spacing: -1px;
+    margin: 0 0 20px;
+    line-height: 1;
+}
+
+.block-seo .block-seo-text .block-seo-text-paragraph {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+}
+
+.block-seo .block-seo-text .block-seo-text-paragraph-1 {
+    margin-bottom: 10px;
+}
+
+// BENEFITS 
+
+.block-seo-qualities {
+    background: #f0f0f0;
+    padding: 42px 0 30px 0;
+    margin: 40px 0 38px 0;
+}
+
+.block-seo-qualities .block-seo-qualities-item {
+    display: flex;
+    gap: 10px;
+}
+
+.block-seo-qualities .block-seo-qualities-item-texts strong {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    margin: 0 0 6px 0;
+    display: block;
+    line-height: 15px;
+    color: var(--cor-vermelho-2);
+    text-transform: uppercase;
+}
+
+.block-seo-qualities .block-seo-qualities-item-texts p {
+    display: block;
+    font-size: 13px;
+    line-height: 16px;
+    margin: 0;
+}
+
+.block-seo-qualities .block-seo-qualities-item-icon {
+    color: var(--cor-vermelho-2);
+}
+
+.block-seo-qualities .block-seo-qualities-item-texts a {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--cor-vermelho-2);
+    margin: 4px 0 0 0;
+    display: block;
+}
+
