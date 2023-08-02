@@ -1,0 +1,92 @@
+.footer-links {
+    background: var(--cor-vermelho-1);
+    color: #fff;
+}
+
+.footer-links * {
+    color: currentColor;
+}
+
+.footer-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links .footer-links-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-links .footer-links-item-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0 0 10px 0;
+    padding: 0 0 0 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1;
+}
+
+.footer-links .footer-links-item-content p, 
+.footer-links .footer-links-item-content ul li a {
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: table;
+    padding: 3px 0;
+    font-weight: 300;
+}
+
+.footer-links .footer-links-item-categories .footer-links-item-content ul {
+    column-count: 2;
+    column-gap: 0;
+}
+
+.footer-links .footer-links-item-about-us .footer-links-item-content p {
+    max-width: 246px;
+    line-height: 26px;
+}
+
+.footer-links .footer-links-wrapper > div:first-child {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.footer-links .footer-links-wrapper > div:nth-child(2) {
+    min-width: 300px;
+}
+
+.footer-links .footer-links-wrapper > div:first-child > div:last-child {
+    display: flex;
+}
+
+.footer-links .footer-links-wrapper > div:first-child > div:last-child > div {
+    width: 100%;
+}
+
+.footer-links .footer-links-item-social-media .footer-links-item-content ul,
+.footer-links .footer-links-item-app .footer-links-item-content ul,
+.footer-links .footer-links-item-social-media .footer-links-item-content ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-links .footer-links-wrapper > div:last-child strong.footer-links-item-title {
+    text-align: center;
+    display: block;
+}
+
+.footer-links .footer-links-item-payments .footer-links-item-content ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+}
