@@ -17,6 +17,7 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
+    padding: 35px 0;
 }
 
 .footer-links .footer-links-item-title {
@@ -52,6 +53,8 @@
 .footer-links .footer-links-item-about-us .footer-links-item-content p {
     max-width: 246px;
     line-height: 26px;
+    padding: 1px 0 0 0;
+    margin: 0;
 }
 
 .footer-links .footer-links-wrapper > div:first-child {
@@ -62,7 +65,7 @@
 }
 
 .footer-links .footer-links-wrapper > div:nth-child(2) {
-    min-width: 300px;
+    min-width: 340px;
 }
 
 .footer-links .footer-links-wrapper > div:first-child > div:last-child {
@@ -83,10 +86,26 @@
 .footer-links .footer-links-wrapper > div:last-child strong.footer-links-item-title {
     text-align: center;
     display: block;
+    margin: 0px 0 40px 0;
 }
 
 .footer-links .footer-links-item-payments .footer-links-item-content ul {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 10px;
+}
+
+.footer-links .footer-links-item-about-us {
+    margin: 60px 0 0 0;
+}
+
+.footer-links .footer-links-wrapper > div:last-child {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 5px 0;
+}
+
+.footer-links-item.footer-links-item-social-media a img {
+    max-width: 34px;
 }
