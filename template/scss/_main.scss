@@ -1,6 +1,9 @@
 @import '#template/scss/main';
 @import 'custom-css/styles';
 
+// CUSTOM PLUGINS
+@import '../custom-plugins/swiper-slide/styles';
+
 // HELPERS COMPONENTS
 @import '../custom-components/helpers/countdown/styles';
 
@@ -16,4 +19,5 @@
 @import '../custom-components/layout/buy-for-phone/styles';
 @import '../custom-components/layout/footer-links/styles';
 @import '../custom-components/layout/footer-security-seals/styles';
+@import '../custom-components/layout/footer-credits/styles';
 
