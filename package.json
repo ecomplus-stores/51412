@@ -11,8 +11,9 @@
   "description": "PWA and JAMstack based e-commerce template for E-Com Plus stores",
   "main": "template/js/index.js",
   "scripts": {
-    "serve": "storefront-tmpl-pack serve",
-    "build": "ECOMCLIENT_NOTIMEOUT=true storefront-tmpl-pack build",
+    "auto-imports": "zx scripts/auto-imports.mjs",
+    "serve": "concurrently \"npm run auto-imports watch\" \"storefront-tmpl-pack serve\"",
+    "build": "npm run auto-imports && ECOMCLIENT_NOTIMEOUT=true storefront-tmpl-pack build",
     "setup": "storefront-tmpl"
   },
   "author": "E-Com Club <ti@e-com.club>",
@@ -42,6 +43,8 @@
     "firebase-tools": "^11.30.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.29.3"
+    "browser-sync": "^2.29.3",
+    "concurrently": "^8.2.0",
+    "zx": "^7.2.3"
   }
 }

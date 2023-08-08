@@ -1,7 +1,6 @@
 import '#template/js/'
 
-import '../custom-plugins/yuuk-countdown'
-import '../custom-plugins/swiper-slide/index'
+import '../custom-plugins/all'
+import '../custom-components/all'
 import './custom-js/utils'
 import './custom-js/pages'
-
