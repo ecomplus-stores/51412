@@ -1,0 +1,41 @@
+<%
+const skus = ['PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20', 'GU10-6-5WBQ-KIT5', '5050-SMD-3LBF-KIT20'];
+
+const search = new _.EcomSearch()
+let items = [];
+
+try {
+    await search.setSkus(skus).setSortOrder('news').fetch(true)
+
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+    console.error(err)
+}
+
+const dataShowcaseRefletoresLED = {
+    title: 'Refletores LED',
+    link: '/refletores-led',
+    items,
+    slideOptions: {
+        navigation: 'default',
+        slidesPerView: 4,
+        spaceBetween: 0,
+    },
+}
+
+const dataShowcaseMaisVendidos = {
+    title: 'Mais Vendidos',
+    countdownTitle: 'Termina em:',
+    items,
+    slideOptions: {
+        navigation: 'default',
+        slidesPerView: 4,
+        spaceBetween: 0,
+    },
+}
+%>
+
+<div class="showcases">
+    <%- await include('../../helpers/product-showcase/index', { data: dataShowcaseRefletoresLED }) %>
+    <%- await include('../../helpers/product-showcase/index', { data: dataShowcaseMaisVendidos }) %>
+</div>

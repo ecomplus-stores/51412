@@ -1,0 +1,37 @@
+<%
+const slideOptions = {
+    navigation: 'default',
+    slidesPerView: 1,
+    spaceBetween: 0,
+}
+%>
+
+<div class="full-banners">
+    <div class="container">
+        <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+            <div class="swiper-clip">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <img alt="test" src="https://cdn.awsli.com.br/1920x1920/257/257163/banner/banner-chamada-desktop-ziojugsh0b.jpg" width="1280" height="466">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <img alt="test" src="https://cdn.awsli.com.br/1920x1920/257/257163/banner/frete-gratis-para-todo-o-brasil-n108rolwne.png" width="1280" height="466">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <img alt="test" src="https://cdn.awsli.com.br/1920x1920/257/257163/banner/rspm-200wbf-kit10-6p2e5h6nxs.png" width="1280" height="466">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>

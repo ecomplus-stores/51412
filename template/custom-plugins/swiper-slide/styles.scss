@@ -722,7 +722,7 @@ button.swiper-pagination-bullet {
     top: -0.06rem;
 }
 
-.swiper img:not([src]) {
+.swiper img:not([alt]) {
     opacity: 0;
 }
 

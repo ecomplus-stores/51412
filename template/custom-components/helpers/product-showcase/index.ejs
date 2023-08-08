@@ -1,0 +1,67 @@
+<div class="product-showcase">
+    <% if (data.title) { %>
+        <div class="container">
+            <div class="product-showcase-title">
+                <div class="product-showcase-title-wrapper">
+                    <% if (data.icon) { %>
+                        <div class="product-showcase-title-icon">
+                            <svg fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M300.4 275.4l-19.75-40c-4.742-9.422-14.69-14.14-24.62-14.14c-9.969 0-19.93 4.75-24.63 14.27L211.6 275.4l-44.13 6.5C157.1 283.4 148.6 290.5 145.4 300.5c-3.25 10.12-.625 20.88 6.875 28.25l32 31l-7.625 44c-3.063 17.98 11.36 32.21 27.23 32.21c4.215 0 8.531-1.004 12.65-3.207L256 412l39.5 20.75c4.022 2.117 8.276 3.086 12.45 3.086c15.8 0 30.49-13.89 27.43-32.09l-7.625-43.88l32-31.12c7.5-7.375 10.13-18.12 6.875-28.25c-3.25-10-11.75-17.12-22.13-18.62L300.4 275.4zM293.4 348.6l8.803 51.45l-46.22-24.32l-46.36 24.97l8.95-52.11l-37.38-36.45l51.66-7.576l23.13-46.82l23.13 46.82l51.66 7.576L293.4 348.6zM256 160c-97.2 0-176 78.8-176 176S158.8 512 256 512s176-78.8 176-176S353.2 160 256 160zM256 480c-79.4 0-144-64.6-144-144S176.6 192 256 192s144 64.6 144 144S335.4 480 256 480zM112 192c3.094 0 6.219-.875 8.969-2.75c7.313-4.938 9.25-14.91 4.281-22.22L33.85 31.97l98.78-1L196.7 137.8c4.563 7.594 14.47 10.12 21.94 5.5c7.594-4.531 10.06-14.38 5.5-21.94L160.1 14.56C154.7 5.562 144.9 0 134.4 0H29.94C18.75 0 8.596 6.156 3.408 16.09C-1.748 26-.9983 37.88 5.283 46.84l93.47 138.1C101.8 189.5 106.9 192 112 192zM508.6 16.09C503.4 6.156 493.3 0 482.1 0h-104.5c-10.47 0-20.31 5.562-25.66 14.53l-64.09 106.9c-4.563 7.562-2.094 17.41 5.5 21.94c7.531 4.625 17.41 2.094 21.94-5.5L377.6 32h100.5l-91.38 135c-4.969 7.312-3.031 17.28 4.281 22.22C393.8 191.1 396.9 192 400 192c5.125 0 10.16-2.469 13.25-7.031l93.35-137.9C513 37.88 513.8 26 508.6 16.09z"></path></svg>
+                        </div>
+                    <% } %>
+
+                    <div class="product-showcase-title-text">
+                        <strong><%= data.title %></strong>
+                    </div>
+                </div>
+                
+                <div class="product-showcase-title-wrapper">
+                    <% if (data.countdownTitle) { %>
+                        <div class="product-showcase-title-countdown">
+                            <div class="product-showcase-title-countdown-wrapper">
+                                <div class="product-showcase-title-countdown-text">
+                                    <%= data.countdownTitle %>
+                                </div>
+                                
+                                <div class="product-showcase-title-countdown-icon">
+                                    <svg fill="currentColor" width="25" height="25" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 22 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.30852 1.94579H13.8024C13.9049 1.94579 13.9888 1.8663 13.9888 1.76913V0.176913C13.9888 0.0797498 13.9049 0 13.8024 0H8.30852C8.20597 0 8.12207 0.0797498 8.12207 0.176913V1.76913C8.12207 1.8663 8.20597 1.94579 8.30852 1.94579ZM0 13.5768C0 19.3238 4.93453 23.9993 11 23.9993C17.0655 23.9993 22 19.3238 22 13.5768C22 7.83001 17.0655 3.1543 11 3.1543C4.93453 3.1543 0 7.83001 0 13.5768ZM2.3466 13.5768C2.3466 9.05604 6.22849 5.37795 11 5.37795C15.7715 5.37795 19.6534 9.05604 19.6534 13.5768C19.6534 18.0978 15.7715 21.7759 11 21.7759C6.22849 21.7759 2.3466 18.0978 2.3466 13.5768ZM9.99573 13.571C9.86644 13.7848 9.83157 14.0197 9.87842 14.2352C9.93502 14.4956 10.1113 14.7275 10.3854 14.8579C10.8865 15.0964 11.5243 14.9064 11.8103 14.434L14.1204 10.6152C14.4061 10.1428 14.2318 9.56692 13.7305 9.3283C13.2297 9.09004 12.5919 9.27995 12.3062 9.7523L9.99573 13.571ZM20.5757 6.16097L18.5687 4.49657C18.5136 4.45089 18.508 4.37064 18.5562 4.3184L19.3468 3.46285C19.395 3.41061 19.4797 3.40531 19.5348 3.45099L21.5418 5.11514C21.597 5.16107 21.6026 5.24107 21.5543 5.29331L20.7638 6.14911C20.7153 6.20135 20.6309 6.20665 20.5757 6.16097Z"></path></svg>
+                                </div>
+
+                                <%- await include('../../helpers/countdown/index') %>
+                            </div>
+                        </div>
+                    <% } %>
+
+                    <% if (data.link) { %>
+                        <div class="product-showcase-title-link">
+                            <a href="<%= data.link %>"><span>VER TODA CATEGORIA</span>
+                                <svg fill="currentColor" width="8" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="31.93 63.93 224.05 384.15"><path d="M246.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L178.7 256 41.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"></path></svg>
+                            </a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+
+    <div class="container">
+        <div class="product-showcase-listing swiper" data-slide-options='<%- JSON.stringify(data.slideOptions) %>'>
+            <div class="swiper-clip">
+                <div class="swiper-wrapper">
+                    <% for (let i = 0; i < data.items.length; i++) { %>
+                        <div class="swiper-slide">
+                            <%- await include('@/sections/inc/product-item', {
+                                _, opt: { item: data.items[i] }
+                            }) %>
+                        </div>
+                    <% } %>
+                </div>
+        
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+

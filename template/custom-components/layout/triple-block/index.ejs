@@ -11,10 +11,13 @@ try {
     console.error(err)
 }
 
-const slideOptions = {
-    navigation: 'default',
-    slidesPerView: 1,
-    spaceBetween: 0,
+const dataTripleBlockProducts = {
+    items,
+    slideOptions: {
+        navigation: 'default',
+        slidesPerView: 1,
+        spaceBetween: 0,
+    }
 }
 %>
 
@@ -22,7 +25,7 @@ const slideOptions = {
     <div class="container">
         <div class="triple-block-wrapper">
             <div class="triple-block-item triple-block-item-1">
-                <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
                     <div class="swiper-clip">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -53,14 +56,14 @@ const slideOptions = {
                     <div class="triple-block-item-countdown-title">Ofertas Imbatíveis</div>
                     <%- await include('../../helpers/countdown/index') %>
                 </div>
+
                 <div class="triple-block-item-products">
-                    <%- await include(`../../helpers/test/index`, {
-                        prop: 'Prop de teste' 
-                    }) %>
+                    <%- await include('../../helpers/product-showcase/index', { data: dataTripleBlockProducts }) %>
                 </div>
             </div>
+
             <div class="triple-block-item triple-block-item-3">
-                <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
                     <div class="swiper-clip">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">

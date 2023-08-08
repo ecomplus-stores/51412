@@ -1,0 +1,51 @@
+.product-showcase .product-showcase-title-text strong {
+    font-family: 'Francois One', sans-serif;
+    font-weight: 400;
+    display: block;
+    text-transform: uppercase;
+    font-size: 21px;
+    letter-spacing: -.5px;
+}
+
+.product-showcase .product-showcase-title {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: none;
+    border: 1px solid #ddd;
+    border-top: 2px solid var(--cor-vermelho-2);
+    padding: 0 25px 0 25px;
+    align-items: center;
+    min-height: 58px;
+    color: var(--cor-vermelho-2);
+    background: none !important;
+}
+
+.product-showcase .product-showcase-title-countdown-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-showcase .product-showcase-title-countdown-text {
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.product-showcase .product-showcase-title-countdown-icon {
+    display: flex;
+    position: relative;
+    top: -1px;
+}
+
+.product-showcase .product-showcase-title .countdown-item span {
+    display: none;
+}
+
+.product-showcase .product-showcase-title .countdown-item b {
+    font-size: 22px;
+    font-weight: 700;
+    min-width: 30px;
+}

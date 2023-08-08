@@ -8,21 +8,6 @@
                     if (opt && opt.enabled !== false) {
         %>
                         <%- await include(`@/sections/${opt.type}`, { _, opt }) %>
-
-                        <% if (_.pageName === 'home' && opt.type === 'collection-shelf') { %>
-                            <!-- <%- await include('@/custom-components/skus', {
-                                skus: ['PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20'],
-                                teste: 'nova prop',
-                                opt
-                            }) %> -->
-                        <% } %>
-
-                        <% if (_.pageName === 'home' && opt.type === 'banner-slider') { %>
-                            <%- await include('../custom-components/layout/information-bar/index') %>
-                            <%- await include('../custom-components/layout/triple-block/index') %>
-                            <%- await include('../custom-components/layout/horizontal-banners/index') %>
-                            <%- await include('../custom-components/layout/mini-banners/index') %>
-                        <% } %>
         <%          
                     }
                 }
