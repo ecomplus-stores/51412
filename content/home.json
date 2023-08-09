@@ -2,56 +2,5 @@
   "meta_title": "",
   "meta_description": "",
   "sections": [
-    {
-      "type": "banner-slider",
-      "autoplay": 9000,
-      "full_width": false,
-      "slides": [
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/full-banners/desktop/banner-chamada-desktop.jpg",
-          "alt": "Banner Chamada desktop 01",
-          "mobile_img": "/img/uploads/full-banners/desktop/banner-chamada-mobile.jpg"
-        },
-        {
-          "start": "",
-          "end": "",
-          "img": "/img/uploads/full-banners/desktop/banner-chamada-desktop.jpg",
-          "alt": "Banner Chamada desktop 02",
-          "mobile_img": "/img/uploads/full-banners/desktop/banner-chamada-mobile.jpg"
-        }
-      ]
-    },
-    {
-      "type": "info-bar",
-      "enabled": true
-    },
-    {
-      "page": 1,
-      "title": "MAIS VENDIDOS",
-      "shuffle": true,
-      "headless": false,
-      "type": "collection-shelf",
-      "link": "",
-      "limit": 12,
-      "collection_id": null,
-      "sort": "sales"
-    },
-    {
-      "type": "collection-shelf",
-      "shuffle": false,
-      "limit": 12,
-      "page": 1,
-      "collection_id": "64c290035e60690370759965:collections:Luminárias LED:/luminarias-led",
-      "sort": "sales",
-      "title": "LUMINÁRIAS",
-      "link": ""
-    },
-    {
-      "type": "page-title",
-      "title": "Loja demo da E-Com Plus",
-      "description": "Loja de demonstração e testes da plataforma E-Com Plus e Storefront. Todos os produtos, preços e informações são meramente ilustrativos."
-    }
   ]
 }

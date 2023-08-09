@@ -56,3 +56,19 @@
     line-height: 20px;
     padding: 0 0 6px 0;
 }
+
+
+.triple-block .triple-block-item-products,
+.triple-block .product-showcase, 
+.triple-block .product-showcase .container {
+    height: 100%;
+}
+
+.triple-block .product-showcase .container {
+    padding: 0;
+}
+
+.triple-block .triple-block-item-2 {
+    display: flex;
+    flex-direction: column;
+}
