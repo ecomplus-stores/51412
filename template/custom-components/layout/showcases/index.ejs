@@ -12,30 +12,112 @@ try {
     console.error(err)
 }
 
-const dataShowcaseRefletoresLED = {
-    title: 'Refletores LED',
-    link: '/refletores-led',
-    items,
-    slideOptions: {
-        navigation: 'default',
-        slidesPerView: 4,
-        spaceBetween: 0,
-    },
-}
-
-const dataShowcaseMaisVendidos = {
-    title: 'Mais Vendidos',
-    countdownTitle: 'Termina em:',
-    items,
-    slideOptions: {
-        navigation: 'default',
-        slidesPerView: 4,
-        spaceBetween: 0,
-    },
-}
 %>
 
 <div class="showcases">
-    <%- await include('../../helpers/product-showcase/index', { data: dataShowcaseRefletoresLED }) %>
-    <%- await include('../../helpers/product-showcase/index', { data: dataShowcaseMaisVendidos }) %>
+    <%- await include('../../helpers/product-showcase/index', { 
+        data: {
+            title: 'Mais Vendidos',
+            countdownTitle: 'Termina em:',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        }
+    }) %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Kits Especiais',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Refletores Holofotes LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+    
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Luminárias LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+
+    <%- await include('../featured-deals/index') %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Kits Spots LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Lâmpada LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Fita de LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
+
+    <%- await include('../../helpers/product-showcase/index', {
+        data: {
+            title: 'Lançamentos',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                slidesPerView: 4,
+                spaceBetween: 0,
+            },
+        } 
+    }) %>
 </div>

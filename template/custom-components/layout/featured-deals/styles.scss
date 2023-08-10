@@ -1,0 +1,52 @@
+.featured-deals .product-showcase-title {
+    border-bottom: none;
+}
+
+.featured-deals .featured-deals-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 10px 9px 65px;
+    background: var(--cor-vermelho-2);
+    margin: 0;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.featured-deals .featured-deals-products {
+    max-width: 780px;
+}
+
+.featured-deals .product-showcase .product-showcase-listing {
+    border: none;
+}
+
+.featured-deals .product-showcase .product-item .product-card {
+    background: #fff;
+    border-radius: 5px;
+}
+
+.featured-deals .featured-deals-texts strong {
+    font-size: 60px;
+    letter-spacing: -3px;
+    line-height: 60px;
+    font-weight: 800;
+    max-width: 360px;
+}
+
+.featured-deals .featured-deals-texts {
+    color: #fff;
+}
+
+.featured-deals .featured-deals-texts p {
+    font-size: 36px;
+    line-height: 32px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    display: block;
+    margin: 18px 0 0 0;
+}
+
+.featured-deals .swiper-clip {
+    border-radius: 5px;
+}

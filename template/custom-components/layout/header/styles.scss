@@ -1,4 +1,13 @@
 
+body.header-fixed .header {
+    top: -52px;
+    background: #f0f0f0;
+}
+
+body.header-fixed .header .header-zip-code {
+    display: none;
+}
+
 .header {
     background: #fff;
     padding: 0;

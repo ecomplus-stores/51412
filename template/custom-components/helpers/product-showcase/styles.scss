@@ -19,6 +19,7 @@
     min-height: 58px;
     color: var(--cor-vermelho-2);
     background: none !important;
+    margin-bottom: -1px;
 }
 
 .product-showcase .product-showcase-title-countdown-wrapper {
@@ -161,8 +162,14 @@
 }
 
 .product-showcase .product-item .product-card {
+    border: 1px solid transparent;
     box-shadow: none;
-    padding: 35px 0 0 0;
+    padding: 35px 0 0;
+    border-radius: 0;
+}
+
+.product-showcase .product-item .product-card:hover {
+    border: 1px solid var(--cor-vermelho-2);
 }
 
 .product-showcase .product-item .product-card__offer-stamp {
@@ -192,16 +199,6 @@
     height: 0;
     margin: -4px auto 0 auto;
 }
-
-
-
-
-
-
-
-
-
-
 
 .product-showcase .product-card > section {
     flex-wrap: wrap;
@@ -246,4 +243,30 @@
 
 .product-showcase .product-card:hover .btn.product-card__favorite {
     opacity: 1;
+}
+
+
+.product-showcase .product-card__buy {
+    transition: none;
+}
+
+.product-showcase .product-card__buy {
+    padding: 0 5px 5px 5px;
+}
+
+.product-showcase .product-card__buy > button {
+    background: var(--cor-verde-1);
+    border: none;
+    border-bottom: 3px solid var(--cor-verde-2);
+    box-shadow: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 11px 0 9px 0;
+    transition: all 0.3s;
+}
+
+.product-showcase .product-card__buy > button:hover {
+    background: var(--cor-verde-2);
+    border-bottom: 3px solid var(--cor-verde-3);
 }

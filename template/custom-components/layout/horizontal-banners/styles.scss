@@ -1,3 +1,27 @@
 .horizontal-banners {
     margin: 0 0 25px 0;
 }
+
+.horizontal-banners .swiper-button-prev {
+    left: 0px;
+}
+
+.horizontal-banners .swiper-button-next {
+    right: 0px;
+}
+
+.horizontal-banners .swiper-button-prev,
+.horizontal-banners .swiper-button-next {
+    background: none !important;
+    font-size: 20px;
+}
+
+.horizontal-banners .swiper-button-prev:hover,
+.horizontal-banners .swiper-button-next:hover {
+    color: #ddd
+}
+
+.horizontal-banners .triple-block-item-2 .swiper-button-prev:hover,
+.horizontal-banners .triple-block-item-2 .swiper-button-next:hover {
+    color: var(--cor-vermelho-2)
+}
