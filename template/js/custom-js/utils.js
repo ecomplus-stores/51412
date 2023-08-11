@@ -48,9 +48,14 @@ window.utils = {
         });
     },
 
+    scrollLock(){
+        $('.scroll-lock').scrollLock();
+    },
+
     initPlugins(){
         this.yuukCountdown();
         this.swiperSlide();
+        this.scrollLock();
     },
 
     init(){

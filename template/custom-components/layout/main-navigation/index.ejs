@@ -1,12 +1,25 @@
-<div class="main-navigation">
+<%
+const slideOptionsCategories = {
+    navigation: 'default',
+    slidesPerView: 8,
+    spaceBetween: 10,
+}
+%>
+
+<div class="main-navigation scroll-lock">
     <div class="container">
         <div class="main-navigation-wrapper">
-            <div class="main-navigation-list main-navigation-list-level-1">
+            <div class="main-navigation-list main-navigation-list-level-1 scroll-lock">
                 <div class="main-navigation-list-item main-navigation-list-item-all-departments">
                     <div class="main-navigation-list-item-content">
                         <div class="main-navigation-list-item-content-wrapper">
                             <div class="main-navigation-list-item-icon">
-                                <svg fill="currentColor" width="22" height="24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 68 448 376"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class=""></path></svg>
+                                <svg fill="currentColor" width="22" height="24" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 68 448 376">
+                                    <path fill="currentColor"
+                                        d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
+                                        class=""></path>
+                                </svg>
                             </div>
                             <div class="main-navigation-list-item-title">
                                 <span>Todos os</span>
@@ -30,6 +43,282 @@
                             </div>
                         </a>
                     </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Refletores LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                <div class="main-navigation-list-item-dropdown-content-categories">
+                                    <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptionsCategories) %>'>
+                                        <div class="swiper-clip">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item main-navigation-list-item-dropdown-content-categories-item-custom">
+                                                        <a href="/oferta-da-semana-refletor-led?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">super oferta</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="82" height="82"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/icon-categoria-oferta-da-semana-menu-13-04-23.png"
+                                                                    alt="Ofertas da Semana Refletores LED" title="Ofertas da Semana Refletores LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Ofertas da Semana</span>
+                                                                <span>Refletores LED</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/holofotes-led?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="108" height="127"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/kits-refletores-led-19-08-21.png"
+                                                                    alt="Kits Refletores LED" title="Kits Refletores LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Kits Refletores</span>
+                                                                <span>LED</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-slim?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="100" height="124"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-micro-led-slim-18-08-21.png"
+                                                                    alt="Refletor Micro LED Slim" title="Refletor Micro LED Slim">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Slim</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-slim-branco-frio?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="132" height="164"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-micro-led-slim-branco-frio-menu-17-06-2022.png"
+                                                                    alt="Refletor Micro LED Slim" title="Refletor Micro LED Slim">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Slim Branco Frio</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-smd-verde?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="105" height="120"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-micro-led-slim-verde-19-08-21-v2.png"
+                                                                    alt="Refletor Micro LED Slim Verde" title="Refletor Micro LED Slim Verde">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Slim Verde</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-slim-branco-quente?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="100" height="124"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/menu-refletor-micro-led-slim-branco-quente-08-06-2022.png"
+                                                                    alt="Refletor Micro LED Slim Branco Quente" title="Refletor Micro LED Slim Branco Quente">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Slim Branco Quente</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-led-smd-ultra-thin?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="157" height="115"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-led-ultra-thin-menu-17-06-2022.png"
+                                                                    alt="Refletor Micro LED Ultra Thin" title="Refletor Micro LED Ultra Thin">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra Thin</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-ultra-thin-branco-frio?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">super oferta</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="157" height="115"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-led-ultra-thin-branco-frio-menu-17-06-2022-v2.png"
+                                                                    alt="Refletor Micro LED Ultra Thin" title="Refletor Micro LED Ultra Thin">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra Thin Frio</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-ultra-thin-verde?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="157" height="108"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-led-ultra-thin-verde-menu-17-06-2022-v2.png"
+                                                                    alt="Refletor Micro LED Ultra Thin Verde" title="Refletor Micro LED Ultra Thin Verde">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra Thin Verde</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-ultra-thin-branco-quente?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="147" height="107"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-led-ultra-thin-branco-quente-menu-17-06-2022-v2.png"
+                                                                    alt="Refletor Micro LED Ultra Thin Branco Quente"
+                                                                    title="Refletor Micro LED Ultra Thin Branco Quente">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra Thin Quente</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-ultra-thin-rgb?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="157" height="106"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-ultra-thin-rgb-27-06-2022.png"
+                                                                    alt="Refletor Micro LED Ultra Thin RGB" title="Refletor Micro LED Ultra Thin RGB">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra Thin RGB</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-led-solar?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="123" height="125"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-micro-led-solar-19-08-21.png"
+                                                                    alt="Refletor Micro LED Solar" title="Refletor Micro LED Solar">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Solar</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-led-alta-performance?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">lançamento</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="170" height="99"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-led-performance-05-04-2023.png"
+                                                                    alt="Refletor Micro LED Performance" title="Refletor Micro LED Performance">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Performance</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-microled-ultra?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">lançamento</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="147" height="122"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/R-500WBF-PREMIUM-icone-menu-21-03-2023.png"
+                                                                    alt="Refletor Micro LED Ultra" title="Refletor Micro LED Ultra">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Ultra</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/refletor-micro-led-com-sensor-de-presenca?sort=mais_vendidos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="77" height="123"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/refletor-micro-led-sensor-presenca-23-01-23.png"
+                                                                    alt="Refletor Micro LED Sensor de Presença" title="Refletor Micro LED Sensor de Presença">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Refletor Micro LED</span>
+                                                                <span>Sensor de Presença</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item main-navigation-list-item-dropdown-content-categories-item-custom">
+                                                        <a href="/lancamento-refletor-led?sort=ultimos_produtos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="82" height="82"
+                                                                    src="https://cdn.awsli.com.br/257/257163/arquivos/icone-novo-lancamentos-menu-19-08-21.png"
+                                                                    alt="Lançamentos Refletores LED" title="Lançamentos Refletores LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Lançamentos</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="main-navigation-list-item">
@@ -42,6 +331,20 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Luminárias LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -56,6 +359,20 @@
                             </div>
                         </a>
                     </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Lâmpadas LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="main-navigation-list-item">
@@ -68,6 +385,20 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Spots LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -82,6 +413,20 @@
                             </div>
                         </a>
                     </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Fitas LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="main-navigation-list-item">
@@ -94,6 +439,20 @@
                                 </div>
                             </div>
                         </a>
+                    </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Pendentes LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -108,6 +467,20 @@
                             </div>
                         </a>
                     </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Lustres</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                CONTEUDO DROPDOWN
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="main-navigation-list-item">
@@ -121,20 +494,51 @@
                             </div>
                         </a>
                     </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Acessórios LED</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+                                
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="main-navigation-list-item main-navigation-list-item-campaign">
                     <div class="main-navigation-list-item-content">
                         <div class="main-navigation-list-item-content-wrapper">
                             <div class="main-navigation-list-item-icon">
-                                <svg fill="currentColor" width="25" height="31" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" ><path d="m77.08 28.577 5.748-5.748-5.656-5.658-6.149 6.149a39.747 39.747 0 0 0 -19.023-7.12v-8.2h8v-8h-24v8h8v8.2a39.747 39.747 0 0 0 -19.023 7.12l-6.149-6.149-5.656 5.658 5.748 5.748a40 40 0 1 0 58.16 0zm-29.08 59.423a32 32 0 1 1 32-32 32.036 32.036 0 0 1 -32 32z"></path><path d="m48 32v24h-24a24 24 0 1 0 24-24z"></path></svg>
+                                <svg fill="currentColor" width="25" height="31" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 96 96">
+                                    <path
+                                        d="m77.08 28.577 5.748-5.748-5.656-5.658-6.149 6.149a39.747 39.747 0 0 0 -19.023-7.12v-8.2h8v-8h-24v8h8v8.2a39.747 39.747 0 0 0 -19.023 7.12l-6.149-6.149-5.656 5.658 5.748 5.748a40 40 0 1 0 58.16 0zm-29.08 59.423a32 32 0 1 1 32-32 32.036 32.036 0 0 1 -32 32z">
+                                    </path>
+                                    <path d="m48 32v24h-24a24 24 0 1 0 24-24z"></path>
+                                </svg>
                             </div>
                             <div class="main-navigation-list-item-title">
                                 <span>Frete</span>
                                 <span>Grátis</span>
                             </div>
-                            <div class="main-navigation-list-item-icon">
-                                <i class="i-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="main-navigation-list-item-dropdown scroll-lock">
+                        <div class="main-navigation-list-item-dropdown-wrapper">
+                            <div class="main-navigation-list-item-dropdown-title">
+                                <a href="/">
+                                    <i>+</i>
+                                    Ver todos
+                                    <strong>Frete grátis</strong>
+                                </a>
+                            </div>
+                            <div class="main-navigation-list-item-dropdown-content">
+
                             </div>
                         </div>
                     </div>
@@ -143,4 +547,3 @@
         </div>
     </div>
 </div>
-  
