@@ -15,6 +15,18 @@
     width: 100%;
 }
 
+.triple-block .triple-block-item-1 a,
+.triple-block .triple-block-item-3 a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.triple-block .triple-block-item-1 a img,
+.triple-block .triple-block-item-3 a img {
+    /*width: auto;*/
+}
+
 .triple-block .triple-block-item-countdown {
     background: radial-gradient(circle, var(--cor-vermelho-2) 0, var(--cor-vermelho-3) 100%);
     color: #ffff;

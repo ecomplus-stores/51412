@@ -250,7 +250,27 @@ body.header-fixed .main-navigation .main-navigation-list-item {
 }
 
 .main-navigation .main-navigation-list-item-dropdown-content-categories-item-tag {
-    display: none;
+    -webkit-animation-direction: alternate;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: bounce;
+    -webkit-animation-timing-function: cubic-bezier(.5,.05,1,.5);
+    background: #d00b11;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    height: 14px;
+    line-height: 13px;
+    padding: 0 5px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    transition: all .5s .1s;
+    width: auto;
+    display: table;
+    margin: auto;
+    top: 6px;
 }
 
 .main-navigation .main-navigation-list-item-dropdown-content-categories-item > a:hover {

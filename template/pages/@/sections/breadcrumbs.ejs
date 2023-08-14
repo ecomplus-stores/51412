@@ -10,10 +10,10 @@ if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
   %>
   <div class="container">
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb my-2 my-sm-3<%= breadcrumbs.length < 2 ? ' d-none d-md-flex' : '' %>">
-        <li class="breadcrumb-item d-none d-md-block">
+      <ol class="breadcrumb <%= breadcrumbs.length < 2 ? ' d-none d-md-flex' : '' %>">
+        <li class="breadcrumb-item">
           <a href="/">
-            <i class="i-home"></i>
+            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M576 287.6H511.8l1 224.4H472 456 352V352H224V512H120 104 64.1V474.8c-.1-.9-.1-1.8-.1-2.8V360c0-.9 0-1.9 .1-2.8V287.6H0V240L288.4 0 416 106.5V32h96V186.6L576 240v47.6z"></path></svg>
           </a>
         </li>
         <% breadcrumbs.forEach(({ name, link }, index) => { %>
@@ -22,7 +22,7 @@ if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
               <% if (index === breadcrumbs.length - 2) { %>
                 class="breadcrumb-item"
               <% } else { %>
-                class="breadcrumb-item d-none d-md-block"
+                class="breadcrumb-item"
               <% } %>
             >
               <a href="<%= link %>">
@@ -30,7 +30,7 @@ if (Array.isArray(breadcrumbs) && breadcrumbs.length) {
               </a>
             </li>
           <% } else { %>
-            <li class="breadcrumb-item d-none d-md-block active" aria-current="page">
+            <li class="breadcrumb-item active" aria-current="page">
               <%= name %>
             </li>
           <% } %>

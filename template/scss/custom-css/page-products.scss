@@ -1,0 +1,17 @@
+.product-info {
+    border-top: 3px solid var(--cor-vermelho-2);
+    background: #f7f7f7;
+    padding: 20px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-bottom: 3px solid #ccc;
+}
+
+
+.product-info h1.product__name {
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid #ddd;
+    padding: 0 40px 20px 0;
+    position: relative;
+}
