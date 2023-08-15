@@ -9,9 +9,90 @@
 
 
 .product-info h1.product__name {
+    border-bottom: 1px solid #ddd;
     font-size: 20px;
     font-weight: 700;
-    border-bottom: 1px solid #ddd;
     padding: 0 40px 20px 0;
     position: relative;
+    margin: 0 0 20px 0;
+}
+
+.product-info .product-info-details {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 0px 0 20px 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0 0 20px 0;
+}
+
+.product-info .product-info-details > div {
+    display: flex;
+    gap: 5px;
+    font-size: 11px;
+    line-height: 1;
+}
+
+.product-info .product-info-details > div > div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.product-info .product-info-details-rating b {
+    position: relative;
+    top: 1px;
+}
+
+.product-info .product-info-details .product-info-details-sales {
+    font-size: 12px;
+}
+
+.product-info .product-info-details-rating > div {
+    color: var(--cor-amarelo-1);
+}
+
+.product-info .product-price-dropped {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-weight: 700;
+    border-radius: 4px;
+    background: var(--cor-verde-1);
+    color: #fff;
+    font-size: 13px;
+    padding: 8px 9px 7px 7px;
+    line-height: 1;
+    margin: 0 0 6px 0;
+}
+
+div#product-block section#product > .row {
+    margin-right: 0;
+}
+
+.product-info .prices--big span.prices__compare > small:last-child {
+    display: none;
+}
+
+.product-info .prices--big strong.prices__value {
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--cor-vermelho-2);
+    display: block;
+    line-height: 1;
+    margin: 0 0 10px 0px;
+}
+
+.product-info strong.prices__value:before {
+    content: "por";
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0 -2px 0 0;
+}
+
+.product-info span.prices__compare {
+    font-weight: 800;
+    margin: 12px 0 5px 0;
+    display: block;
+    line-height: 1;
 }
