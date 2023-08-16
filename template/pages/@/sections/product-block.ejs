@@ -8,6 +8,8 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
 const lastSalesQttMin = 8650;
 const lastSalesQttMax = 12987;
 const lastSalesQtt = Math.floor(Math.random() * (lastSalesQttMax - lastSalesQttMin + 1)) + lastSalesQttMin;
+
+console.log('_state', _.state);
 %>
 
 <div id="product-block" class="product-block">
@@ -87,6 +89,34 @@ const lastSalesQtt = Math.floor(Math.random() * (lastSalesQttMax - lastSalesQttM
             <% } %>
           <% } %>
           <!-- Custom additional code on bottom of images gallery -->
+          <div class="product-video">
+            <p>Clique no botão ao lado para assistir o video relacionado ao produto.</p>
+            <a href="">
+              <svg fill="currentColor" width="20" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="14.93 64 546.13 384"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
+              <span>Assistir Vídeo</span>
+            </a>
+          </div>
+
+          <div class="product-main-benefits">
+            <div class="product-main-benefits-title">COMPRANDO NA MAIOR LOJA DE LED DA AMÉRICA</div>
+
+            <div class="product-main-benefits-wrapper">
+              <div class="product-main-benefits-item">
+                <strong>Entrega expressa</strong>
+                <p>Confie na entrega mais eficiente e rápida do Brasil. Nossos produtos são transportados de maneira segura e dentro dos mais rigorosos padrões de qualidade do e-commerce.</p>
+              </div>
+
+              <div class="product-main-benefits-item">
+                <strong>Pagamento facilitado</strong>
+                <p>Sua compra pode ser realizada por cartão de crédito em até 12x sem juros, com parcelas mínimas de R$ 15, ou através de boleto bancário com 5% de desconto extra no valor total.</p>
+              </div>
+
+              <div class="product-main-benefits-item">
+                <strong>Total segurança</strong>
+                <p>Possuímos diversos parceiros como Google, Microsoft,Trustvox, Ebit, Mercado Pago e Site Blindado que possibilitam uma transação 100% segura e confiável.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="product-info col">
@@ -122,7 +152,12 @@ const lastSalesQtt = Math.floor(Math.random() * (lastSalesQttMax - lastSalesQttM
           <div class="product-price-dropped">
             <svg width="13" height="12" viewBox="0 0 12 12" fill="#fff"><path fill="inherit" d="M.813 5.647a.5.5 0 01.707 0L5.5 9.628V1.166a.5.5 0 111 0v8.461l3.98-3.98a.5.5 0 01.637-.057l.07.058a.5.5 0 010 .707l-4.833 4.832a.508.508 0 01-.019.018l-.027.022a.379.379 0 01-.044.031l-.03.017a.363.363 0 01-.08.034.398.398 0 01-.08.018.45.45 0 01-.063.006H5.99a.503.503 0 01-.061-.005l.072.005a.502.502 0 01-.151-.023l-.023-.008-.015-.006a.496.496 0 01-.048-.022l-.015-.01-.01-.004a.498.498 0 01-.051-.037l-.017-.015a.232.232 0 01-.025-.022L.813 6.354a.5.5 0 010-.707z"></path></svg>
             <span>baixou</span>
-         </div>
+          </div>
+          
+          <div class="product-save-money">
+            <span>Economize</span>
+            <b><%= _.ecomUtils.formatMoney(_.state.base_price - _.state.price) %></b>
+          </div>
 
           <div id="product-actions">
             <div id="product-loading">

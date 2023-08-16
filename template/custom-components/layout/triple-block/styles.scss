@@ -116,3 +116,22 @@
 .triple-block .triple-block-item-2 .swiper-button-next:hover {
     color: var(--cor-vermelho-2)
 }
+
+.triple-block .triple-block-item-products {
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+.triple-block .triple-block-item-products:hover {
+    border-color: var(--cor-vermelho-2);
+}
+
+.triple-block .product-showcase-listing .swiper-clip:before, 
+.triple-block .product-showcase-listing .swiper-clip:after {
+    display: none;
+}
+
+.triple-block .product-showcase .product-item .product-card {
+    border: none;
+}

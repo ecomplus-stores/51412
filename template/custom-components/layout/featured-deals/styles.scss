@@ -1,3 +1,8 @@
+.featured-deals .product-showcase-listing .swiper-clip:before,
+.featured-deals .product-showcase-listing .swiper-clip:after {
+    display: none;
+}
+
 .featured-deals .product-showcase-title {
     border-bottom: none;
 }
@@ -24,6 +29,7 @@
 .featured-deals .product-showcase .product-item .product-card {
     background: #fff;
     border-radius: 5px;
+    border: none;
 }
 
 .featured-deals .featured-deals-texts strong {

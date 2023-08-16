@@ -59,3 +59,68 @@
     display: block;
 }
 
+// RATING 
+.block-seo-rating {
+    margin: 0 0 50px 0;
+}
+
+.block-seo-rating .block-seo-rating-title {
+    font-size: 27px;
+    font-weight: 700;
+    margin: 0 0 25px 0;
+    line-height: 1;
+}
+
+.block-seo-rating .block-seo-rating-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.block-seo-rating .block-seo-rating-note strong {
+    font-size: 43px;
+    font-weight: 700;
+    letter-spacing: -3px;
+    line-height: 1;
+    display: block;
+}
+
+.block-seo-rating .block-seo-rating-note p {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    margin: 5px 0 7px 0;
+}
+
+.block-seo-rating .block-seo-rating-comment strong {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.block-seo-rating .block-seo-rating-comment strong span {
+    font-weight: 400;
+    font-size: 11px;
+}
+
+.block-seo-rating .block-seo-rating-comment div {
+    display: flex;
+    gap: 3px;
+    color: var(--cor-amarelo-1);
+    margin: 4px 0 6px 0;
+}
+
+.block-seo-rating .block-seo-rating-comment p {
+    font-size: 14px;
+    letter-spacing: -0.5px;
+    margin: 0;
+}
+
+.block-seo-rating .block-seo-rating-note {
+    text-align: center;
+}
+
+.block-seo-rating .block-seo-rating-note div {
+    display: flex;
+    justify-content: space-between;
+    color: var(--cor-amarelo-1);
+}
+

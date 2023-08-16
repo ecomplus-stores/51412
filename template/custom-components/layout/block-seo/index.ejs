@@ -24,14 +24,17 @@ const slideOptions = {
 } 
 %>
 
+
 <div class="block-seo" xmlns="http://www.w3.org/1999/xhtml">
-    <div class="block-seo-text">
-        <div class="container">
-            <strong class="block-seo-text-title">Iluminim: A maior Loja de Iluminação LED da América</strong>
-            <p class="block-seo-text-paragraph block-seo-text-paragraph-1">A Iluminim nasceu para trazer soluções de iluminação para sua casa, loja, condomínio ou empresa. Com exclusividade em lâmpadas <strong>LED</strong>, a loja online Iluminim oferece qualidade, durabilidade e praticidade para você.</p>
-            <p class="block-seo-text-paragraph block-seo-text-paragraph-2">Com uma gama completa de produtos diodos emissores de luz, você encontra <a href="/refletores-de-led?sort=mais_vendidos">Refletores de LED</a>, <a href="/luminarias-led?sort=mais_vendidos">Luminárias LED</a>, <a href="/lampada-led?sort=mais_vendidos">Lâmpadas LED</a> e todos os componentes de iluminação para seu negócio ou lar. A <strong>Iluminação LED</strong> é vantajosa pois, enquanto as lâmpadas incandescentes consomem muita energia elétrica e resultam em luz de baixa qualidade, as lâmpadas LED consomem até 90% menos energia, duram mais e oferecem iluminação clara e nítida. A iluminação LED é perfeita para todos os ambientes, principalmente em escritórios, pois não cansa a vista dos colaboradores, possibilitando assim aumento de produtividade. Entre outras opções de iluminação estão as <a href="/fita-de-led">Fitas LED</a>, ideais para vitrines de lojas e outras aplicações, as Fontes LED e os Spots LED que, charmosos e modernos, são utilizados em ambientes planejados e em sancas, podendo criar diversos efeitos. Não deixe de conferir todo o site da <strong>Loja de LED</strong> Iluminim para encontrar a solução ideal de sua reforma! Nossos produtos possuem até 24 meses de garantia e atendem às normas ISO 9001:2000 de fabricação. Aproveite agora mesmo para <strong>Comprar Lâmpadas de LED</strong> na Iluminim!</p>
+    <% if (_.pageName === 'home') { %>
+        <div class="block-seo-text">
+            <div class="container">
+                <strong class="block-seo-text-title">Iluminim: A maior Loja de Iluminação LED da América</strong>
+                <p class="block-seo-text-paragraph block-seo-text-paragraph-1">A Iluminim nasceu para trazer soluções de iluminação para sua casa, loja, condomínio ou empresa. Com exclusividade em lâmpadas <strong>LED</strong>, a loja online Iluminim oferece qualidade, durabilidade e praticidade para você.</p>
+                <p class="block-seo-text-paragraph block-seo-text-paragraph-2">Com uma gama completa de produtos diodos emissores de luz, você encontra <a href="/refletores-de-led?sort=mais_vendidos">Refletores de LED</a>, <a href="/luminarias-led?sort=mais_vendidos">Luminárias LED</a>, <a href="/lampada-led?sort=mais_vendidos">Lâmpadas LED</a> e todos os componentes de iluminação para seu negócio ou lar. A <strong>Iluminação LED</strong> é vantajosa pois, enquanto as lâmpadas incandescentes consomem muita energia elétrica e resultam em luz de baixa qualidade, as lâmpadas LED consomem até 90% menos energia, duram mais e oferecem iluminação clara e nítida. A iluminação LED é perfeita para todos os ambientes, principalmente em escritórios, pois não cansa a vista dos colaboradores, possibilitando assim aumento de produtividade. Entre outras opções de iluminação estão as <a href="/fita-de-led">Fitas LED</a>, ideais para vitrines de lojas e outras aplicações, as Fontes LED e os Spots LED que, charmosos e modernos, são utilizados em ambientes planejados e em sancas, podendo criar diversos efeitos. Não deixe de conferir todo o site da <strong>Loja de LED</strong> Iluminim para encontrar a solução ideal de sua reforma! Nossos produtos possuem até 24 meses de garantia e atendem às normas ISO 9001:2000 de fabricação. Aproveite agora mesmo para <strong>Comprar Lâmpadas de LED</strong> na Iluminim!</p>
+            </div>
         </div>
-    </div>
+    <% } %>
 
     <div class="block-seo-qualities">
         <div class="container">
@@ -145,4 +148,76 @@ const slideOptions = {
             </div>
         </div>
     </div>
+
+    <% if (_.pageName === 'home') { %>
+        <div class="block-seo-rating">
+            <div class="container">
+                <div class="block-seo-rating-title">Excelência em iluminação LED</div>
+                <div class="block-seo-rating-wrapper">
+                    <div class="block-seo-rating-note">
+                        <strong>4.9/5</strong>
+                        <p>+ 1 milhão avaliações</p>
+                        <div>
+                            <svg fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="18" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                        </div>
+                    </div>
+
+                    <div class="block-seo-rating-comment">
+                        <strong>Lenilson Ferreira <span>Aracaju - SE</span></strong>
+                        <div>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                        </div>
+                        <p>
+                            Da compra até a entrega, tudo foi <br> 
+                            extramemente rápido, em apenas 2 dias os <br> 
+                            produto já estava em minhas mãos. Certeza <br> 
+                            que recomendo a loja.
+                        </p>
+                    </div>
+
+                    <div class="block-seo-rating-comment">
+                        <strong>Márcio dos Santos <span>Campinas - SP</span></strong>
+                        <div>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                        </div>
+                        <p>
+                            Estava precisando resolver o problema de iluminação de meu <br/>
+                            Jardim e adquiri um Refletor Holofote de LED 50w, o produto é <br/>
+                            muito potente e resistente, parabéns pelo excelente atendimento <br/>
+                            e agilidade.
+                        </p>
+                    </div>
+
+                    <div class="block-seo-rating-comment">
+                        <strong>Natália Schmit <span>Rio de Janeiro - RJ</span></strong>
+                        <div>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                            <svg fill="currentColor" width="14" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="24.14 0 528.06 512.06"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path></svg>
+                        </div>
+                        <p>
+                            Precisava de uma entrega rápida com um <br>
+                            produto de qualidade e consegui. Obrigado pelo <br>
+                            excelente atendimento por parte de toda equipe. <br>
+                            Parabéns!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% } %>
 </div>
