@@ -50,7 +50,11 @@
                     <% for (let i = 0; i < data.items.length; i++) { %>
                         <div class="swiper-slide">
                             <%- await include('@/sections/inc/product-item', {
-                                _, opt: { item: data.items[i] }
+                                _,
+                                opt: {
+                                    item: data.items[i],
+                                    countdownProducts: data.countdownProducts,
+                                },
                             }) %>
                         </div>
                     <% } %>

@@ -170,3 +170,35 @@ body#page-products .product-video a:hover {
     background: #fff;
     color: var(--cor-vermelho-2);
 }
+
+body#page-products .product-save-money {
+    font-size: 14px;
+    color: var(--cor-verde-1);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin: 2px 0 2px 0;
+}
+
+body#page-products .product__buy button.btn-lg.btn-primary {
+    max-width: 100%;
+    font-family: roboto;
+    font-weight: 600;
+    width: 240px;
+    font-size: 21px;
+    padding: 18px 10px 15px 10px !important;
+    text-transform: uppercase;
+    border-radius: 7px;
+    margin-left: 0;
+    border: 0;
+    text-shadow: none;
+    background: #34af6f;
+    transition: all .3s;
+    border-bottom: 3px solid #25945b;
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+body#page-products .product__buy button.btn-lg.btn-primary:hover {
+    background: var(--cor-verde-2);
+    border-color: var(--cor-verde-3);
+}

@@ -4,6 +4,20 @@ const slideOptionsCategories = {
     slidesPerView: 8,
     spaceBetween: 10,
 }
+
+const skus = ['RSPM-100WBF', 'RSPM-200WBF', 'PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20', 'GU10-6-5WBQ-KIT5', '5050-SMD-3LBF-KIT20'];
+
+const search = new _.EcomSearch()
+let items = [];
+
+try {
+    await search.setSkus(skus).setSortOrder('news').fetch(true)
+
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+    console.error(err)
+}
+
 %>
 
 <div class="main-navigation scroll-lock">
@@ -59,7 +73,7 @@ const slideOptionsCategories = {
                                             <div class="swiper-wrapper">
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item main-navigation-list-item-dropdown-content-categories-item-custom">
-                                                        <a href="/oferta-da-semana-refletor-led?sort=mais_vendidos">
+                                                        <a href="/oferta-da-semana-refletor-led">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag" style="background: #6ede04;">super oferta</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="82" height="82"
@@ -76,7 +90,7 @@ const slideOptionsCategories = {
                                                 
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/holofotes-led?sort=mais_vendidos">
+                                                        <a href="/holofotes-led">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="108" height="127"
@@ -93,7 +107,7 @@ const slideOptionsCategories = {
                                                 
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-slim?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-slim">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="100" height="124"
@@ -110,7 +124,7 @@ const slideOptionsCategories = {
                                                 
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-slim-branco-frio?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-slim-branco-frio">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="132" height="164"
@@ -126,7 +140,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-smd-verde?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-smd-verde">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="105" height="120"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-micro-led-slim-verde.png"
@@ -141,7 +155,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-slim-branco-quente?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-slim-branco-quente">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="100" height="124"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-micro-led-slim-branco-quente.png"
@@ -156,7 +170,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-led-smd-ultra-thin?sort=mais_vendidos">
+                                                        <a href="/refletor-led-smd-ultra-thin">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="157" height="115"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-led-ultra-thin.png"
@@ -171,7 +185,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-ultra-thin-branco-frio?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-ultra-thin-branco-frio">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag" style="background: #6ede04;">super oferta</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="157" height="115"
@@ -187,7 +201,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-ultra-thin-verde?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-ultra-thin-verde">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="157" height="108"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-led-ultra-thin-verde.png"
@@ -202,7 +216,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-ultra-thin-branco-quente?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-ultra-thin-branco-quente">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="147" height="107"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-led-ultra-thin-branco-quente.png"
@@ -218,7 +232,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-ultra-thin-rgb?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-ultra-thin-rgb">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="157" height="106"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-ultra-thin-rgb.png"
@@ -233,7 +247,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-led-solar?sort=mais_vendidos">
+                                                        <a href="/refletor-led-solar">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="123" height="125"
@@ -249,7 +263,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-led-alta-performance?sort=mais_vendidos">
+                                                        <a href="/refletor-led-alta-performance">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">lançamento</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="170" height="99"
@@ -265,7 +279,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-microled-ultra?sort=mais_vendidos">
+                                                        <a href="/refletor-microled-ultra">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-tag">lançamento</div>
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="147" height="122"
@@ -281,7 +295,7 @@ const slideOptionsCategories = {
                                                 </div>
                                                 <div class="swiper-slide">
                                                     <div class="main-navigation-list-item-dropdown-content-categories-item">
-                                                        <a href="/refletor-micro-led-com-sensor-de-presenca?sort=mais_vendidos">
+                                                        <a href="/refletor-micro-led-com-sensor-de-presenca">
                                                             <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
                                                                 <img loading="lazy" width="77" height="123"
                                                                     src="/img/uploads/main-navigation/refletores/refletor-micro-led-senso-presenca.png"
@@ -348,7 +362,280 @@ const slideOptionsCategories = {
                                 </a>
                             </div>
                             <div class="main-navigation-list-item-dropdown-content">
-                                CONTEUDO DROPDOWN
+                                <div class="main-navigation-list-item-dropdown-content-categories">
+                                    <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptionsCategories) %>'>
+                                        <div class="swiper-clip">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item main-navigation-list-item-dropdown-content-categories-item-custom">
+                                                        <a href="/oferta-da-semana-plafon-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novidade</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="82" height="82"
+                                                                    src="/img/uploads/main-navigation/icon-oferta-semana.png"
+                                                                    alt="Ofertas da Semana Luminárias LED" title="Ofertas da Semana Luminárias LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Ofertas da Semana</span>
+                                                                <span>Luminárias LED</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/kit-plafon-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">últimas unidades</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="85" height="89"
+                                                                    src="/img/uploads/main-navigation/luminarias/kits-luminarias-led.png"
+                                                                    alt="Kits Luminárias LED" title="Kits Luminárias LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Kits Luminárias</span>
+                                                                <span>LED</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/plafon-led-embutir">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag" style="background: #6ede04;">super oferta</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="83" height="93"
+                                                                    src="/img/uploads/main-navigation/luminarias/plafon-led-embutir.png"
+                                                                    alt="Plafon LED Embutir" title="Plafon LED Embutir">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Plafon LED</span>
+                                                                <span>Embutir</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/plafon-led-sobrepor">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag" style="background: #6ede04;">super oferta</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="80" height="88"
+                                                                    src="/img/uploads/main-navigation/luminarias/plafon-led-sobrepor.png"
+                                                                    alt="Plafon LED Sobrepor" title="Plafon LED Sobrepor">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Plafon LED</span>
+                                                                <span>Sobrepor</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/plafon-led-borda-infinita">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="78" height="94"
+                                                                    src="/img/uploads/main-navigation/luminarias/plafon-led-borda-infinita.png"
+                                                                    alt="Plafon LED Borda Infinita" title="Plafon LED Borda Infinita">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Plafon LED</span>
+                                                                <span>Borda Infinita</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminaria-plafon-led-recuado">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="83" height="94"
+                                                                    src="/img/uploads/main-navigation/luminarias/plafon-led-recuado.png"
+                                                                    alt="Plafon LED Recuado" title="Plafon LED Recuado">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Plafon LED</span>
+                                                                <span>Recuado</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/plafon-led-colorido">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="131" height="150"
+                                                                    src="/img/uploads/main-navigation/luminarias/plafon-led-colorido.png"
+                                                                    alt="Plafon LED Colorido" title="Plafon LED Colorido">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Plafon LED</span>
+                                                                <span>Colorido</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/arandela-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">lançamento</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="114" height="220"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-arandela.png"
+                                                                    alt="Luminária LED Arandela" title="Luminária LED Arandela">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Arandela</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminaria-emergencia-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="84" height="103"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-emergencia.png"
+                                                                    alt="Luminária LED Emergência" title="Luminária LED Emergência">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Emergência</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminarias-publicas-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="40" height="105"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-publica.png"
+                                                                    alt="Luminária LED Pública" title="Luminária LED Pública">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Pública</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminaria-led-industrial-highbay">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="119" height="67"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-industrial.png"
+                                                                    alt="Luminária LED Industrial" title="Luminária LED Industrial">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Industrial</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/espeto-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="48" height="118"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-espeto.png"
+                                                                    alt="Luminária LED Espeto" title="Luminária LED Espeto">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Espeto</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/perfil-de-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="241" height="172"
+                                                                    src="/img/uploads/main-navigation/luminarias/perfil-led.png"
+                                                                    alt="Perfil LED" title="Perfil LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Perfil</span>
+                                                                <span>LED</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminaria-abajur">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="51" height="94"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-abajur.png"
+                                                                    alt="Luminária LED Abajur" title="Luminária LED Abajur">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Abajur</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item">
+                                                        <a href="/luminaria-abajur-led">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-tag">novo</div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="88" height="103"
+                                                                    src="/img/uploads/main-navigation/luminarias/luminaria-led-mesa.png"
+                                                                    alt="Luminária LED Mesa" title="Luminária LED Mesa">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Luminária LED</span>
+                                                                <span>Mesa</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="main-navigation-list-item-dropdown-content-categories-item main-navigation-list-item-dropdown-content-categories-item-custom">
+                                                        <a href="/lancamento-luminarias-led?sort=ultimos_produtos">
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-icon">
+                                                                <img loading="lazy" width="82" height="82"
+                                                                    src="/img/uploads/main-navigation/icon-lancamentos.png"
+                                                                    alt="Lançamentos Luminárias LED" title="Lançamentos Luminárias LED">
+                                                            </div>
+                                                            <div class="main-navigation-list-item-dropdown-content-categories-item-title">
+                                                                <span>Lançamentos</span>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="main-navigation-list-item-dropdown-content-banner">
+                                    <a href="/" target="_blank">
+                                        <img alt="Luminárias LED" src="/img/uploads/banners-sub-main-navigation/luminarias-led.png">
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -544,7 +831,27 @@ const slideOptionsCategories = {
                                 </a>
                             </div>
                             <div class="main-navigation-list-item-dropdown-content">
-
+                                <%- await include('../../helpers/product-showcase/index', { 
+                                    data: {
+                                        items,
+                                        countdownProducts: true,
+                                        slideOptions: {
+                                            spaceBetween: 10,
+                                            navigation: 'default',
+                                            breakpoints: {
+                                                0: {
+                                                    slidesPerView: 3,
+                                                },
+                                                767: {
+                                                    slidesPerView: 4,
+                                                },
+                                                1100: {
+                                                    slidesPerView: 6,
+                                                }
+                                            }
+                                        },
+                                    }
+                                }) %>
                             </div>
                         </div>
                     </div>
