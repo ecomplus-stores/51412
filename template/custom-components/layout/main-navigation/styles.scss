@@ -295,11 +295,6 @@ body.header-fixed .main-navigation .main-navigation-list-item {
     margin: 15px 0 0 0;
 }
 
-
-.main-navigation .product-showcase .product-item {
-    position: relative;
-}
-
 .main-navigation .product-showcase .product-countdown-custom {
     position: absolute;
     bottom: 18px;
@@ -332,21 +327,24 @@ body.header-fixed .main-navigation .main-navigation-list-item {
     padding: 20px 0 0 0;
 }
 
+.main-navigation .product-showcase .product-card__pictures img,
 .main-navigation .product-showcase .product-card__pictures {
     height: 115px;
-}
-
-.main-navigation .product-showcase .product-card__pictures img {
-    max-height: 115px;
 }
 
 .main-navigation .product-showcase .product-item {
     border: 2px solid transparent;
     border-radius: 5px;
-    height: 270px;
+    height: 271px;
     display: block;
     width: 100%;
     box-sizing: border-box;
+    position: relative;
+}
+
+.main-navigation .product-showcase .prices__discount {
+    margin: 0;
+    font-size: 18px;
 }
 
 .main-navigation .product-showcase .product-card__name {
@@ -384,9 +382,11 @@ body.header-fixed .main-navigation .main-navigation-list-item {
 .main-navigation .product-showcase .product-countdown-custom .countdown-item span,
 .main-navigation .product-showcase .product-card__favorite,
 .main-navigation .product-showcase .product-card__rating-custom,
-.main-navigation .product-showcase span.product-card__offer-stamp,
+.main-navigation .product-showcase .product-card__offer-stamp,
 .main-navigation .product-showcase .product-card__buy,
-.main-navigation .product-showcase .prices.product-card__prices span.prices__compare,
+.main-navigation .product-showcase .prices.product-card__prices .prices__compare,
+.main-navigation .product-showcase .prices.product-card__prices .prices__value,
+.main-navigation .product-showcase .prices.product-card__prices .prices__installments,
 .main-navigation .product-showcase-listing .swiper-clip:before, 
 .main-navigation .product-showcase-listing .swiper-clip:after {
     display: none;
@@ -417,3 +417,17 @@ body.header-fixed .main-navigation .main-navigation-list-item {
     transition: all .5s .1s;
     z-index: 1;
 }
+
+.main-navigation .product-showcase .product-card > section > * {
+    width: auto !important;
+}
+
+.main-navigation .product-showcase .product-item .skeleton-loading.skeleton-installments {
+    display: none !important;
+}
+
+.main-navigation .product-showcase .product-item .skeleton-loading.skeleton-pix {
+    height: 20px!important;
+    margin: 0px auto 0;
+}
+

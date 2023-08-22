@@ -134,4 +134,10 @@
 
 .triple-block .product-showcase .product-item .product-card {
     border: none;
+    padding-top: 20px
+}
+
+.triple-block .product-showcase .product-item .product-card__pictures, 
+.triple-block .product-showcase .product-item .product-card__pictures img {
+    height: 156px;
 }
