@@ -163,7 +163,7 @@
     font-size: 10px;
     word-spacing: 0px;
     font-weight: 600;
-    margin: 8px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     display: block;
     line-height: 1;
     color: var(--cor-amarelo-2);
@@ -175,6 +175,11 @@
     justify-content: center;
     gap: 4px;
     color: var(--cor-amarelo-1);
+}
+
+.product-showcase .product-item .product-card__rating-custom-stars i {
+    line-height: 1;
+    font-size: 20px;
 }
 
 .product-showcase .product-item .product-card__pictures {
@@ -417,9 +422,8 @@
         line-height: 2px;
     }
     
-    .product-showcase .product-item .product-card__rating-custom-stars svg {
-        width: 15px;
-        height: 15px;
+    .product-showcase .product-item .product-card__rating-custom-stars i {
+        font-size: 16px;
     }
     
     .product-showcase .product-item .product-card__rating-custom-stars {
