@@ -171,6 +171,7 @@
 
 .product-showcase .product-item .product-card__rating-custom-stars {
     color: var(--cor-amarelo-1);
+    display: block !important;
 }
     
 .product-showcase .product-item .product-card__rating-custom-stars:before {
