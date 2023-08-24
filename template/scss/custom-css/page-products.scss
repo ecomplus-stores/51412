@@ -77,24 +77,24 @@ body#page-products .product-info .prices--big span.prices__compare > small:last-
 }
 
 body#page-products .product-info .prices--big strong.prices__value {
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 900;
     color: var(--cor-vermelho-2);
     display: block;
     line-height: 1;
-    margin: 0 0 10px 0px;
+    margin: 0 0 9px 0px;
 }
 
 body#page-products .product-info strong.prices__value:before {
     content: "por";
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 500;
+    font-size: 18px;
     margin: 0 -2px 0 0;
 }
 
 body#page-products .product-info span.prices__compare {
     font-weight: 800;
-    margin: 12px 0 5px 0;
+    margin: 8px 0 4px 0;
     display: block;
     line-height: 1;
 }
@@ -171,15 +171,15 @@ body#page-products .product-video a:hover {
     color: var(--cor-vermelho-2);
 }
 
-body#page-products .product-save-money {
+body#page-products .product-info .product-save-money {
     font-size: 14px;
     color: var(--cor-verde-1);
     letter-spacing: -0.5px;
     line-height: 1;
-    margin: 2px 0 2px 0;
+    margin: 2px 0 0px 0;
 }
 
-body#page-products .product__buy button.btn-lg.btn-primary {
+body#page-products .product-info .product__buy button.btn-lg.btn-primary {
     max-width: 100%;
     font-family: roboto;
     font-weight: 600;
@@ -198,7 +198,80 @@ body#page-products .product__buy button.btn-lg.btn-primary {
     line-height: 1;
 }
 
-body#page-products .product__buy button.btn-lg.btn-primary:hover {
+body#page-products .product-info .product__buy button.btn-lg.btn-primary:hover {
     background: var(--cor-verde-2);
     border-color: var(--cor-verde-3);
+}
+
+body#page-products .product-info .prices__installments {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+body#page-products .product-info .prices__installments span {
+    color: var(--cor-verde-1);
+}
+
+body#page-products .product-info p.product__prices .prices > span:not([class]) {
+    transform: none !important;
+    width: 100%;
+}
+
+body#page-products .product-info p.product__prices .prices > span:not([class]) > * {
+    transform: none !important;
+}
+
+body#page-products .product-info .prices__installments {
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    line-height: 1;
+}
+
+body#page-products .product-info .prices__installments span {
+    color: var(--cor-verde-1);
+}
+
+body#page-products .product-info p.product__prices .prices > span:not([class]) {
+    transform: none !important;
+    width: 100%;
+}
+
+body#page-products .product-info p.product__prices .prices > span:not([class]) > * {
+    transform: none !important;
+}
+
+body#page-products .product-info .prices__discount {
+    font-size: 32px;
+    letter-spacing: -0.7px;
+    color: var(--cor-verde-1);
+    line-height: 1;
+}
+
+body#page-products .product-info .prices__discount span {
+    font-weight: 900 !important;
+}
+
+body#page-products .product-info .prices__discount small {
+    text-transform: lowercase;
+    font-size: 14px;
+    font-weight: 900;
+    margin: 0 0 0 -4px;
+}
+
+body#page-products .product-info .prices__discount:before {
+    content: "ou";
+    font-size: 14px;
+    font-weight: 900;
+    margin-right: -4px;
+}
+
+body#page-products .product-info p.product__prices {
+    display: inline-block;
+}
+
+body#page-products .product-info .product__buy {
+    float: right;
 }
