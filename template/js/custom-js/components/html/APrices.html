@@ -2,6 +2,17 @@
   class="prices"
   :class="{ 'prices--literal': isLiteral, 'prices--big': isBig }"
 >
+  <template v-if="isBig && comparePrice">
+    <div class="product-price-dropped">
+      <i class="i-arrow-down"></i>
+      <span>baixou</span>
+    </div>
+    <div class="product-save-money">
+      <span>Economize</span>
+      <b>{{ formatMoney(comparePrice - price) }}</b>
+    </div>
+  </template>
+
   <span
     v-if="comparePrice"
     class="prices__compare"

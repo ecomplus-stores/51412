@@ -3,6 +3,9 @@
     "html.validate.styles": false,
     "workbench.editor.labelFormat": "short",
     "editor.tabSize": 4,
+    "files.associations": {
+        "**/html/*.html": "vue-html"
+    },
     "emmet.includeLanguages": {
         "ejs": "html"
     },
