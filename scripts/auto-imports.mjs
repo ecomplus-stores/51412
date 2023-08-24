@@ -24,7 +24,9 @@ const createAll = () => {
         return
       }
       if (filename.endsWith('.js')) {
-        js += `import '${filename.replace(`template/${folder}/`, './')}'\n`
+        if (!/\/_[^/]+\.js$/.test(filename)) {
+          js += `import '${filename.replace(`template/${folder}/`, './')}'\n`
+        }
       } else {
         scss += `@import '${filename.replace(`template/${folder}/`, './')}';\n`
       }
