@@ -1,0 +1,130 @@
+<%
+const skus = ['PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20'];
+const search = new _.EcomSearch()
+let items = [];
+
+try {
+    await search.setSkus(skus).setSortOrder('news').fetch(true)
+
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+    console.error(err)
+}
+
+const dataTripleBlockProducts = {
+    items,
+    slideOptions: {
+        navigation: 'default',
+        slidesPerView: 1,
+        spaceBetween: 0,
+    }
+}
+%>
+
+<div class="triple-block">
+    <div class="container">
+        <div class="triple-block-wrapper">
+            <div class="triple-block-item triple-block-item-1">
+                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
+                    <div class="swiper-clip">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img alt="Fitas LED" src="/img/uploads/triple-block-1/fitas-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Luminárias LED" src="/img/uploads/triple-block-1/luminarias-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Refletores LED" src="/img/uploads/triple-block-1/refletores-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Spots LED" src="/img/uploads/triple-block-1/spots-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Lâmpadas LED" src="/img/uploads/triple-block-1/lampadas-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Pendentes LED" src="/img/uploads/triple-block-1/pendentes-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Lustres LED" src="/img/uploads/triple-block-1/lustres-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Acessórios LED" src="/img/uploads/triple-block-1/acessorios-led.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="triple-block-item triple-block-item-2">
+                <div class="triple-block-item-countdown">
+                    <div class="triple-block-item-countdown-title">Ofertas Imbatíveis</div>
+                    <%- await include('@/custom-components/helpers/countdown/index') %>
+                </div>
+
+                <div class="triple-block-item-products">
+                    <%- await include('@/custom-components/helpers/product-showcase/index', { data: dataTripleBlockProducts }) %>
+                </div>
+            </div>
+
+            <div class="triple-block-item triple-block-item-3">
+                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
+                    <div class="swiper-clip">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="eager" alt="Cumpo de Desconto" src="/img/uploads/triple-block-3/cupom-desconto.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Frete Grátis" src="/img/uploads/triple-block-3/frete-gratis.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/">
+                                    <img loading="lazy" alt="Campeão de Vendas" src="/img/uploads/triple-block-3/campeao-de-vendas.png.webp" width="407" height="529">
+                                </a>
+                            </div>
+                        </div>
+        
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+
+
+
+<!-- ├── custom-components/
+│   ├── pages/ -> # Arquivos de estruturação de layout.
+│       ├─── pages/ -> 
+│       ├─── pages/ -> 
+│   ├── layout/ -> # Arquivos reutilizaveis em todos layouts.
+│   ├── helpers/ -> # Arquivos de estruturação de layout. -->
+

@@ -1,0 +1,17 @@
+<%
+  const { width, height } = _.tryImageSize(data.src)
+%>
+
+<img 
+    <% if (data.class) { %>
+        class="<%= data.class %>"
+    <% } %>
+    <% if (data.loading) { %>
+        loading="<%= data.loading %>"
+    <% } %>
+    src="<%= data.src %>" 
+    title="<%= data.alt %>" 
+    alt="<%= data.alt %>" 
+    width="<%= width %>" 
+    height="<%= height %>"
+/>

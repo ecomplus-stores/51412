@@ -1,0 +1,243 @@
+<%
+const skus = ['PG-RT36WBN-30X60-KIT50', 'ARA-5WBQ-PT-KIT10', 'XL-5050VE-KIT1', 'PS-R25WBF-KIT20', 'GU10-6-5WBQ-KIT5', '5050-SMD-3LBF-KIT20'];
+
+const search = new _.EcomSearch()
+let items = [];
+
+try {
+    await search.setSkus(skus).setSortOrder('news').fetch(true)
+
+    items = search.getItems().filter(item => _.ecomUtils.inStock(item))
+} catch (err) {
+    console.error(err)
+}
+
+%>
+
+<div class="showcases">
+    <%- await include('@/custom-components/helpers/product-showcase/index', { 
+        data: {
+            title: 'Mais Vendidos',
+            countdownTitle: 'Termina em:',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        }
+    }) %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Kits Especiais',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Refletores Holofotes LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+    
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Luminárias LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+
+    <%- await include('@/custom-components/layout/featured-deals/index') %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Kits Spots LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Lâmpada LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Fita de LED',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+
+    <%- await include('@/custom-components/helpers/product-showcase/index', {
+        data: {
+            title: 'Lançamentos',
+            link: '/',
+            items,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        } 
+    }) %>
+</div>

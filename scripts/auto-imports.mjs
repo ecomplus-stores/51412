@@ -3,7 +3,7 @@
 const _files = {}
 const createAll = () => {
   ;['custom-components', 'custom-plugins'].forEach(async (folder) => {
-    const files = await glob([`template/${folder}/**/*.{js,scss,css}`])
+    const files = await glob([`template/pages/@/${folder}/**/*.{js,scss,css}`])
     if (_files[folder]) {
       let isChanged = files.length !== _files[folder].length
       if (!isChanged) {
@@ -25,14 +25,14 @@ const createAll = () => {
       }
       if (filename.endsWith('.js')) {
         if (!/\/_[^/]+\.js$/.test(filename)) {
-          js += `import '${filename.replace(`template/${folder}/`, './')}'\n`
+          js += `import '${filename.replace(`template/pages/@/${folder}/`, './')}'\n`
         }
       } else {
-        scss += `@import '${filename.replace(`template/${folder}/`, './')}';\n`
+        scss += `@import '${filename.replace(`template/pages/@/${folder}/`, './')}';\n`
       }
     })
-    fs.writeFile(path.join(__dirname, `../template/${folder}/all.js`), js, 'utf8')
-    fs.writeFile(path.join(__dirname, `../template/${folder}/_all.scss`), scss, 'utf8')
+    fs.writeFile(path.join(__dirname, `../template/pages/@/${folder}/all.js`), js, 'utf8')
+    fs.writeFile(path.join(__dirname, `../template/pages/@/${folder}/_all.scss`), scss, 'utf8')
   })
 }
 

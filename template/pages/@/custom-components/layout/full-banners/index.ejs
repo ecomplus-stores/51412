@@ -1,0 +1,54 @@
+<%
+const slideOptions = {
+    navigation: 'default',
+    slidesPerView: 1,
+    spaceBetween: 0,
+}
+%>
+
+<%#- await include('@/sections/inc/banner', {
+    _, opt: {
+        img: '/img/uploads/full-banners/desktop/chamada.png.webp',
+        mobile_img: '/img/uploads/full-banners/mobile/chamada.png.webp',
+        link: '/teste',
+        alt: 'Banner chamada',
+    }
+}) %>
+
+<div class="full-banners">
+    <div class="container">
+        <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+            <div class="swiper-clip">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <%- await include('@/custom-components/helpers/image/index', {
+                                data: {
+                                    src: '/img/uploads/full-banners/desktop/chamada.png.webp',
+                                    alt: 'Chamada',
+                                    loading: 'eager',
+                                }
+                            }) %>
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <img loading="lazy" alt="Frete Grátis" src="/img/uploads/full-banners/desktop/frete-gratis.png.webp" width="1280" height="466">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="/">
+                            <img loading="lazy" alt="RSPM-200WBF" src="/img/uploads/full-banners/desktop/RSPM-200WBF.png.webp" width="1280" height="466">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+</div>

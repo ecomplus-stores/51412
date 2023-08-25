@@ -1050,6 +1050,9 @@
 
     --cor-amarelo-1: #ffc240;
     --cor-amarelo-2: #e7ae35;
+
+    --cor-laranja-1: #f8a264;
+    --cor-laranja-2: #ea8339;
 }
 
 // KEYFRAMES 
@@ -1136,6 +1139,7 @@ body {
 
 img {
     max-width: 100%;
+    height: auto;
 }
 
 // GLIDE JS CAROUSEL
