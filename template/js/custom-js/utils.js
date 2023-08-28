@@ -1,8 +1,22 @@
 window.utils = {
     swiperSlide(){
-        if ($('.swiper').length == 0) return;
+        let target = $('.swiper');
 
-        $('.swiper').each(function(){
+        if (target.length == 0) return;
+
+        target.each(function(){
+            const startOnlyDevice = $(this).attr('data-start-only-device');
+
+            if (startOnlyDevice) {
+                if (startOnlyDevice == 'desktop' && window.innerWidth < 767) {
+                    return;
+                }
+
+                if (startOnlyDevice == 'mobile' && window.innerWidth > 767) {
+                    return;
+                }
+            }
+
             const slideOptions = $(this).data().slideOptions;
             const slideHasThumbs = $(this).data().targetSwiperThumbs;
 
@@ -37,19 +51,35 @@ window.utils = {
         });
     },
 
-    yuukCountdown(target){
-        const element = target || $('.countdown');
+    yuukCountdown(){
+        let target = $('.countdown');
     
-        if (element.length == 0) return;
+        if (target.length == 0) return;
 
-        element.yuukCountdown({
-            starttime: '2016/11/11 00:00:00',
-            endtime: '2030/12/30 00:00:00'
-        });
+        target.each(function(){
+            const startOnlyDevice = $(this).attr('data-start-only-device');
+
+            if (startOnlyDevice) {
+                if (startOnlyDevice == 'desktop' && window.innerWidth < 767) {
+                    return;
+                }
+
+                if (startOnlyDevice == 'mobile' && window.innerWidth > 767) {
+                        return;
+                }
+            }
+
+            $(this).yuukCountdown({
+                starttime: '2016/11/11 00:00:00',
+                endtime: '2030/12/30 00:00:00'
+            });
+        })
     },
 
     scrollLock(){
-        $('.scroll-lock').scrollLock();
+        if (window.innerWidth > 767) {
+            $('.scroll-lock').scrollLock();
+        }
     },
 
     initPlugins(){

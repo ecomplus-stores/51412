@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header d-none d-md-block">
     <div class="container">
         <div class="header-wrapper">
             <div class="header-logo">
@@ -61,7 +61,7 @@
                         <div class="header-cart-wrapper">
                             <a id="cart-button" role="button" href="/app/#/cart" title="<%= _.dictionary('openCart') %>">
                                 <svg fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M80 0C87.47 0 93.95 5.17 95.6 12.45L100 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H158.2L172.8 352H496C504.8 352 512 359.2 512 368C512 376.8 504.8 384 496 384H160C152.5 384 146.1 378.8 144.4 371.5L67.23 32H16C7.164 32 0 24.84 0 16C0 7.164 7.164 0 16 0H80zM107.3 64L150.1 256H487.8L541.8 64H107.3zM128 456C128 425.1 153.1 400 184 400C214.9 400 240 425.1 240 456C240 486.9 214.9 512 184 512C153.1 512 128 486.9 128 456zM184 480C197.3 480 208 469.3 208 456C208 442.7 197.3 432 184 432C170.7 432 160 442.7 160 456C160 469.3 170.7 480 184 480zM512 456C512 486.9 486.9 512 456 512C425.1 512 400 486.9 400 456C400 425.1 425.1 400 456 400C486.9 400 512 425.1 512 456zM456 432C442.7 432 432 442.7 432 456C432 469.3 442.7 480 456 480C469.3 480 480 469.3 480 456C480 442.7 469.3 432 456 432z"></path></svg>
-                                <span id="cart-count" class="animation-bounce"></span>
+                                <span id="cart-count" class="animation-bounce">0</span>
                             </a>
                         </div>
                     </div>
@@ -84,6 +84,68 @@
         </div>
     </div>
 </div>
+
+
+<div class="header d-block d-md-none">
+    <div class="container">
+        <div class="header-wrapper">
+            <div class="header-bars">
+                <div>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="header-logo">
+                <a href="/">
+                    <%- await include('@/layout/inc/logo', { _ }) %>
+                </a>
+            </div>
+
+            <div class="header-actions">
+                <div class="header-account">
+                    <a href="#!">
+                        <svg fill="currentColor" width="18" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 511.97"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM224 32c52.94 0 96 43.06 96 96c0 52.93-43.06 96-96 96S128 180.9 128 128C128 75.06 171.1 32 224 32zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM413.3 480H34.66C33.2 480 32 478.8 32 477.3C32 399.4 95.4 336 173.3 336h101.3C352.6 336 416 399.4 416 477.3C416 478.8 414.8 480 413.3 480z"></path></svg>
+                    </a>
+                </div>
+        
+                <div class="header-cart">
+                    <a id="cart-button" role="button" href="/app/#/cart" title="<%= _.dictionary('openCart') %>">
+                        <svg fill="currentColor" width="28" height="28" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M80 0C87.47 0 93.95 5.17 95.6 12.45L100 32H541.8C562.1 32 578.3 52.25 572.6 72.66L518.6 264.7C514.7 278.5 502.1 288 487.8 288H158.2L172.8 352H496C504.8 352 512 359.2 512 368C512 376.8 504.8 384 496 384H160C152.5 384 146.1 378.8 144.4 371.5L67.23 32H16C7.164 32 0 24.84 0 16C0 7.164 7.164 0 16 0H80zM107.3 64L150.1 256H487.8L541.8 64H107.3zM128 456C128 425.1 153.1 400 184 400C214.9 400 240 425.1 240 456C240 486.9 214.9 512 184 512C153.1 512 128 486.9 128 456zM184 480C197.3 480 208 469.3 208 456C208 442.7 197.3 432 184 432C170.7 432 160 442.7 160 456C160 469.3 170.7 480 184 480zM512 456C512 486.9 486.9 512 456 512C425.1 512 400 486.9 400 456C400 425.1 425.1 400 456 400C486.9 400 512 425.1 512 456zM456 432C442.7 432 432 442.7 432 456C432 469.3 442.7 480 456 480C469.3 480 480 469.3 480 456C480 442.7 469.3 432 456 432z"></path></svg>
+                        <span id="cart-count" class="animation-bounce">0</span>
+                    </a>
+                </div>
+        
+                <div class="header-favorites">
+                    <a href="#">
+                        <svg fill="currentColor" width="22" height="22" xmlns="http://www.w3.org/2000/svg" viewBox="0 42.15 512 437.85"><path d="M255.1 96L267.1 84.02C300.6 51.37 347 36.51 392.6 44.1C461.5 55.58 512 115.2 512 185.1V190.9C512 232.4 494.8 272.1 464.4 300.4L283.7 469.1C276.2 476.1 266.3 480 256 480C245.7 480 235.8 476.1 228.3 469.1L47.59 300.4C17.23 272.1 0 232.4 0 190.9V185.1C0 115.2 50.52 55.58 119.4 44.1C164.1 36.51 211.4 51.37 244 84.02L255.1 96zM255.1 141.3L221.4 106.6C196.1 81.31 160 69.77 124.7 75.66C71.21 84.58 31.1 130.9 31.1 185.1V190.9C31.1 223.6 45.55 254.7 69.42 277L250.1 445.7C251.7 447.2 253.8 448 255.1 448C258.2 448 260.3 447.2 261.9 445.7L442.6 277C466.4 254.7 480 223.6 480 190.9V185.1C480 130.9 440.8 84.58 387.3 75.66C351.1 69.77 315.9 81.31 290.6 106.6L255.1 141.3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <div class="header-search">
+                <form class="header__search mt-2 mt-md-3 mt-lg-0" id="search-form" action="/search" method="get">
+                    <input type="search" name="term" placeholder="Procure em mais de 200.000 produtos" aria-label="Procure em mais de 200.000 produtos" class="header__search-input form-control" id="search-input">
+                    
+                    <button type="submit" class="header__search-btn" aria-label="Procure em mais de 200.000 produtos">
+                        <svg width="22" height="18" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.03 512" fill="currentColor"><path d="M507.3 484.7l-141.5-141.5C397 306.8 415.1 259.7 415.1 208c0-114.9-93.13-208-208-208S-.0002 93.13-.0002 208S93.12 416 207.1 416c51.68 0 98.85-18.96 135.2-50.15l141.5 141.5C487.8 510.4 491.9 512 496 512s8.188-1.562 11.31-4.688C513.6 501.1 513.6 490.9 507.3 484.7zM208 384C110.1 384 32 305 32 208S110.1 32 208 32S384 110.1 384 208S305 384 208 384z"></path></svg>
+                    </button>
+
+                    <div id="instant-search">
+                        <!--
+                            `InstantSearch` should be open on input focus:
+                            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/InstantSearch.html
+                        -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <div id="login-modal">
     <!--

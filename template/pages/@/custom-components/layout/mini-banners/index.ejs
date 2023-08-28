@@ -1,19 +1,37 @@
-<div class="mini-banners">
+<div class="mini-banners d-none d-md-block">
     <div class="container">
         <div class="mini-banners-wrapper">
             <div class="mini-banners-item mini-banners-item-1">
                 <a href="/">
-                    <img loading="lazy" alt="Lançamentos LED" src="/img/uploads/mini-banners/lancamentos-led.png.webp" width="407" height="529">
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/mini-banners/lancamentos-led.png.webp',
+                            alt: 'Lançamentos LED',
+                            loading: 'lazy',
+                        }
+                    }) %>
                 </a>
             </div>
             <div class="mini-banners-item mini-banners-item-2">
                 <a href="/">
-                    <img loading="lazy" alt="Refletores LED" src="/img/uploads/mini-banners/refletores-led.png.webp" width="407" height="529">
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/mini-banners/refletores-led.png.webp',
+                            alt: 'Refletores LED',
+                            loading: 'lazy',
+                        }
+                    }) %>
                 </a>
             </div>
             <div class="mini-banners-item mini-banners-item-3">
                 <a href="/">
-                    <img loading="lazy" alt="Refletores LED" src="/img/uploads/mini-banners/super-ofertas-led.png.webp" width="407" height="529">
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/mini-banners/super-ofertas-led.png.webp',
+                            alt: 'Super Ofertas LED',
+                            loading: 'lazy',
+                        }
+                    }) %>
                 </a>
             </div>
         </div>

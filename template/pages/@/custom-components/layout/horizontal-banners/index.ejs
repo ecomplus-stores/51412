@@ -6,30 +6,54 @@ const slideOptions = {
 } 
 %>
 
-<div class="horizontal-banners">
+<div class="horizontal-banners d-none d-md-block">
     <div class="container">
         <div class="horizontal-banners-wrapper">
-            <div class="swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+            <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
                 <div class="swiper-clip">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <a href="/">
-                                <img alt="Refletores LED" src="https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-wireframe-refletores-07-06-23.png" width="1280" height="325">
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/horizontal-banners/refletores-led.png.webp',
+                                        alt: 'Refletores LED',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="/">
-                                <img alt="Luminárias LED" src="https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-wireframe-luminaria-05-06-23.png" width="1280" height="325">
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/horizontal-banners/luminarias-led.png.webp',
+                                        alt: 'Luminárias LED',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="/">
-                                <img alt="Lustres LED" src="https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-wireframe-lustres-05-06-23.png" width="1280" height="325">
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/horizontal-banners/lustres-led.png.webp',
+                                        alt: 'Lustres LED',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
                             </a>
                         </div>
                         <div class="swiper-slide">
                             <a href="/">
-                                <img alt="Spots LED" src="https://cdn.awsli.com.br/257/257163/arquivos/banner-horizontal-wireframe-spots-05-06-23.png" width="1280" height="325">
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/horizontal-banners/spots-led.png.webp',
+                                        alt: 'Spots LED',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
                             </a>
                         </div>
                     </div>

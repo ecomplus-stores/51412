@@ -1,8 +1,14 @@
 <div class="top-bar d-none d-md-block">
     <div class="container">
-        <div class="top-bar-wrapper">
+        <div class="top-bar-wrapper d-none d-md-block">
             <a href="/">
-                <img loading="eager" width="1280" height="45" alt="LED Ofertas frete grátis expresso para todo o brasil!" title="LED Ofertas frete grátis expresso para todo o brasil!" src="/img/uploads/top-bar/banner-top-bar.png.webp">
+                <%- await include('@/custom-components/helpers/image/index', {
+                    data: {
+                        src: '/img/uploads/top-bar/banner-top-bar.png.webp',
+                        alt: 'LED Ofertas frete grátis expresso para todo o brasil!',
+                        loading: 'eager',
+                    }
+                }) %>
             </a>
         </div>
     </div>
@@ -11,12 +17,19 @@
 <div class="top-bar d-block d-md-none">
     <div class="container">
         <div class="top-bar-wrapper">
-            <div class="top-bar-close"></div>
+            <div class="top-bar-close">×</div>
             <div class="top-bar-content">
                 <a href="/">
-                    <img loading="eager" width="1280" height="45" alt="LED Ofertas frete grátis expresso para todo o brasil!" title="LED Ofertas frete grátis expresso para todo o brasil!" src="/img/uploads/top-bar/banner-top-bar-mobile.png.webp">
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/top-bar/banner-top-bar-mobile.png.webp',
+                            alt: 'LED Ofertas frete grátis expresso para todo o brasil!',
+                            loading: 'eager',
+                        }
+                    }) %>
                 </a>
             </div>
         </div>
     </div>
 </div>
+

@@ -13,6 +13,7 @@ try {
 
 const dataTripleBlockProducts = {
     items,
+    startOnlyDevice: 'desktop',
     slideOptions: {
         navigation: 'default',
         slidesPerView: 1,
@@ -21,51 +22,99 @@ const dataTripleBlockProducts = {
 }
 %>
 
-<div class="triple-block">
+<div class="triple-block d-none d-md-block">
     <div class="container">
         <div class="triple-block-wrapper">
             <div class="triple-block-item triple-block-item-1">
-                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
+                <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
                     <div class="swiper-clip">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img alt="Fitas LED" src="/img/uploads/triple-block-1/fitas-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/fitas-led.png.webp',
+                                            alt: 'Fitas lED',
+                                            loading: 'eager',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Luminárias LED" src="/img/uploads/triple-block-1/luminarias-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/luminarias-led.png.webp',
+                                            alt: 'Luminárias LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Refletores LED" src="/img/uploads/triple-block-1/refletores-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/refletores-led.png.webp',
+                                            alt: 'Refletores LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Spots LED" src="/img/uploads/triple-block-1/spots-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/spots-led.png.webp',
+                                            alt: 'Spots LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Lâmpadas LED" src="/img/uploads/triple-block-1/lampadas-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/lampadas-led.png.webp',
+                                            alt: 'Lâmpadas LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Pendentes LED" src="/img/uploads/triple-block-1/pendentes-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/pendentes-led.png.webp',
+                                            alt: 'Pendentes LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Lustres LED" src="/img/uploads/triple-block-1/lustres-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/lustres-led.png.webp',
+                                            alt: 'Lustres LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Acessórios LED" src="/img/uploads/triple-block-1/acessorios-led.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-1/acessorios-led.png.webp',
+                                            alt: 'Acessórios LED',
+                                            loading: 'lazy',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                         </div>
@@ -76,10 +125,15 @@ const dataTripleBlockProducts = {
                     </div>
                 </div>
             </div>
+
             <div class="triple-block-item triple-block-item-2">
                 <div class="triple-block-item-countdown">
                     <div class="triple-block-item-countdown-title">Ofertas Imbatíveis</div>
-                    <%- await include('@/custom-components/helpers/countdown/index') %>
+                    <%- await include('@/custom-components/helpers/countdown/index', { 
+                        data: {
+                            startOnlyDevice: 'desktop'
+                        }
+                    }) %>
                 </div>
 
                 <div class="triple-block-item-products">
@@ -88,7 +142,7 @@ const dataTripleBlockProducts = {
             </div>
 
             <div class="triple-block-item triple-block-item-3">
-                <div class="swiper" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
+                <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(dataTripleBlockProducts.slideOptions) %>'>
                     <div class="swiper-clip">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">

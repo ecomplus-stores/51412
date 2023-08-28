@@ -1,3 +1,42 @@
-.top-bar {
-    background: #000;
+@media (min-width: 767px) {
+    .top-bar {
+        background: #000;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .top-bar {
+        background: #fff;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .top-bar .container {
+        padding: 0;
+    }
+    
+    .top-bar .top-bar-close {
+        font-size: 34px;
+        padding: 0 8px 0 8px;
+        position: relative;
+        top: -2px;
+        color: #cd0c0c;
+    }
+    
+    
+    .top-bar .top-bar-content {
+        padding: 6px 6px 6px 0;
+        background: #fff;
+    }
+    
+    .top-bar .top-bar-content a {
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    
+    .top-bar-wrapper {
+        display: flex;
+        align-items: center;
+    }
 }

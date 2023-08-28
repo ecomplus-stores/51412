@@ -209,6 +209,7 @@
     transition: all 0.3s;
 }
 
+
 .swiper-button-next:not(.swiper-button-disabled):hover, 
 .swiper-button-prev:not(.swiper-button-disabled):hover {
     background: var(--swiper-theme-color-2);
@@ -218,6 +219,11 @@
     opacity: 0.35;
     cursor: auto;
     /*pointer-events: none;*/
+}
+
+.swiper-button-next:not([role="button"]), 
+.swiper-button-prev:not([role="button"]) {
+    display: none;
 }
 
 .swiper-button-next:after, .swiper-button-prev:after {

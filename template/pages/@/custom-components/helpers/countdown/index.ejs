@@ -1,4 +1,9 @@
-<div class="countdown">
+<div 
+    class="countdown" 
+    <% if (data.startOnlyDevice) { %> 
+        data-start-only-device="<%= data.startOnlyDevice %>"    
+    <% } %>
+>
     <div class="countdown-wrapper">
         <div class="countdown-item countdown-item-day"><b>00</b><span>dias</span></div>
         <div class="countdown-item-separator countdown-item-separator-1">:</div>
