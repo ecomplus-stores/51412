@@ -232,6 +232,33 @@
     margin: -4px auto 0 auto;
 }
 
+.product-showcase .product-item .product-tag-last-units {
+    position: absolute;
+    left: 62px;
+    background: #fff;
+    border-radius: 45px;
+    font-size: 8px;
+    height: 45px;
+    min-width: auto;
+    top: 11px;
+    width: 45px;
+    z-index: 1;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 0 0 2px 0;
+    color: var(--cor-vermelho-2);
+    border: 2px solid var(--cor-vermelho-2);
+}
+
+.product-showcase .product-item .product-tag-last-units span {
+    line-height: 1;
+}
+
 .product-showcase .product-card > section {
     flex-wrap: wrap;
     flex-direction: unset;
@@ -553,5 +580,57 @@
     .product-showcase .product-item .product-card__rating-custom-stars {
         text-align: left;
         line-height: 1;
+    }
+
+    .product-showcase .product-showcase-title-link a {
+        border: none;
+        height: auto;
+        line-height: 1;
+        font-size: 13px;
+        padding: 2px 0 0 2px;
+        text-decoration: underline;
+    }
+
+    .product-showcase .product-showcase-title-countdown-text {
+        display: none;
+    }
+    
+    .product-showcase .product-showcase-title-countdown-wrapper {
+        gap: 5px;
+    }
+    
+    .product-showcase .product-showcase-title-countdown-icon svg {
+        width: 17px;
+        position: relative;
+    }
+    
+    .product-showcase .product-showcase-title .countdown-item b {
+        font-size: 18px;
+        min-width: 16px;
+        text-align: center;
+    }
+    
+    .product-showcase .product-showcase-title .countdown-item-separator {
+        font-size: 16px;
+        font-weight: 800;
+        height: 14px;
+        line-height: 10px;
+    }
+
+    .product-showcase .product-card__buy-loading {
+        margin: auto;
+        bottom: 0;
+        top: 0;
+        right: 0;
+    }
+
+    .product-showcase .product-item .product-tag-last-units {
+        width: 35px;
+        height: 35px;
+        border-width: 1px;
+        left: 50px;
+        top: 10px;
+        font-size: 7px;
+        padding: 0 0 0 0;
     }
 }

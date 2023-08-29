@@ -14,13 +14,20 @@ try {
 
 const slideOptions = {
     navigation: 'default',
-    slidesPerView: 3,
-    spaceBetween: 10,
+    breakpoints: {
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 5,
+        },
+        767: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        }
+    }
 }
-
 %>
 
-<div class="featured-deals">
+<div class="featured-deals d-none d-md-block">
     <div class="product-showcase">
         <div class="container">
             <div class="product-showcase-title">
@@ -40,7 +47,9 @@ const slideOptions = {
                             </div>
 
                             <%- await include('@/custom-components/helpers/countdown/index', {
-                                data: {}
+                                data: {
+                                    startOnlyDevice: 'desktop'
+                                }
                             }) %>
                         </div>
                     </div>
@@ -56,7 +65,49 @@ const slideOptions = {
                 </div>
 
                 <div class="featured-deals-products">
-                    <div class="product-showcase-listing swiper" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                    <div class="product-showcase-listing swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                        <div class="swiper-clip">
+                            <div class="swiper-wrapper">
+                                <% for (let i = 0; i < items.length; i++) { %>
+                                    <div class="swiper-slide">
+                                        <%- await include('@/sections/inc/product-item', {
+                                            _, opt: { item: items[i] }
+                                        }) %>
+                                    </div>
+                                <% } %>
+                            </div>
+                    
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="featured-deals d-block d-md-none">
+    <div class="product-showcase">
+        <div class="container">
+            <div class="featured-deals-wrapper">
+                <div class="featured-deals-texts">
+                    <strong>Oferta Relâmpago</strong>
+                    <p>faltam apenas:</p>
+                </div>
+
+                <div class="featured-deals-countdown">
+                    <%- await include('@/custom-components/helpers/countdown/index', {
+                        data: {
+                            startOnlyDevice: 'mobile'
+                        }
+                    }) %>
+                </div>
+
+                <div class="featured-deals-products">
+                    <div class="product-showcase-listing swiper" data-start-only-device="mobile" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
                         <div class="swiper-clip">
                             <div class="swiper-wrapper">
                                 <% for (let i = 0; i < items.length; i++) { %>

@@ -56,3 +56,79 @@
 .featured-deals .swiper-clip {
     border-radius: 5px;
 }
+
+@media (max-width: 767px) {
+    .featured-deals .featured-deals-texts strong {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: -1px;
+        color: var(--cor-vermelho-2);
+        text-align: center;
+        margin: 0 0 13px 0;
+        display: block;
+        line-height: 1;
+    }
+    
+    .featured-deals .featured-deals-wrapper {
+        display: block;
+        margin: 25px 0 0 0;
+        background: #fff;
+        padding: 15px 7px 7px 7px;
+        border-radius: 8px;
+        box-shadow: 1px 1px 3px 0 rgb(0 0 0 / 5%);
+        border: 2px solid var(--cor-vermelho-2) !important;
+    }
+    
+    .featured-deals .featured-deals-texts p {
+        color: var(--cor-vermelho-2);
+        font-size: 16px;
+        letter-spacing: 0;
+        margin: 0;
+        text-align: center;
+        line-height: 1;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+    }
+    
+    .featured-deals .product-showcase .swiper-pagination {
+        display: none;
+    }
+    
+    .featured-deals .featured-deals-countdown .countdown-item b {
+        font-size: 22px;
+        font-weight: 800;
+        line-height: 1;
+    }
+    
+    .featured-deals .featured-deals-countdown .countdown-item span {
+        font-size: 11px;
+    }
+    
+    .featured-deals .featured-deals-countdown .countdown-wrapper {
+        gap: 5px;
+        color: var(--cor-vermelho-2);
+    }
+    
+    .featured-deals .featured-deals-countdown .countdown-item-separator {
+        font-weight: 800;
+        padding: 0 0 12px 0;
+    }
+    
+    .featured-deals .product-showcase .product-item .product-card {
+        box-shadow: none !important;
+        border: 1px solid #dddddd !important;
+    }
+
+    .featured-deals .featured-deals-products {
+        margin: 15px 0 0 0;
+    }
+
+    .featured-deals .product-showcase .swiper-button-next {
+        right: -21px;
+    }
+    
+    .featured-deals .product-showcase .swiper-button-prev {
+        left: -21px;
+    }
+}

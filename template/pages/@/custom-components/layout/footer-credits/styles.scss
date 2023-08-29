@@ -11,3 +11,14 @@
     text-align: center;
     margin: 0;
 }
+
+@media (max-width: 767px) {
+    .footer-credits p {
+        font-size: 11px;
+    }
+    
+    .footer-credits {
+        padding: 20px 0;
+        background: var(--cor-vermelho-2);
+    }
+}

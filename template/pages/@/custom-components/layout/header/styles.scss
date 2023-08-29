@@ -11,7 +11,6 @@
     .header {
         background: #fff;
         padding: 0;
-        box-shadow: none;
         border: none;
     }
 
@@ -250,7 +249,7 @@
         padding: 0;
         background: #fff;
         border: none;
-        box-shadow: none;
+        box-shadow: 0 3px 3px 0 rgb(0 0 0 / 7%);
     }
     
     .header .header-wrapper {
@@ -347,5 +346,51 @@
         padding: 0 8px 6px 6px;
         top: 0;
         color: #676767;
+    }
+
+    .header .header-account > a {
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        padding: 6px 7px;
+        position: relative;
+        top: -1px;
+    }
+    
+    .header .header-cart {
+        position: relative;
+        padding: 0 13px 0 4px;
+    }
+    
+    .header .header-account a > svg {
+        color: var(--cor-vermelho-2);
+    }
+    
+    .header .header-cart > a > svg {
+        color: var(--cor-vermelho-2);
+    }
+    
+    .header span#cart-count {
+        background: var(--cor-vermelho-2);
+        position: absolute;
+        top: 0px;
+        right: 9px;
+        color: #fff;
+        height: 13px;
+        width: 13px;
+        border-radius: 25px;
+        font-size: 8.5px;
+        font-weight: 600;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: -0.5px;
+        padding-right: 1px;
+        padding-top: 2px;
+    }
+    
+    .header .header-favorites > a {
+        display: flex;
+        color: var(--cor-vermelho-2);
     }
 }

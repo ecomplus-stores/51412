@@ -1,0 +1,26 @@
+.most-searched-words ul {
+    white-space: unset;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 18px 0;
+    padding: 0 15px;
+    box-sizing: border-box;
+    gap: 13px;
+    list-style: none;
+}
+
+.most-searched-words a {
+    font-weight: 700;
+    color: var(--cor-vermelho-2);
+    font-size: 15px;
+    display: block;
+    text-decoration: none;
+}
+
+.most-searched-words span {
+    font-weight: 700;
+}
+
+.most-searched-words {
+    margin: 20px 0 0 0;
+}

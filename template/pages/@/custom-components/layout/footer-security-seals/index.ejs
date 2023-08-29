@@ -1,16 +1,199 @@
-<div class="footer-security-seals">
+<%
+const slideOptions = {
+    navigation: 'default',
+    slidesPerView: 2,
+    spaceBetween: 0,
+}
+%>
+
+<div class="footer-security-seals d-none d-md-block">
     <div class="container">
         <div class="footer-security-seals-wrapper">
             <ul>
-                <li><div><img loading="lazy" width="99" height="27" alt="Selo Google" title="Selo Google" src="/img/uploads/security-seals/google-site-seguro.png.webp"></div></li>
-                <li><div><img loading="lazy" width="36" height="60" alt="Great Place To Work" title="Great Place to Work" src="/img/uploads/security-seals/great-place-to-work.png.webp"></div></li>
-                <li><div><img loading="lazy" width="71" height="83" alt="Selo Site Sincero Trustvox" title="Selo Site Sincero Trustvox" src="/img/uploads/security-seals/trustvox.png.webp"></div></li>
-                <li><div><img loading="lazy" width="63" height="81" alt="Selo Abcomm" title="Selo Abcomm" src="/img/uploads/security-seals/abcomm.png.webp"></div></li>
-                <li><div><img loading="lazy" width="49" height="62" alt="Selo Ebit" title="Selo Ebit" src="/img/uploads/security-seals/ebit.png.webp"></div></li>
-                <li><div><img loading="lazy" width="81" height="81" alt="Selo Mercado Pago" title="Selo Mercado Pago" src="/img/uploads/security-seals/mercado-pago.png.webp"></div></li>
-                <li><div><img loading="lazy" width="67" height="82" alt="Selo Site Blindado" title="Selo Site Blindado" src="/img/uploads/security-seals/site-blindado.png.webp"></div></li>
-                <li><div><img loading="lazy" width="74" height="83" alt="Selo Site Protegido" title="Selo Site Protegido" src="/img/uploads/security-seals/site-protegido.png.webp"></div></li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/google-site-seguro.png.webp',
+                            alt: 'Selo Google',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/great-place-to-work.png.webp',
+                            alt: 'Great Place To Work',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/trustvox.png.webp',
+                            alt: 'Selo Site Sincero Trustvox',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/abcomm.png.webp',
+                            alt: 'Selo Abcomm',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/ebit.png.webp',
+                            alt: 'Selo Ebit',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/mercado-pago.png.webp',
+                            alt: 'Selo Mercado Pago',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/site-blindado.png.webp',
+                            alt: 'Selo Site Blindado',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
+                <li>
+                    <%- await include('@/custom-components/helpers/image/index', {
+                        data: {
+                            src: '/img/uploads/security-seals/site-protegido.png.webp',
+                            alt: 'Selo Site Protegido',
+                            loading: 'lazy',
+                        }
+                    }) %>
+                </li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer-security-seals d-block d-md-none">
+    <div class="container">
+        <div class="footer-security-seals-wrapper">
+            <div class="swiper" data-start-only-device="mobile" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                <div class="swiper-clip">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/google-site-seguro.png.webp',
+                                        alt: 'Selo Google',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/great-place-to-work.png.webp',
+                                        alt: 'Great Place To Work',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/trustvox.png.webp',
+                                        alt: 'Selo Site Sincero Trustvox',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/abcomm.png.webp',
+                                        alt: 'Selo Abcomm',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/ebit.png.webp',
+                                        alt: 'Selo Ebit',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/mercado-pago.png.webp',
+                                        alt: 'Selo Mercado Pago',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/site-blindado.png.webp',
+                                        alt: 'Selo Site Blindado',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div>
+                                <%- await include('@/custom-components/helpers/image/index', {
+                                    data: {
+                                        src: '/img/uploads/security-seals/site-protegido.png.webp',
+                                        alt: 'Selo Site Protegido',
+                                        loading: 'lazy',
+                                    }
+                                }) %>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

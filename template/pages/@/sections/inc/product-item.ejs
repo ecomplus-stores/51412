@@ -23,6 +23,10 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
 %>
 
 <article class="product-item" data-product="<%= JSON.stringify(itemData) %>">
+  <div class="product-tag-last-units">
+    <span>últimas</span>
+    <span>unid.</span>
+  </div>
   <div
     class="product-card"
     data-product-id="<%= itemData._id %>"

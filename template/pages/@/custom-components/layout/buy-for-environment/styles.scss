@@ -1,0 +1,34 @@
+@media (max-width: 767px) {
+    .buy-for-environment {
+        margin: 40px 0 0 0;
+    }
+
+    .buy-for-environment .container {
+        padding-right: 0;
+    }
+
+    .buy-for-environment-image {
+        border-radius: 100%;
+        overflow: hidden;
+    }
+
+    .buy-for-environment-item-title {
+        font-size: 13px;
+        font-weight: 500;
+        color: #444;
+        margin: 5px 0 0 0;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+
+    .buy-for-environment-item-title span {
+        display: block;
+        line-height: 1;
+    }
+
+    .buy-for-environment-item-title span:first-child {
+        margin: 0 0 2px 0;
+    }
+}
+
+
