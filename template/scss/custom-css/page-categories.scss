@@ -1,0 +1,84 @@
+body#page-categories .retail-grid-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+body#page-categories .side-navigation .side-navigation-item-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body#page-categories .side-navigation {
+    min-width: 295px;
+}
+
+body#page-categories .side-navigation .side-navigation-item-content > a {
+    padding: 17px 0px 17px 20px;
+    color: #fff;
+    background: var(--cor-vermelho-1);
+    display: block;
+    border-bottom: 1px solid var(--cor-vermelho-5);
+    line-height: 1;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+body#page-categories .side-navigation .side-navigation-item-title {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+}
+
+body#page-categories .side-navigation .side-navigation-item:first-child .side-navigation-item-content > a {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+body#page-categories .side-navigation .side-navigation-item:last-child .side-navigation-item-content > a {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+body#page-categories .side-navigation a {
+    text-decoration: none;
+}
+
+body#page-categories .side-navigation .side-navigation-item-icon i {
+    font-size: 17px;
+}
+
+body#page-categories .side-navigation .side-navigation-item-icon {
+    padding: 0 20px 1px 20px;
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+body#page-categories .side-navigation .side-navigation-item-icon:before {
+    content: "";
+    width: 1px;
+    height: 34px;
+    position: absolute;
+    display: table;
+    background: var(--cor-vermelho-5);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+body#page-categories .side-navigation .side-navigation-item:hover .side-navigation-item-content > a {
+    background: var(--cor-vermelho-2);
+}
+body#page-categories .side-navigation .side-navigation-item-icon:hover {
+    color: #ccc;
+}

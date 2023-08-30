@@ -6,12 +6,10 @@
     <% if (data.class) { %>
         class="<%= data.class %>"
     <% } %>
-    <% if (data.loading) { %>
-        loading="<%= data.loading %>"
-    <% } %>
-    src="<%= data.src %>" 
-    title="<%= data.alt %>" 
-    alt="<%= data.alt %>" 
-    width="<%= width %>" 
+    class="lozad fade"
+    data-src="<%= data.src %>"
+    alt="<%= data.alt %>"
+    title="<%= data.alt %>"
+    width="<%= width %>"
     height="<%= height %>"
 />

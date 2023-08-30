@@ -46,7 +46,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/luminarias-led.png.webp',
                                             alt: 'Luminárias LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -57,7 +56,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/refletores-led.png.webp',
                                             alt: 'Refletores LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -68,7 +66,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/spots-led.png.webp',
                                             alt: 'Spots LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -79,7 +76,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/lampadas-led.png.webp',
                                             alt: 'Lâmpadas LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -90,7 +86,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/pendentes-led.png.webp',
                                             alt: 'Pendentes LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -101,7 +96,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/lustres-led.png.webp',
                                             alt: 'Lustres LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -112,7 +106,6 @@ const dataTripleBlockProducts = {
                                         data: {
                                             src: '/img/uploads/triple-block-1/acessorios-led.png.webp',
                                             alt: 'Acessórios LED',
-                                            loading: 'lazy',
                                         }
                                     }) %>
                                 </a>
@@ -147,17 +140,32 @@ const dataTripleBlockProducts = {
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="eager" alt="Cumpo de Desconto" src="/img/uploads/triple-block-3/cupom-desconto.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-3/cupom-desconto.png.webp',
+                                            alt: 'Cumpo de Desconto',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Frete Grátis" src="/img/uploads/triple-block-3/frete-gratis.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-3/frete-gratis.png.webp',
+                                            alt: 'Frete Grátis',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                             <div class="swiper-slide">
                                 <a href="/">
-                                    <img loading="lazy" alt="Campeão de Vendas" src="/img/uploads/triple-block-3/campeao-de-vendas.png.webp" width="407" height="529">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: '/img/uploads/triple-block-3/campeao-de-vendas.png.webp',
+                                            alt: 'Campeão de Vendas',
+                                        }
+                                    }) %>
                                 </a>
                             </div>
                         </div>

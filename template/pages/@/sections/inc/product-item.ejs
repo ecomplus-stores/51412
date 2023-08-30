@@ -83,9 +83,16 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
       </div>
 
       <div data-slot="title">
+        <% if (opt.productWithTagChampionOfSeals) { %>
+          <div class="product-tag-default product-tag-champion-of-seals">
+            <%= opt.productWithTagChampionOfSeals %>
+          </div>
+        <% } %>
+
         <h3 class="product-card__name">
           <%= itemData.name %>
         </h3>
+
         <div class="product-card__rating-custom">
           <div class="product-card__rating-custom-stars"></div>
           <div class="product-card__rating-custom-text">+ 100.000 avaliações</div>
@@ -101,7 +108,7 @@ if (stamps && Array.isArray(stamps.stamps_list) && stamps.stamps_list.length) {
           --
         <% } %>
       </strong>
-      <div class="skeletons">
+      <div class="skeletons d-none">
         <div class="skeleton-loading skeleton-installments"></div>
         <div class="skeleton-loading skeleton-pix"></div>
       </div>

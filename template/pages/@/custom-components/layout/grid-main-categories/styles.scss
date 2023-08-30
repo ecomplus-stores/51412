@@ -1,0 +1,42 @@
+@media (max-width: 767px) {
+    .grid-main-categories {
+        background: #fff;
+        margin: 25px 0 0 0;
+        padding: 13px 0;
+    }
+
+    .grid-main-categories a {
+        display: block;
+    }
+    
+    .grid-main-categories .grid-main-categories-item-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        background: var(--cor-vermelho-2);
+        border-radius: 50px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    .grid-main-categories > .container {
+        padding-right: 0;
+    }
+    
+    .grid-main-categories .grid-main-categories-item-title {
+        font-size: 13px;
+        font-weight: 500;
+        color: #444;
+        margin: 5px 0 0 0;
+        letter-spacing: -0.5px;
+        text-align: center;
+    }
+    
+    .grid-main-categories .grid-main-categories-item-title span {
+        line-height: 1;
+        display: block;
+    }
+}
