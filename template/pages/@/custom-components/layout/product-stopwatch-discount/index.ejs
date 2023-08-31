@@ -1,0 +1,76 @@
+<%
+let product = '';
+const categories = {
+    ['/refletor-led-branco-frio']: {
+        sku: 'PRO-10WBF'
+    },
+}
+
+try {
+    const data = categories['/' + _.state.slug];
+
+    if (data) {
+        const search = new _.EcomSearch();
+        await search.setSkus([data.sku]).fetch(true);
+
+        product = search.getItems()[0];
+        product.discount_percentage = Math.round((( product.base_price - product.price) * 100) / product.base_price);
+
+        if (product.name.includes('LED')) {
+            product.name_2 = product.name.split('LED')[1].trim();
+            product.name_1 = product.name.replace(product.name_2, '').trim();
+        } else {
+            let productNameSplitted = product.name.split(' ');
+
+            product.name_1 = productNameSplitted.slice(0, productNameSplitted.length / 2).join(' ');
+            product.name_2 = product.name.replace(product.name_2, '').trim();
+        }
+    }
+} catch (error) {
+    console.log('Catch Error "product-stopwatch-discount" ->', error);
+}
+%>
+
+<% if (product) { %>
+    <div class="product-stopwatch-discount d-none d-md-block">
+        <div class="container">
+            <div class="product-stopwatch-discount-wrapper">
+                <a href="/<%= product.slug%>">
+                    <div class="product-stopwatch-discount-info">
+                        <div class="product-stopwatch-discount-image">
+                            <%- await include('@/custom-components/helpers/image/index', {
+                                data: {
+                                    src: product.pictures[0].normal.url,
+                                    alt: product.name,
+                                }
+                            }) %>
+                        </div>
+    
+                        <div class="product-stopwatch-discount-title">
+                            <span><b><%= product.name_1 %></b></span>
+                            <span><%= product.name_2 %></span>
+                        </div>
+    
+                        <div class="product-stopwatch-discount-text">
+                            <span><b><%= product.discount_percentage %>%</b> DE DESCONTO</span>
+                            <span>Oferta por <b>Tempo Limitado</b></span>
+                        </div>
+    
+                        <div class="product-stopwatch-discount-btn">
+                            <b>Comprar</b>
+                        </div>
+                    </div>
+                    <div class="product-stopwatch-discount-countdown">
+                        <svg width="60" height="40" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180.79 727.62"><defs><style>.cls-1,.cls-3,.cls-4{fill:none;stroke:#d00b11;stroke-miterlimit:10;}.cls-1{stroke-width:84px;}.cls-2{fill:#d00b11;}.cls-3{stroke-width:60px;}.cls-4{stroke-width:47px;}</style></defs><g id="Camada_2" data-name="Camada 2"><g id="Camada_1-2" data-name="Camada 1"><circle class="cls-1" cx="829.26" cy="376.09" r="309.53"></circle></g><g id="Camada_2-2" data-name="Camada 2"><path class="cls-2" d="M674.49,91.65c-31.32-48.73-58.79-61.46-78.43-63.79-8.88-1.05-17.3-.12-32.42-3.13A148.51,148.51,0,0,1,507.17,0c1.5,16.64,6.43,39.33,23.71,54C556,75.35,592.26,68.77,596.06,83.29c1.28,4.88-1,12.59-16.38,25.09-9.69,4.33-26.68,10.29-46.36,7.32-52.06-7.85-64.33-67-109.8-72.15C409.58,42,388.13,44,359.73,64.46c-4.57,2.75-33.83,19.7-68,8.37a80.54,80.54,0,0,1-38.7-28.24c13.66,50.29,34.23,68.4,51.24,75.3,15.63,6.33,28.06,3.14,74.25,9.41,17.9,2.43,32.52,5.14,42.28,7.11,3,1.74,23.6,14,27.78,38.9a55.08,55.08,0,0,1-5.22,33.46c-9.63,6.74-47.12,31.28-99.35,26.15-55.78-5.48-88.9-40.94-96.2-49.15-3.23-1.94-38.63-22.37-75.3-5.23-22.82,10.67-33.33,29.91-36.6,36.6,65.58-5.8,118.61,17.43,131.76,54.38,2.71,7.59,5.07,19.55,1.33,36.2-2.95,7.74-11.33,26.32-29.56,33.86-26.82,11.09-66.17-5.33-87.84-45-19.31-32.87-57.95-48.6-93.07-38.69C27.25,266.76,4,294.52,0,328c18.51-9.2,48.21-20.31,75.29-9.42,41.85,16.84,39.05,70.75,80.52,103.53,20.4,16.12,57.71,32,130.72,17.78,5.45-3.64,61.19-39.65,111.8-15.45a88,88,0,0,1,28.32,21.72c10,16.46,6.22,37.31-7.32,48.1-15.51,12.38-40.69,9-53.33-9.41-6.26-3-34.83-16-69-5.23-39.55,12.53-55.22,47-57.51,52.29,5.87-3.51,40.17-23.29,79.48-10.46a91.32,91.32,0,0,1,37.64,24.06c6.77,6.88,38.76,37.92,89.93,39.73,55.3,2,91.12-31.68,97.26-37.64-13.84-35.26-39.25-114.46-21.36-212.48C548.6,191.61,648.68,111.18,674.49,91.65Z"></path></g><g id="Camada_3" data-name="Camada 3"><line class="cls-3" x1="672.63" y1="242.7" x2="853.66" y2="423.73"></line><line class="cls-3" x1="966.6" y1="274.54" x2="817.41" y2="417.45"></line><line class="cls-4" x1="829.26" y1="66.55" x2="829.26" y2="179.49"></line><line class="cls-4" x1="829.26" y1="585.31" x2="829.26" y2="698.25"></line><line class="cls-4" x1="513.33" y1="371.85" x2="626.27" y2="371.85"></line><line class="cls-4" x1="1030.62" y1="372.14" x2="1143.55" y2="372.14"></line></g></g></svg>
+                        
+                        <%- await include('@/custom-components/helpers/countdown/index', { 
+                            data: {
+                                startOnlyDevice: 'desktop'
+                            }
+                        }) %>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+<% } %>

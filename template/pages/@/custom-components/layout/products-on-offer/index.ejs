@@ -1,0 +1,53 @@
+<%
+let items = [];
+
+const categories = {
+    ['/refletor-led-branco-frio']: {
+        skus: ['PG-RT36WBN-30X60-KIT50', 'XL-5050VE-KIT1', 'GU10-6-5WBQ-KIT5', 'ARA-5WBQ-PT-KIT10']
+    },
+
+}
+
+try {
+    const data = categories['/' + _.state.slug];
+
+    if (data) {
+        const search = new _.EcomSearch();
+        await search.setSkus(data.skus).setSortOrder(null).fetch(true);
+
+        items = search.getItems();
+    }
+} catch (error) {
+    console.log('Catch Error "products-on-offer" ->', error);
+}
+%>
+
+<div class="products-on-offer">
+    <%- await include('@/custom-components/helpers/product-showcase/index', { 
+        data: {
+            items,
+            countdownProducts: true,
+            slideOptions: {
+                navigation: 'default',
+                breakpoints: {
+                    0: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                    },
+                    767: {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    },
+                    1100: {
+                        slidesPerView: 4,
+                        spaceBetween: 0,
+                    }
+                }
+            },
+        }
+    }) %>
+</div>

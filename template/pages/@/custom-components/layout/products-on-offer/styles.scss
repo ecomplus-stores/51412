@@ -1,0 +1,18 @@
+.products-on-offer .product-countdown-custom {
+    position: absolute;
+    bottom: 0;
+}
+
+.products-on-offer .container {
+    padding: 0 !important;
+}
+
+.products-on-offer {
+    margin: 0 0 30px;
+    order: -8;
+}
+
+.products-on-offer .product-showcase-listing .swiper-clip:before,
+.products-on-offer .product-showcase-listing .swiper-clip:after {
+    display: none !important;
+}

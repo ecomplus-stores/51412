@@ -1,0 +1,117 @@
+@media (min-width: 767px) {
+    .product-stopwatch-discount {
+        margin: 0 0 15px 0;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-wrapper a {
+        display: flex;
+        justify-content: space-between;
+        text-decoration: none;
+        padding: 2px 15px;
+        transition: all .3s;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        min-height: 90px;
+        box-sizing: border-box;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-title span {
+        line-height: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-text span {
+        display: block;
+        line-height: 1;
+        margin: 2px 0 2px 0;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-title {
+        color: #444;
+        margin-right: 35px;
+        letter-spacing: -0.5px;
+        max-width: 280px;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-image {
+        width: 80px;
+        height: 80px;
+        margin-right: 15px;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-text {
+        margin-right: 35px;
+        color: var(--cor-vermelho-2);
+        letter-spacing: -0.5px;
+        font-size: 18px;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-title span:first-child {
+        font-size: 22px;
+        margin: 0 0 2px 0;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-title span:first-child b {
+        font-weight: 800;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-btn b {
+        color: #fff;
+        background: var(--cor-verde-1);
+        text-transform: uppercase;
+        font-size: 17px;
+        padding-left: 30px;
+        padding-right: 30px;
+        border-bottom: 3px solid var(--cor-verde-2) !important;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2px;
+        margin-right: 0;
+        border-radius: 6px;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-title span:last-child {
+        font-size: 15px;
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-wrapper a:hover {
+        border-color: var(--cor-vermelho-2);
+    }
+    
+    .product-stopwatch-discount .product-stopwatch-discount-countdown {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .product-stopwatch-discount .countdown-item b {
+        font-size: 30px;
+        font-weight: 800;
+        color: #444;
+        line-height: 1;
+    }
+    
+    .product-stopwatch-discount .countdown-item-separator {
+        font-size: 30px;
+        font-weight: 800;
+        margin: 0 10px;
+        color: #444;
+        padding: 0 0 8px 0;
+    }
+    
+    .product-stopwatch-discount .countdown-item span {
+        line-height: 1;
+        font-size: 13px;
+        letter-spacing: -0.5px;
+    }
+}

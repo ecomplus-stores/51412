@@ -3,11 +3,12 @@
 %>
 
 <img 
-    <% if (data.class) { %>
-        class="<%= data.class %>"
+    <% if (data.lazy == false) { %>
+      src="<%= data.src %>"
+    <% } else { %>
+      class="lozad fade"
+      data-src="<%= data.src %>"
     <% } %>
-    class="lozad fade"
-    data-src="<%= data.src %>"
     alt="<%= data.alt %>"
     title="<%= data.alt %>"
     width="<%= width %>"

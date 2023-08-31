@@ -21,9 +21,13 @@
     <%- await include('@/custom-components/layout/top-bar/index') %>
     <%- await include('@/custom-components/layout/header/index') %>
     <%- await include('@/custom-components/layout/main-navigation/index') %>
+    <%- await include('@/custom-components/layout/full-banners/index') %>
+
+    <% if (_.pageName === 'categories') { %>
+      <%- await include('@/custom-components/layout/product-stopwatch-discount/index') %>
+    <% } %>
 
     <% if (_.pageName === 'home') { %>
-      <%- await include('@/custom-components/layout/full-banners/index') %>
       <%- await include('@/custom-components/layout/grid-main-categories/index') %>
       <%- await include('@/custom-components/layout/buy-for-environment/index') %>
       <%- await include('@/custom-components/layout/information-bar/index') %>
