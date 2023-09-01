@@ -4,7 +4,8 @@
     "workbench.editor.labelFormat": "short",
     "editor.tabSize": 4,
     "files.associations": {
-        "**/html/*.html": "vue-html"
+        "**/html/*.html": "vue-html",
+        "*.ejs": "ejs"
     },
     "emmet.includeLanguages": {
         "ejs": "html"

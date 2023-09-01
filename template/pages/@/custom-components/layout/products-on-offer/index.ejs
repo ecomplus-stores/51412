@@ -2,10 +2,9 @@
 let items = [];
 
 const categories = {
-    ['/refletor-led-branco-frio']: {
+    ['/refletores-de-led']: {
         skus: ['PG-RT36WBN-30X60-KIT50', 'XL-5050VE-KIT1', 'GU10-6-5WBQ-KIT5', 'ARA-5WBQ-PT-KIT10']
     },
-
 }
 
 try {
@@ -26,7 +25,7 @@ try {
     <%- await include('@/custom-components/helpers/product-showcase/index', { 
         data: {
             items,
-            countdownProducts: true,
+            topCountdownProducts: true,
             slideOptions: {
                 navigation: 'default',
                 breakpoints: {

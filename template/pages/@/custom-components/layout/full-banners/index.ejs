@@ -1,359 +1,279 @@
 <%
-const slideOptionsFullBannersDesktop = {
-    navigation: 'default',
-    slidesPerView: 1,
-    spaceBetween: 0,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
+const slideOptions = {
+    breakpoints: {
+        0: {
+            slidesPerView: 1.15,
+            spaceBetween: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        },
+        767: {
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        }
+    }
 }
 
-const slideOptionsFullBannersMobile = {
-    navigation: false,
-    slidesPerView: 1.15,
-    spaceBetween: 5,
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+const banners = {
+    desktop: {
+        home: [
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/chamada.png.webp',
+                alt: 'Chamada Campanha',
+                lazy: false,
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/frete-gratis.png.webp',
+                alt: 'Frete Grátis',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/RSPM-200WBF-KIT10.png.webp',
+                alt: 'RSPM-200WBF-KIT10',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/RSPM-100WBF-KIT5.png.webp',
+                alt: 'RSPM-100WBF-KIT5',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/RSPM-200WBF.png.webp',
+                alt: 'RSPM-200WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/RSPM-300WBF.png.webp',
+                alt: 'RSPM-300WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/R-400WBF.png.webp',
+                alt: 'R-400WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/PS-Q18WBF-KIT20.png.webp',
+                alt: 'PS-Q18WBF-KIT20',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/PS-Q25WBF-KIT20.png.webp',
+                alt: 'PS-Q25WBF-KIT20',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/PG-Q25WBF.png.webp',
+                alt: 'PG-Q25WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/BULBO-9WBF.png.webp',
+                alt: 'BULBO-9WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/LUM-120BF.png.webp',
+                alt: 'LUM-120BF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/SMD-Q7WBQ.png.webp',
+                alt: 'SMD-Q7WBQ',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/desktop/XL-3528BQ-KIT5.png.webp',
+                alt: 'XL-3528BQ-KIT5',
+            },
+        ],
+
+        categories: {
+            ['/refletores-de-led']: [
+                {
+                    href: '#',
+                    src: '/img/uploads/full-banners/desktop/categories/refletores-de-led/refletores-led-campanha.png.webp',
+                    alt: 'Refletores LED Campanha',
+                },
+                {
+                    href: '/',
+                    src: '/img/uploads/full-banners/desktop/categories/refletores-de-led/refletor-micro-led-slim.png.webp',
+                    alt: 'Refletor Micro LED Slim',
+                },
+                {
+                    href: '/',
+                    src: '/img/uploads/full-banners/desktop/categories/refletores-de-led/refletores-super-ofertas.png.webp',
+                    alt: 'Refletor LED Super Ofertas',
+                },
+                {
+                    href: '/',
+                    src: '/img/uploads/full-banners/desktop/categories/refletores-de-led/refletor-micro-led-ultra-thin.png.webp',
+                    alt: 'Refletor Micro LED Ultra Thin',
+                }
+            ]
+        }
     },
+
+    mobile: {
+        home: [
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/chamada.png.webp',
+                alt: 'Chamada Campanha',
+                lazy: false,
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/RSPM-200WBF-KIT10.png.webp',
+                alt: 'RSPM-200WBF-KIT10',
+                lazy: false,
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/RSPM-100WBF-KIT5.png.webp',
+                alt: 'RSPM-100WBF-KIT5',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/RSPM-200WBF.png.webp',
+                alt: 'RSPM-200WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/RSPM-300WBF.png.webp',
+                alt: 'RSPM-300WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/R-400WBF.png.webp',
+                alt: 'R-400WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/PS-Q18WBF-KIT20.png.webp',
+                alt: 'PS-Q18WBF-KIT20',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/PS-Q25WBF-KIT20.png.webp',
+                alt: 'PS-Q25WBF-KIT20',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/PG-Q25WBF.png.webp',
+                alt: 'PG-Q25WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/BULBO-9WBF.png.webp',
+                alt: 'BULBO-9WBF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/LUM-120BF.png.webp',
+                alt: 'LUM-120BF',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/SMD-Q7WBQ.png.webp',
+                alt: 'SMD-Q7WBQ',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/XL-3528BQ-KIT5.png.webp',
+                alt: 'XL-3528BQ-KIT5',
+            },
+            {
+                href: '/',
+                src: '/img/uploads/full-banners/mobile/compre-pelo-whatsapp.png.webp',
+                alt: 'Compre pelo whatsapp',
+            }
+        ],
+
+        categories: {}
+    }
+}
+
+let bannersDesktop = '';
+let bannersMobile = '';
+
+if (_.pageName == 'home') {
+    bannersDesktop = banners.desktop.home;
+    bannersMobile = banners.mobile.home;
+} else if (_.pageName == 'categories') {
+    bannersDesktop = banners.desktop.categories['/' + _.state.slug] || [];
+    bannersMobile = banners.mobile.categories['/' + _.state.slug] || [];
 }
 %>
 
-<div class="full-banners d-none d-md-block">
-    <div class="container">
-        <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(slideOptionsFullBannersDesktop) %>'>
-            <div class="swiper-clip">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/chamada.png.webp',
-                                    alt: 'Chamada',
-                                    lazy: false,
-                                }
-                            }) %>
-                        </a>
+<% if (bannersDesktop) { %>
+    <div class="full-banners d-none d-md-block">
+        <div class="container">
+            <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                <div class="swiper-clip">
+                    <div class="swiper-wrapper">
+                        <% for (let i = 0; i < bannersDesktop.length; i++) { %>
+                            <div class="swiper-slide">
+                                <a href="<%= bannersDesktop[i].href %>">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: bannersDesktop[i].src,
+                                            alt: bannersDesktop[i].alt,
+                                            lazy: bannersDesktop[i].lazy == false ? false : true,
+                                        }
+                                    }) %>
+                                </a>
+                            </div>
+                        <% } %>
                     </div>
 
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/frete-gratis.png.webp',
-                                    alt: 'Frete Grátis',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/RSPM-200WBF-KIT10.png.webp',
-                                    alt: 'RSPM-200WBF-KIT10',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/RSPM-100WBF-KIT5.png.webp',
-                                    alt: 'RSPM-100WBF-KIT5',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/RSPM-200WBF.png.webp',
-                                    alt: 'RSPM-200WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/RSPM-300WBF.png.webp',
-                                    alt: 'RSPM-300WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/R-400WBF.png.webp',
-                                    alt: 'R-400WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/PS-Q18WBF-KIT20.png.webp',
-                                    alt: 'PS-Q18WBF-KIT20',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/PS-Q25WBF-KIT20.png.webp',
-                                    alt: 'PS-Q25WBF-KIT20',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/PG-Q25WBF.png.webp',
-                                    alt: 'PG-Q25WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/BULBO-9WBF.png.webp',
-                                    alt: 'BULBO-9WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/LUM-120BF.png.webp',
-                                    alt: 'LUM-120BF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/SMD-Q7WBQ.png.webp',
-                                    alt: 'SMD-Q7WBQ',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/desktop/XL-3528BQ-KIT5.png.webp',
-                                    alt: 'XL-3528BQ-KIT5',
-                                }
-                            }) %>
-                        </a>
-                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-</div>
+<% } %>
 
-<div class="full-banners d-md-none d-block">
-    <div class="container">
-        <div class="swiper" data-start-only-device="mobile" data-slide-options='<%- JSON.stringify(slideOptionsFullBannersMobile) %>'>
-            <div class="swiper-clip">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/chamada.png.webp',
-                                    alt: 'Chamada',
-                                    lazy: false,
-                                }
-                            }) %>
-                        </a>
+<% if (bannersMobile) { %>
+    <div class="full-banners d-md-none d-block">
+        <div class="container">
+            <div class="swiper" data-start-only-device="mobile" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
+                <div class="swiper-clip">
+                    <div class="swiper-wrapper">
+                        <% for (let i = 0; i < bannersMobile.length; i++) { %>
+                            <div class="swiper-slide">
+                                <a href="<%= bannersMobile[i].href %>">
+                                    <%- await include('@/custom-components/helpers/image/index', {
+                                        data: {
+                                            src: bannersMobile[i].src,
+                                            alt: bannersMobile[i].alt,
+                                            lazy: bannersMobile[i].lazy == false ? false : true,
+                                        }
+                                    }) %>
+                                </a>
+                            </div>
+                        <% } %>
                     </div>
 
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/RSPM-200WBF-KIT10.png.webp',
-                                    alt: 'RSPM-200WBF-KIT10',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/RSPM-100WBF-KIT5.png.webp',
-                                    alt: 'RSPM-100WBF-KIT5',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/RSPM-200WBF.png.webp',
-                                    alt: 'RSPM-200WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/RSPM-300WBF.png.webp',
-                                    alt: 'RSPM-300WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/R-400WBF.png.webp',
-                                    alt: 'R-400WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/PS-Q18WBF-KIT20.png.webp',
-                                    alt: 'PS-Q18WBF-KIT20',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/PS-Q25WBF-KIT20.png.webp',
-                                    alt: 'PS-Q25WBF-KIT20',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/PG-Q25WBF.png.webp',
-                                    alt: 'PG-Q25WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/BULBO-9WBF.png.webp',
-                                    alt: 'BULBO-9WBF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/LUM-120BF.png.webp',
-                                    alt: 'LUM-120BF',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/SMD-Q7WBQ.png.webp',
-                                    alt: 'SMD-Q7WBQ',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/XL-3528BQ-KIT5.png.webp',
-                                    alt: 'XL-3528BQ-KIT5',
-                                }
-                            }) %>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <a href="/">
-                            <%- await include('@/custom-components/helpers/image/index', {
-                                data: {
-                                    src: '/img/uploads/full-banners/mobile/compre-pelo-whatsapp.png.webp',
-                                    alt: 'Compre pelo whatsapp',
-                                }
-                            }) %>
-                        </a>
-                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-pagination"></div>
             </div>
         </div>
     </div>
-</div>
+<% } %>

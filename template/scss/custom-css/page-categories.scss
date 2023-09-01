@@ -142,6 +142,7 @@ body#page-categories .search-engine__nav {
     background: none;
     border-bottom: 1px solid #ededed;
     margin: 0 0 15px 0;
+    order: -10;
 }
 
 body#page-categories .search-engine__nav .container {
@@ -276,5 +277,5 @@ body#page-categories div#search-engine {
 }
 
 div#search-engine section.search-engine {
-    order: -10;
+    display: contents;
 }
