@@ -1,6 +1,8 @@
 .products-on-offer .product-countdown-custom {
-    position: absolute;
-    bottom: 0;
+    position: static;
+    background: var(--cor-vermelho-1);
+    color: #fff;
+    padding: 2px 0 2px 0;
 }
 
 .products-on-offer .container {
@@ -9,10 +11,89 @@
 
 .products-on-offer {
     margin: 0 0 30px;
+    max-width: 955px;
     order: -8;
+    padding: 0 0 30px 0;
+    border-bottom: 1px solid #ddd;
 }
 
+.products-on-offer .product-countdown-custom .countdown-item span,
 .products-on-offer .product-showcase-listing .swiper-clip:before,
 .products-on-offer .product-showcase-listing .swiper-clip:after {
     display: none !important;
+}
+
+.products-on-offer .product-countdown-custom .countdown-wrapper:before {
+    content: "Acaba em:";
+    font-size: 13px;
+    padding: 1px 4px 0 0;
+}
+
+
+.products-on-offer .product-countdown-custom .countdown-item b {
+    font-size: 18px;
+}
+
+.products-on-offer .countdown .countdown-wrapper {
+    gap: 4px;
+}
+
+.products-on-offer .countdown-item-separator {
+    font-weight: 700;
+    padding: 0 0 2px 0;
+    font-size: 17px;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__name {
+    -webkit-line-clamp: 2;
+    background: #f9f9f9;
+    height: 35px;
+    margin: 0;
+    padding: 10px 10px 0px 10px;
+    box-sizing: unset;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__rating-custom {
+    background: #f9f9f9;
+    margin: 0;
+    padding-bottom: 12px;
+    padding-top: 5px;
+}
+
+.products-on-offer .product-showcase .product-item .prices.product-card__prices {
+    background: #f9f9f9;
+}
+
+.products-on-offer .product-showcase .product-card__buy {
+    background: #f9f9f9;
+    margin: 0;
+    opacity: 1;
+    visibility: visible;
+    position: static;
+    padding: 12px 20px;
+}
+
+.products-on-offer .product-showcase .product-item .product-card {
+    padding-bottom: 0;
+}
+
+.products-on-offer .product-showcase .product-card__buy > button {
+    padding: 8px 0 6px 0;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__rating-custom-text {
+    font-size: 0;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__rating-custom-text:after {
+    content: "Economize comprando o produto e muito mais";
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: var(--cor-verde-1);
+    line-height: 14px;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__rating-custom-text {
+    padding: 0 40px;
 }

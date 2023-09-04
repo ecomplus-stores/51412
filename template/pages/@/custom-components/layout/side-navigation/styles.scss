@@ -1,0 +1,114 @@
+
+.side-navigation .side-navigation-item-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-navigation {
+    min-width: 295px;
+}
+
+.side-navigation .side-navigation-item-content > a {
+    padding: 17px 0px 17px 20px;
+    color: #fff;
+    background: var(--cor-vermelho-1);
+    display: block;
+    border-bottom: 1px solid var(--cor-vermelho-5);
+    line-height: 1;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.side-navigation .side-navigation-item-title {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.side-navigation .side-navigation-item:first-child .side-navigation-item-content > a {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.side-navigation .side-navigation-item:last-child .side-navigation-item-content > a {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.side-navigation a {
+    text-decoration: none;
+}
+
+.side-navigation .side-navigation-item-icon i {
+    font-size: 17px;
+    transition: transform 0.3s;
+}
+
+.side-navigation .side-navigation-item-icon {
+    padding: 0 20px 1px 20px;
+    position: absolute;
+    right: 0;
+    width: 45px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.side-navigation .side-navigation-item-icon:before {
+    content: "";
+    width: 1px;
+    height: 34px;
+    position: absolute;
+    display: table;
+    background: var(--cor-vermelho-5);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.side-navigation .side-navigation-item.active .side-navigation-item-content > a,
+.side-navigation .side-navigation-item:hover .side-navigation-item-content > a {
+    background: var(--cor-vermelho-2);
+}
+
+.side-navigation .side-navigation-item.active .side-navigation-item-content > a .side-navigation-item-icon i {
+    transform: rotate(90deg);
+}
+
+.side-navigation .side-navigation-item-icon:hover {
+    color: #ccc;
+}
+
+.side-navigation .side-navigation-item-dropdown {
+    background: #e9e9e9;
+    display: none;
+}
+
+.side-navigation .side-navigation-item-dropdown a {
+    padding: 11px 10px 11px 21px;
+    font-weight: 700;
+    font-size: 10px;
+    background: #e9e9e9;
+    color: #444;
+    text-transform: uppercase;
+    display: block;
+    transition: all 0.3s;
+    line-height: 1;
+}
+
+.side-navigation .side-navigation-item-dropdown > div > a:hover {
+    color: var(--cor-vermelho-2);
+}
+
+.side-navigation .side-navigation-item-dropdown > a {
+    background: var(--cor-vermelho-2);
+    color: #fff;
+    padding: 14px 10px 14px 21px;
+}
