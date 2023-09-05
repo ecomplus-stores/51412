@@ -29,6 +29,10 @@
     .full-banners .swiper-pagination .swiper-pagination-bullet:hover {
         background: rgb(255 255 255 / 40%);
     }
+
+    .full-banners .swiper-clip {
+        border-radius: 5px;
+    }
 }
 
 @media (max-width: 767px) {

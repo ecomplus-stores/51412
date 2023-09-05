@@ -21,32 +21,34 @@ try {
 }
 %>
 
-<div class="products-on-offer">
-    <%- await include('@/custom-components/helpers/product-showcase/index', { 
-        data: {
-            items,
-            topCountdownProducts: true,
-            slideOptions: {
-                navigation: 'default',
-                breakpoints: {
-                    0: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
-                        pagination: {
-                            el: '.swiper-pagination',
-                            clickable: true,
+<% if (items.length > 0) { %>
+    <div class="products-on-offer">
+        <%- await include('@/custom-components/helpers/product-showcase/index', { 
+            data: {
+                items,
+                topCountdownProducts: true,
+                slideOptions: {
+                    navigation: 'default',
+                    breakpoints: {
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
                         },
-                    },
-                    767: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                    },
-                    1100: {
-                        slidesPerView: 4,
-                        spaceBetween: 10,
+                        767: {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        1100: {
+                            slidesPerView: 4,
+                            spaceBetween: 10,
+                        }
                     }
-                }
-            },
-        }
-    }) %>
-</div>
+                },
+            }
+        }) %>
+    </div>
+<% } %>

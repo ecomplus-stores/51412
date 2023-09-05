@@ -53,13 +53,6 @@
     box-sizing: unset;
 }
 
-.products-on-offer .product-showcase .product-item .product-card__rating-custom {
-    background: #f9f9f9;
-    margin: 0;
-    padding-bottom: 12px;
-    padding-top: 5px;
-}
-
 .products-on-offer .product-showcase .product-item .prices.product-card__prices {
     background: #f9f9f9;
 }
@@ -70,30 +63,56 @@
     opacity: 1;
     visibility: visible;
     position: static;
-    padding: 12px 20px;
+    padding: 15px;
 }
 
 .products-on-offer .product-showcase .product-item .product-card {
-    padding-bottom: 0;
+    padding: 40px 0 0 0 !important;
+    border-radius: 0 !important;
+    border: none !important;
 }
 
-.products-on-offer .product-showcase .product-card__buy > button {
-    padding: 8px 0 6px 0;
+.products-on-offer .product-showcase .product-card__rating {
+    text-align: center;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 10px 0 10px 0;
 }
 
-.products-on-offer .product-showcase .product-item .product-card__rating-custom-text {
-    font-size: 0;
-}
-
-.products-on-offer .product-showcase .product-item .product-card__rating-custom-text:after {
+.products-on-offer .product-showcase .prices.product-card__prices:before {
+    color: var(--cor-verde-1);
     content: "Economize comprando o produto e muito mais";
+    font-family: Roboto;
     font-size: 12px;
     font-weight: 600;
-    font-family: 'Roboto';
-    color: var(--cor-verde-1);
     line-height: 14px;
+    padding: 0 35px;
+    text-align: center;
+    margin: 0 0 10px 0;
 }
 
-.products-on-offer .product-showcase .product-item .product-card__rating-custom-text {
-    padding: 0 40px;
+.products-on-offer  .product-showcase .product-card:before {
+    top: 0;
+    left: 50px;
+}
+
+.products-on-offer .product-showcase .product-item .product-card__offer-stamp {
+    left: 0;
+    top: 0;
+}
+
+.products-on-offer .product-showcase a.product-card__link > span:before {
+    content: "SÓ HOJE: LED OFERTAS";
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    font-size: 13px;
+    text-align: center;
+    width: auto;
+    background: var(--cor-vermelho-2);
+    border-radius: 4px;
+    padding: 6px 18px;
+    margin: 6px auto 8px auto;
+    display: block;
+    line-height: 1;
 }

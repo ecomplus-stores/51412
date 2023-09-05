@@ -634,6 +634,10 @@ body.header-fixed .main-navigation .main-navigation-list-item {
     color: #fff !important;
 }
 
-.main-navigation .product-showcase .product-tag-last-units {
+.main-navigation .product-showcase .product-card:before {
     display: none;
+}
+
+.main-navigation .product-showcase .product-card__rating {
+    display: none !important;
 }

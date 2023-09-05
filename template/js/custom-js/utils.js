@@ -119,28 +119,30 @@ window.utils = {
     },
 
     yuukCountdown(){
-        let target = $('.countdown');
-    
-        if (target.length == 0) return;
+        $(window).on('load', () => {
+            const target = $('.countdown');
+        
+            if (target.length == 0) return;
 
-        target.each(function(){
-            const startOnlyDevice = $(this).attr('data-start-only-device');
+            target.each(function(){
+                const startOnlyDevice = $(this).attr('data-start-only-device');
 
-            if (startOnlyDevice) {
-                if (startOnlyDevice == 'desktop' && window.innerWidth < 767) {
-                    return;
-                }
-
-                if (startOnlyDevice == 'mobile' && window.innerWidth > 767) {
+                if (startOnlyDevice) {
+                    if (startOnlyDevice == 'desktop' && window.innerWidth < 767) {
                         return;
-                }
-            }
+                    }
 
-            $(this).yuukCountdown({
-                starttime: '2016/11/11 00:00:00',
-                endtime: '2030/12/30 00:00:00'
+                    if (startOnlyDevice == 'mobile' && window.innerWidth > 767) {
+                        return;
+                    }
+                }
+
+                $(this).yuukCountdown({
+                    starttime: '2016/11/11 00:00:00',
+                    endtime: '2030/12/30 00:00:00'
+                });
             });
-        })
+        });
     },
 
     scrollLock(){
