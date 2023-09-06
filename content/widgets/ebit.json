@@ -5,7 +5,7 @@
   "enableCheckout": true,
   "disablePages": true,
   "options": {
-    "ebitStoreId": ""
+    "ebitStoreId": "75255"
   },
   "stampsAppend": "src/append/stamps"
 }
