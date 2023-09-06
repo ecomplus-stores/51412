@@ -7,12 +7,12 @@
         padding-right: 0;
     }
 
-    .buy-for-environment-image {
+    .buy-for-environment .buy-for-environment-image {
         border-radius: 100%;
         overflow: hidden;
     }
 
-    .buy-for-environment-item-title {
+    .buy-for-environment .buy-for-environment-item-title {
         font-size: 13px;
         font-weight: 500;
         color: #444;
@@ -21,12 +21,12 @@
         text-align: center;
     }
 
-    .buy-for-environment-item-title span {
+    .buy-for-environment .buy-for-environment-item-title span {
         display: block;
         line-height: 1;
     }
 
-    .buy-for-environment-item-title span:first-child {
+    .buy-for-environment .buy-for-environment-item-title span:first-child {
         margin: 0 0 2px 0;
     }
 

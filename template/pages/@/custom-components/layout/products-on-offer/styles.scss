@@ -116,3 +116,90 @@
     display: block;
     line-height: 1;
 }
+
+@media (max-width: 767px) {
+    .products-on-offer .product-countdown-custom .countdown-wrapper:before {
+        width: 100%;
+        line-height: 1;
+        text-align: center;
+        margin: 0 0 3px 0;
+        font-size: 12px;
+    }
+    
+    .products-on-offer .countdown .countdown-wrapper {
+        flex-wrap: wrap;
+        gap: 0 2px;
+        padding: 0 0 2px 0;
+    }
+    
+    .products-on-offer .product-countdown-custom .countdown-item {
+        line-height: 1;
+    }
+    
+    .products-on-offer .countdown-item-separator {
+        line-height: 1;
+        font-size: 14px;
+    }
+    
+    .products-on-offer .product-countdown-custom .countdown-item b {
+        font-size: 15px;
+    }
+    
+    .products-on-offer .product-showcase a.product-card__link > span:before {
+        margin: 0;
+        border-radius: 0;
+        font-size: 11px;
+    }
+    
+    .products-on-offer .product-showcase .product-item .product-card__name {
+        background: #fff;
+    }
+    
+    .products-on-offer .product-showcase .product-card__rating {
+        background: #fff;
+        padding: 5px 5px 5px 10px;
+    }
+    
+    .products-on-offer .product-showcase .prices.product-card__prices:before {
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 12px;
+        text-align: left;
+        padding: 5px 0 0 0;
+        margin: 0 0 6px 0;
+    }
+    
+    .products-on-offer .product-showcase .product-item .prices.product-card__prices {
+        background: #fff;
+        padding: 0 10px;
+    }
+    
+    .products-on-offer .product-showcase .product-card__buy {
+        background: #fff;
+        padding: 10px;
+        position: absolute;
+        bottom: 0;
+    }
+
+    .products-on-offer .product-showcase .product-item .product-card {
+        padding-bottom: 50px !important;
+        border-radius: 5px !important;
+        overflow: hidden;
+        height: 100% !important;
+    }
+    
+    .products-on-offer .product-showcase .product-item .product-card__offer-stamp {
+        left: 5px;
+        top: 5px;
+    }
+    
+    .products-on-offer .product-showcase .product-card:before {
+        top: 5px;
+        left: 45px;
+    }
+
+    .products-on-offer .product-showcase .swiper-button-next, 
+    .products-on-offer .product-showcase .swiper-button-prev {
+        top: 155px;
+    }
+}

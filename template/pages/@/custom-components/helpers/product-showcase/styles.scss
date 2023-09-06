@@ -479,12 +479,14 @@
     }
     
     .product-showcase .prices.product-card__prices .prices__compare {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 600;
+        margin-right: 2px;
+        padding: 0 0 3px 0;
     }
     
     .product-showcase .prices.product-card__prices .prices__value {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .product-showcase .prices.product-card__prices > span:not([class]) {
@@ -500,7 +502,7 @@
     .product-showcase .prices__discount {
         text-align: left;
         font-size: 16px;
-        margin: 5px 0 0 0;
+        margin: 2px 0 0 0;
     }
     
     .product-showcase .prices.product-card__prices .prices__compare s {
@@ -518,7 +520,6 @@
     }
     
     .product-showcase .product-card__buy > button {
-        font-size: 10px;
         padding: 7px 0 5px 0;
         border-radius: 6px;
     }
@@ -567,12 +568,23 @@
         letter-spacing: -1px;
     }
 
-    .product-showcase .product-card__offer-stamp {
+    .product-showcase .product-card .product-card__offer-stamp {
         width: 35px;
         height: 35px;
         font-size: 12px;
         font-weight: 500;
         padding: 1px 0 0 0;
+        left: 5px;
+        top: 5px;
+    }
+
+    .product-showcase .product-card:before {
+        width: 35px;
+        height: 35px;
+        font-size: 7px;
+        border-width: 1px;
+        left: 45px;
+        top: 5px;
     }
     
     .product-showcase .product-card__offer-stamp:after {
@@ -628,20 +640,34 @@
         right: 0;
     }
 
-    .product-showcase .product-tag-last-units {
-        width: 35px;
-        height: 35px;
-        border-width: 1px;
-        left: 50px;
-        top: 10px;
-        font-size: 7px;
-        padding: 0 0 0 0;
-    }
-
     .product-showcase .product-tag-default {
         font-size: 11px;
         line-height: 22px;
         border-radius: 5px;
         margin: 10px auto 10px auto;
+    }
+
+    .product-showcase .product-card__rating:before {
+        font-size: 14px;
+        text-align: left;
+    }
+    
+    .product-showcase .product-card__rating {
+        padding: 0 10px;
+        margin: 0 0 10px 0;
+    }
+    
+    .product-showcase .product-card__rating:after {
+        font-size: 8px;
+        text-align: left;
+    }
+
+    .product-showcase .product-card__buy button:before {
+        font-size: 9px;
+    }
+    
+    .product-showcase .product-card__buy button {
+        border-radius: 6px;
+        overflow: hidden;
     }
 }

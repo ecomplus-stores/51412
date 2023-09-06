@@ -42,14 +42,19 @@
 
     <%- await include('@/custom-components/layout/block-seo/index') %>
     <%- await include('@/custom-components/layout/buy-for-phone/index') %>
+    
     <% if (_.pageName === 'home') { %>
       <%- await include('@/custom-components/layout/most-searched-words/index') %>
     <% } %>
+
     <%- await include('@/custom-components/layout/footer-links/index') %>
     <%- await include('@/custom-components/layout/footer-security-seals/index') %>
     <%- await include('@/custom-components/layout/footer-credits/index') %>
-
     <%- await include('@/layout/footer') %>
+
+    <div class="d-block d-md-none">
+      <%- await include('@/custom-components/layout/side-navigation/index') %>
+    </div>
   </main>
 
   <%- await include('@/json') %>

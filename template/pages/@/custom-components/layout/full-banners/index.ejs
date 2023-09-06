@@ -218,7 +218,7 @@ if (_.pageName == 'home') {
 }
 %>
 
-<% if (bannersDesktop) { %>
+<% if (bannersDesktop && bannersDesktop.length > 0) { %>
     <div class="full-banners d-none d-md-block">
         <div class="container">
             <div class="swiper" data-start-only-device="desktop" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
@@ -248,7 +248,7 @@ if (_.pageName == 'home') {
     </div>
 <% } %>
 
-<% if (bannersMobile) { %>
+<% if (bannersMobile && bannersMobile.length > 0) { %>
     <div class="full-banners d-md-none d-block">
         <div class="container">
             <div class="swiper" data-start-only-device="mobile" data-slide-options='<%- JSON.stringify(slideOptions) %>'>
