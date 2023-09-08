@@ -16,6 +16,7 @@
   <% } %>
 >
   <%- await include('@/layout/menu') %>
+  <%#- await include('@/layout/header') %>
 
   <main role="main" id="main">
     <%- await include('@/custom-components/layout/top-bar/index') %>
@@ -36,8 +37,7 @@
       <%- await include('@/custom-components/layout/mini-banners/index') %>
       <%- await include('@/custom-components/layout/showcases/index') %>
     <% } %>
-
-    <%- await include('@/layout/header') %>
+    
     <%- await include('@/layout/sections') %>
 
     <%- await include('@/custom-components/layout/block-seo/index') %>

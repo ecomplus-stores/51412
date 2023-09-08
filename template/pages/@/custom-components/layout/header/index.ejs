@@ -1,3 +1,6 @@
+<div id="overlay" class="fade"></div>
+<a id="user-button" class="d-none" href="/app/#/account/" title="Popup Login"></a>
+
 <div class="header d-none d-md-block">
     <div class="container">
         <div class="header-wrapper">
@@ -44,18 +47,61 @@
                 </div>
 
                 <div>
-                    <div class="header-account">
+                    <div class="header-account header-account-loading">
                         <div class="header-account-wrapper">
                             <div class="header-account-icon">
                                 <svg width="22" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM224 32c52.94 0 96 43.06 96 96c0 52.93-43.06 96-96 96S128 180.9 128 128C128 75.06 171.1 32 224 32zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM413.3 480H34.66C33.2 480 32 478.8 32 477.3C32 399.4 95.4 336 173.3 336h101.3C352.6 336 416 399.4 416 477.3C416 478.8 414.8 480 413.3 480z"></path></svg>
                             </div>
+
+                            <div class="header-account-content header-account-content-skeleton">
+                                <div class="skeleton-loading"></div>
+                                <div class="skeleton-loading"></div>
+                            </div>
                         
-                            <div class="header-account-content">
-                                <span><a href="/">Entre</a> ou <a href="/">Cadastre-se</a></span>
+                            <div class="header-account-content header-account-content-logged-out-user">
+                                <span><a class="header-account-open-user-popup" href="/app/#/account/" title="Entre">Entre</a> ou <a class="header-account-open-user-popup" href="/app/#/account/" title="Entrar">Cadastre-se</a></span>
                                 <span>para acessar sua conta</span>        
+                            </div>
+
+                            <div class="header-account-content header-account-content-logged-in-user">
+                                Olá, <strong class="header-account-content-user-name"></strong>
+                                <a href="/app/#/account/">Acessar minha conta</a>
+                            </div>
+                        </div>
+
+                        <div class="header-account-dropdown">
+                            <div class="header-account-dropdown-content">
+                                <div class="header-account-dropdown-buttons header-account-dropdown-buttons-logged-out-user">
+                                    <a href="/app/#/account/" title="Entrar" class="header-account-dropdown-buttons-log-in header-account-open-user-popup">Entrar</a>
+
+                                    <div class="header-account-dropdown-buttons-separador">
+                                        <span>ou</span>
+                                    </div>
+
+                                    <a href="/app/#/account/" title="Cadastrar" class="header-account-dropdown-buttons-register header-account-open-user-popup">Cadastrar</a>
+                                </div>
+
+                                <div class="header-account-dropdown-buttons header-account-dropdown-buttons-logged-in-user">
+                                    <a href="/" title="Sair" class="header-account-dropdown-buttons-logout">Sair</a>
+                                </div>
+
+                                <div class="header-account-dropdown-links">
+                                    <a href="/app/#/account/" aria-label="Central do cliente" title="Minha Conta">Minha Conta</a>
+                                    <a href="/app/#/account/orders" title="Meus Pedidos">Meus Pedidos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                  
+                    <!--<a
+                        id="user-button"
+                        class="btn btn-lg"
+                        role="button"
+                        href="/app/#/account/"
+                        title="<%= _.dictionary('myAccount') %>"
+                    >
+                        <i class="i-user"></i>
+                    </a>-->
 
                     <div class="header-cart">
                         <div class="header-cart-wrapper">
@@ -68,7 +114,7 @@
 
                     <div class="header-favorites">
                         <div class="header-favorites-wrapper">
-                            <a href="/app/#/cart">
+                            <a href="/app/#/account/favorites">
                                 <svg fill="currentColor" width="26" height="27" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.7c-54.5-46.4-136-38.7-186.6 13.5L256 96.6l-19.7-20.3C195.5 34.1 113.2 8.7 49.7 62.7c-62.8 53.6-66.1 149.8-9.9 207.8l193.5 199.8c6.2 6.4 14.4 9.7 22.6 9.7 8.2 0 16.4-3.2 22.6-9.7L472 270.5c56.4-58 53.1-154.2-9.7-207.8zm-13.1 185.6L256.4 448.1 62.8 248.3c-38.4-39.6-46.4-115.1 7.7-161.2 54.8-46.8 119.2-12.9 142.8 11.5l42.7 44.1 42.7-44.1c23.2-24 88.2-58 142.8-11.5 54 46 46.1 121.5 7.7 161.2z" class=""></path></svg>
                             </a>
                         </div>
@@ -108,6 +154,33 @@
                     <a href="#!">
                         <svg fill="currentColor" width="18" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 511.97"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM224 32c52.94 0 96 43.06 96 96c0 52.93-43.06 96-96 96S128 180.9 128 128C128 75.06 171.1 32 224 32zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304zM413.3 480H34.66C33.2 480 32 478.8 32 477.3C32 399.4 95.4 336 173.3 336h101.3C352.6 336 416 399.4 416 477.3C416 478.8 414.8 480 413.3 480z"></path></svg>
                     </a>
+
+                    <div class="header-account-dropdown">
+                        <div class="header-account-dropdown-content">
+                            <div class="header-account-dropdown-buttons header-account-dropdown-buttons-logged-out-user">
+                                <a href="/app/#/account/" title="Entrar" class="header-account-dropdown-buttons-log-in header-account-open-user-popup">Entrar</a>
+
+                                <div class="header-account-dropdown-buttons-separador">
+                                    <span>ou</span>
+                                </div>
+
+                                <a href="/app/#/account/" title="Cadastrar" class="header-account-dropdown-buttons-register header-account-open-user-popup">Cadastrar</a>
+                            </div>
+
+                            <div class="header-account-dropdown-buttons header-account-dropdown-buttons-logged-in-user">
+                                <a href="/" title="Sair" class="header-account-dropdown-buttons-logout">Sair</a>
+                            </div>
+
+                            <div class="header-account-dropdown-links">
+                                <a href="/app/#/account/" aria-label="Central do cliente" title="Minha Conta">Minha Conta</a>
+                                <a href="/app/#/account/orders" title="Meus Pedidos">Meus Pedidos</a>
+                            </div>
+                        </div>
+
+                        <div class="header-account-dropdown-close">Fechar</div>
+                    </div>
+
+                    <div class="header-account-backdrop"></div>
                 </div>
         
                 <div class="header-cart">

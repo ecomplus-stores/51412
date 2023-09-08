@@ -273,6 +273,22 @@
     text-align: left;
 }
 
+.retail-grid .product-showcase-empty {
+    text-align: center;
+    padding: 120px 0;
+}
+
+.retail-grid .product-showcase-empty p {
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.retail-grid .product-showcase-empty a {
+    font-weight: 600;
+    color: var(--cor-vermelho-2);
+}
+
 body#page-categories .full-banners {
     margin: 0 0 15px 0;
 }

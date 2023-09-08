@@ -1,3 +1,160 @@
+.header .header-account-content-logged-in-user {
+    flex-direction: unset;
+    flex-wrap: wrap;
+}
+
+.header .header-account-content-logged-in-user a {
+    width: 100%;
+    display: block;
+}
+
+.header .header-account-dropdown {
+    position: absolute;
+    top: 37px;
+    transition: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+    padding-top: 19px;
+}
+
+.header .header-account-dropdown-buttons > a {
+    width: 100%;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+    color: #fff;
+    padding: 9px 0 10px 0;
+    border-radius: 5px;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.header .header-account-dropdown-content {
+    background: #fff;
+    padding: 18px;
+    border-radius: 5px;
+    width: 230px;
+    box-shadow: 0 9px 12px 0 rgba(0,0,0,.2);
+}
+
+.header .header-account-dropdown:before {
+    width: 0;
+    height: 0;
+    content: "";
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #fff;
+    top: 7px;
+    position: absolute;
+    left: calc(50% - 12px);
+}
+
+.header .header-account:hover .header-account-wrapper {
+    box-shadow: 0 0 0 1000000px rgba(0,0,0,.3);
+    background: #fff;
+}
+
+.header .header-account:hover .header-account-dropdown {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .header-account-dropdown-buttons .header-account-dropdown-buttons-log-in {
+    background: var(--cor-verde-1);
+}
+
+.header .header-account-dropdown-buttons .header-account-dropdown-buttons-register {
+    background: var(--cor-vermelho-2);
+}
+
+.header .header-account-dropdown-buttons-separador {
+    border-top: 1px solid #ddd;
+    margin: 18px 0 10px 0;
+}
+
+.header .header-account-dropdown-buttons-separador span {
+    background: #fff;
+    color: #444;
+    padding: 0 5px 0 5px;
+    margin: -11px auto 0 auto;
+    display: table !important;
+    font-size: 12px;
+}
+
+.header .header-account-dropdown-links {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ddd;
+    margin: 18px 0 0 0;
+    padding-top: 14px;
+    position: relative;
+}
+
+.header .header-account-dropdown-links a {
+    font-size: 13px;
+    position: relative;
+    color: #444;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.header .header-account-dropdown-links a:first-child:before {
+    content: "";
+    position: absolute;
+    right: -17px;
+    height: 19px;
+    width: 1px;
+    background: #ddd;
+    top: 0;
+}
+
+.header .header-account-dropdown-links a:hover {
+    color: var(--cor-vermelho-2);
+}
+
+.header .header-account-dropdown-buttons .header-account-dropdown-buttons-log-in:hover {
+    background: var(--cor-verde-2);
+}
+
+.header-account-dropdown-buttons .header-account-dropdown-buttons-register:hover {
+    background: var(--cor-vermelho-4);
+}
+
+.header .header-account-dropdown-buttons .header-account-dropdown-buttons-logout {
+    background: var(--cor-vermelho-2);
+}
+
+.header .header-account-dropdown-buttons .header-account-dropdown-buttons-logout:hover {
+    background: var(--cor-vermelho-4);
+}
+
+.header .header-account-dropdown-content .header-account-dropdown-buttons {
+    display: none;
+}
+
+.header .header-account.header-account-logged-in-user .header-account-content.header-account-content-logged-in-user {
+    display: block;
+}
+
+.header .header-account.header-account-logged-in-user .header-account-dropdown-buttons.header-account-dropdown-buttons-logged-in-user {
+    display: block;
+}
+
+.header .header-account.header-account-loading .header-account-content.header-account-content-skeleton {
+    display: flex;
+}
+
+.header .header-account.header-account-logged-out-user .header-account-content.header-account-content-logged-out-user {
+    display: flex;
+}
+
+.header .header-account.header-account-logged-out-user .header-account-dropdown-buttons.header-account-dropdown-buttons-logged-out-user {
+    display: block;
+}
+
 @media (min-width: 767px) {
     body.header-fixed .header {
         top: -52px;
@@ -142,13 +299,19 @@
         justify-content: center;
     }
 
+    .header .header-account-icon {
+        padding: 0 0 1px 0;
+    }
+
     .header .header-account-content {
         color: #000;
         font-size: 13px;
-        line-height: 15px;
-        display: flex;
+        line-height: 14px;
+        display: none;
         flex-direction: column;
         white-space: nowrap;
+        width: 140px;
+        padding: 0 0 1px 0;
     }
 
     .header .header-account-content a {
@@ -160,7 +323,33 @@
         align-items: center;
         justify-content: center;
         margin: 1px -6px 0 0;
+        position: relative;
+        z-index: 1;
     }
+
+    .header .header-account-content strong {
+        text-transform: capitalize;
+        margin-left: 4px;
+    }
+    
+    .header .header-account-content-skeleton {
+        gap: 4px;
+        padding: 0px 0 0 0;
+    }
+    
+    .header .header-account-content-skeleton .skeleton-loading {
+        height: 11px;
+        border-radius: 3px;
+    }
+    
+    .header .header-account-content-skeleton .skeleton-loading:first-child {
+        width: 100px;
+    }
+    
+    .header .header-account-content-skeleton .skeleton-loading:last-child {
+        width: 100%;
+    }
+
 
     // HEADER CART
     .header .header-cart-wrapper {
@@ -356,6 +545,9 @@
         padding: 6px 7px;
         position: relative;
         top: 1px;
+        border-radius: 32px;
+        z-index: 2;
+        background: #fff;
     }
     
     .header .header-cart {
@@ -393,5 +585,57 @@
     .header .header-favorites > a {
         display: flex;
         color: var(--cor-vermelho-2);
+    }
+
+    .header .header-account .header-account-dropdown {
+        z-index: 11;
+        right: 15px;
+        opacity: 0 !important;
+        visibility: hidden !important;
+    }
+
+    .header .header-account.active .header-account-dropdown {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    .header-account .header-account.active > a {
+        background: #fff;
+    }
+    
+    .header .header-account-dropdown:before {
+        left: unset;
+        right: 64px;
+        top: 9px;
+    }
+
+    .header .header-account-backdrop {
+        background: rgba(0,0,0,.4);
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        transition: all .3s;
+        visibility: hidden;
+        width: 100%;
+        z-index: 1;
+        left: 0;
+    }
+    
+    .header .header-account.active .header-account-backdrop {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .header .header-account-dropdown-close {
+        display: table;
+        float: right;
+        padding: 2px 15px 4px 15px;
+        background: var(--cor-vermelho-2);
+        border-radius: 3px;
+        margin: 10px 0 0 0;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
     }
 }

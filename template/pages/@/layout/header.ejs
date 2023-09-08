@@ -120,7 +120,7 @@ const isCentralizedLogo = header.centralized_logo
   </div>
 </div>
 
-<header class="header d-none" id="header">
+<header class="header" id="header">
   <div class="header__container container-fluid">
     <div class="header__row row<%= isCentralizedLogo ? ' header__row--centralized-logo' : '' %><%= isCentralizedLogo && isCategoriesNavFull ? ' header__row--full-width' : '' %>">
       <div class="col-auto p-0 header__toggler-block">
@@ -186,18 +186,7 @@ const isCentralizedLogo = header.centralized_logo
           </a>
         </div>
 
-        <div id="login-modal">
-          <!--
-            `LoginModal` should be rendered here:
-            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/LoginModal.html
-          -->
-        </div>
-        <div id="cart-quickview">
-          <!--
-            `CartQuickview` should be rendered here:
-            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/CartQuickview.html
-          -->
-        </div>
+        
       </div>
 
       <% if (header.search_input) {
@@ -335,3 +324,17 @@ const isCentralizedLogo = header.centralized_logo
     </div>
   </div>
 <% } %>
+
+
+<div id="login-modal">
+          <!--
+            `LoginModal` should be rendered here:
+            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/LoginModal.html
+          -->
+        </div>
+        <div id="cart-quickview">
+          <!--
+            `CartQuickview` should be rendered here:
+            https://developers.e-com.plus/storefront/@ecomplus/storefront-components/docs/CartQuickview.html
+          -->
+        </div>
