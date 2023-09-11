@@ -29,8 +29,15 @@ const header = {
 
         $(document).on('click', '.header .header-account-dropdown-buttons-logout', (e) => {
             e.preventDefault();
-            if ($('div#login-modal button.login-modal__logout.btn.btn-block.btn-danger').length > 0) {
-                $('div#login-modal button.login-modal__logout.btn.btn-block.btn-danger')[0].click();
+
+            if (window.innerWidth > 767) {
+                if ($('div#login-modal button.login-modal__logout.btn.btn-block.btn-danger').length > 0) {
+                    $('div#login-modal button.login-modal__logout.btn.btn-block.btn-danger')[0].click();
+                }
+            } else {
+                utils.removeCookie('ecomPassportClient');
+                localStorage.removeItem('ecomPassportClient');
+                $('.header .header-account').removeClass('header-account-logged-in-user').addClass('header-account-logged-out-user');
             }
         });
 
@@ -61,9 +68,27 @@ const header = {
         }
     },
 
+    handleActionsCart(){
+        if (window.innerWidth < 767) {
+            $('.header .header-cart span#cart-count').html(ecomCart.data.items.length);
+
+            ecomCart.on('save', ({ data }) => {
+                console.log('event', data);
+                console.log('event', data.items.length);
+            });
+
+            $(document).on('click', '#cart-button', event => {
+                event.preventDefault();
+
+                $('#cart-button').first()[0].click();
+            })
+        }
+    },
+
     init() {
         this.handleClickBtnToggleMenu();
         this.handleUserLoginActions();
+        this.handleActionsCart();
     }
 }
 

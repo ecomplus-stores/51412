@@ -1,0 +1,8 @@
+body[id*="page-pages/"] section.custom-html {
+    display: none;
+}
+body[id*="page-pages/"] .sections,
+body[id*="page-pages/"] .extra-page section.md-content {
+    padding: 0;
+}
+

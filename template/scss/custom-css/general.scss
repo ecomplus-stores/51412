@@ -1266,3 +1266,9 @@ img {
     position: relative;
     top: -1px;
 }
+
+@media (max-width: 767px) {
+    .breadcrumb {
+        margin: 15px 0 12px 0;
+    }
+}

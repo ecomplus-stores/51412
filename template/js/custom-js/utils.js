@@ -1,4 +1,30 @@
 window.utils = {
+    setCookie(name, value, hours){
+        if (hours) {
+            var date = new Date();
+            date.setTime(date.getTime()+(hours*60*60*1000));
+            var expires = "; expires="+date.toGMTString();
+        } else {
+            var expires = "";
+        }
+
+        document.cookie = name+"="+value+expires+"; path=/";
+    },
+ 
+    getCookie(name){
+        const match = document.cookie.match(RegExp('(?:^|;\\s*)' + name + '=([^;]*)')); 
+    
+        if (match) {
+            return match[1] == '' ? 'empty' : match[1];
+        } else {
+            return null
+        }
+    },
+    
+    removeCookie(name) {
+        document.cookie = name +"=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    },
+
     slideToggle(target, duration = 500){
         let slideUp = (target, duration=500) => {
             target.style.transitionProperty = 'height, margin, padding';
