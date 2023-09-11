@@ -6,7 +6,7 @@
   "sections": [
     {
       "type": "custom-html",
-      "html": ".titulo-vermelho{font-size:20px;font-weight:700;color:#a80702}"
+      "html": ".titulo-vermelho{font-size:50px;font-weight:700;color:#a80702}"
     }
   ]
 }
