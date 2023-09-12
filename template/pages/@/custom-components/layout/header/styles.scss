@@ -192,7 +192,7 @@
         padding: 0 43px 0px 51px;
     }
 
-    .header .header-search input#search-input {
+    html body .header .header-search input#search-input {
         background: #f7f7f7;
         border: 1px solid #ddd !important;
         border-radius: 5px;
@@ -236,6 +236,7 @@
 
     .header .header-search form#search-form {
         display: flex;
+        overflow: unset !important;
     }
 
     // HEADER CEP

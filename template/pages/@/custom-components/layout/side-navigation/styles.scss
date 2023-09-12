@@ -196,6 +196,15 @@
         line-height: 1;
         margin: 0;
         padding: 18px 15px;
+        position: relative;
+    }
+
+    .side-navigation .side-navigation-categories-header-title a:after {
+        content: "VER +";
+        position: absolute;
+        font-size: 11px;
+        right: 11px;
+        bottom: 11px;
     }
     
     .side-navigation .side-navigation-categories-header-links {
