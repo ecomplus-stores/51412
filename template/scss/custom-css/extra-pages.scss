@@ -6,3 +6,16 @@ body[id*="page-pages/"] .extra-page section.md-content {
     padding: 0;
 }
 
+body[id*="page-pages/"] .page-title__head {
+    justify-content: center;
+    margin: 0;
+}
+
+body[id*="page-pages/"] .page-title__head h1 {
+    font-weight: 700;
+    color: #444;
+}
+
+body[id*="page-pages/"] .page-title {
+    margin: 0 auto 30px auto;
+}
