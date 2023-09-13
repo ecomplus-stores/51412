@@ -5,30 +5,34 @@ _.breadcrumbs = [{
   link: `/pages/${slug}`
 }]
 
-const sections = [
-    { type: 'breadcrumbs' },
-    { type: 'page-title' },
-    { type: 'extra-page' }
-]
-if (content.sections && content.sections.length) {
-  content.sections.forEach(({ type }) => {
-    if (type === 'custom-html') {
-      sections.push({ type: 'custom-html' })
-    }
-  });
-}
-
-content.sections = sections;
-
-// if (!content.sections || !content.sections.length) {
-//   content.sections = [
+// const sections = [
 //     { type: 'breadcrumbs' },
 //     { type: 'page-title' },
 //     { type: 'extra-page' }
-//   ]
-// } else if (!content.sections.find(({ type }) => type === 'extra-page')) {
-//   content.sections.push({ type: 'extra-page' })
+// ]
+
+// if (content.sections && content.sections.length) {
+//   content.sections.forEach(({ type }) => {
+//     if (type === 'custom-html') {
+//       console.log('ok');
+//       sections.push({ type: 'custom-html' })
+//     }
+//   });
 // }
+
+// content.sections = sections;
+
+if (!content.sections || !content.sections.length) {
+  content.sections = [
+    { type: 'breadcrumbs' },
+    { type: 'page-title' },
+    { type: 'extra-page' }
+  ]
+} else if (!content.sections.find(({ type }) => type === 'extra-page')) {
+  content.sections.push({ type: 'breadcrumbs' });
+  content.sections.push({ type: 'page-title' });
+  content.sections.push({ type: 'extra-page' });
+}
 %>
 
 <%- await include('@/view') %>

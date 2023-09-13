@@ -5,7 +5,7 @@
         <a href="#description" name="description">#</a>
         <%= _.dictionary('productDescription') %>
       </p>
-      <div class="html-clearfix">
+      <div id="descricao" class="html-clearfix">
         <%- _.state.body_html.replace(
           /<img ([^/>]+)?src=['"]([^'"]+)['"]([^/>]+)?\/?>/g,
           '<img class="lozad" data-src="$2" $1 $3>'
