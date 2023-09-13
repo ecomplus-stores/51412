@@ -5,11 +5,20 @@ _.breadcrumbs = [{
   link: `/pages/${slug}`
 }]
 
-content.sections = [
+const sections = [
     { type: 'breadcrumbs' },
     { type: 'page-title' },
     { type: 'extra-page' }
 ]
+if (content.sections && content.sections.length) {
+  content.sections.forEach(({ type }) => {
+    if (type === 'custom-html') {
+      sections.push({ type: 'custom-html' })
+    }
+  });
+}
+
+content.sections = sections;
 
 // if (!content.sections || !content.sections.length) {
 //   content.sections = [
