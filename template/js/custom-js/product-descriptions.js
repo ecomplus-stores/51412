@@ -250,31 +250,7 @@ function adicionarBeneficiosLED(){
 
 function avaliacoesPersonalizadas(){
     const avaliacoes = {
-       gerarObjeto(){
-          return {
-                nota: '4.9',
-                avaliacoesTotal: '+ 1 milhão',
-                comentarios: [
-                   {
-                      nome: 'Lenilson Ferreira',
-                      localidade: 'Aracaju - SE',
-                      mensagem: 'Da compra até a entrega, tudo foi extramemente rápido, em apenas 2 dias os produto já estava em minhas mãos. Certeza que recomendo a loja.',
-                   },
-                   {
-                      nome: 'Márcio dos Santos',
-                      localidade: 'Campinas - SP',
-                      mensagem: 'Estava precisando resolver o problema de iluminação de meu Jardim e adquiri um Refletor Holofote de LED 50w, o produto é muito potente e resistente, parabéns pelo excelente atendimento e agilidade.',
-                   },
-                   {
-                      nome: 'Natália Schmit',
-                      localidade: 'Rio de Janeiro - RJ',
-                      mensagem: 'Precisava de uma entrega rápida com um produto de qualidade e consegui. Obrigado pelo excelente atendimento por parte de toda equipe. Parabéns!',
-                   },
-                ]
-          };
-       },
-
-       gerarHTML(data){
+       gerarHTML(){
           return `
              <div class="descricao-conteudo-accordion accordion-avaliacoes-personalizadas">
                 <div class="descricao-titulo avaliacoes-personalizadas-titulo">
@@ -284,40 +260,79 @@ function avaliacoesPersonalizadas(){
                    <span>Avaliações</span>
                 </div>
                 <div class="descricao-conteudo duvidas-rapidas-conteudo">
-                   <div class="avaliacoes-personalizadas">
-                      <div class="avaliacoes-personalizadas-conteudo">
-                         <div class="avaliacoes-personalizadas-reviews">
-                               <div class="avaliacoes-personalizadas-nota">
-                                  <strong>${data.nota}/5</strong>
-                                  <span><span class="avaliacoes-personalizadas-qtd">${data.avaliacoesTotal}</span> avaliações</span>
-                               </div>
-                               <div class="avaliacoes-personalizadas-estrelas">
-                                  <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
-                               </div>
-                         </div>
-                         <div class="avaliacoes-personalizadas-commentarios">
-                               ${data.comentarios.map(item => {
-                                  return `
-                                     <div class="avaliacoes-personalizadas-commentario-item">
-                                           <div class="avaliacoes-personalizadas-comentario-nome">${item.nome} <b>${item.localidade}</b></div>
-                                           <div class="avaliacoes-personalizadas-comentario-estrelas">
-                                              <i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i>
-                                           </div>
-                                           <div class="avaliacoes-personalizadas-comentario-texto">${item.mensagem}</div>
-                                     </div>
-                                  `;
-                               }).join('')}
-                         </div>
-                      </div>
-                   </div>
+					<div class="block-seo-rating">
+						<div class="block-seo-rating-wrapper">
+							<div class="block-seo-rating-note">
+								<strong>4.9/5</strong>
+								<p>+ 1 milhão avaliações</p>
+								<div>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+								</div>
+							</div>
+		
+							<div class="block-seo-rating-comment">
+								<strong>Lenilson Ferreira <span>Aracaju - SE</span></strong>
+								<div>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+								</div>
+								<p>
+									Da compra até a entrega, tudo foi <br> 
+									extramemente rápido, em apenas 2 dias os <br> 
+									produto já estava em minhas mãos. Certeza <br> 
+									que recomendo a loja.
+								</p>
+							</div>
+		
+							<div class="block-seo-rating-comment">
+								<strong>Márcio dos Santos <span>Campinas - SP</span></strong>
+								<div>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+								</div>
+								<p>
+									Estava precisando resolver o problema de iluminação de meu <br>
+									Jardim e adquiri um Refletor Holofote de LED 50w, o produto é <br>
+									muito potente e resistente, parabéns pelo excelente atendimento <br>
+									e agilidade.
+								</p>
+							</div>
+		
+							<div class="block-seo-rating-comment">
+								<strong>Natália Schmit <span>Rio de Janeiro - RJ</span></strong>
+								<div>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+									<i class="fa-4-7 fa-star" aria-hidden="true"></i>
+								</div>
+								<p>
+									Precisava de uma entrega rápida com um <br>
+									produto de qualidade e consegui. Obrigado pelo <br>
+									excelente atendimento por parte de toda equipe. <br>
+									Parabéns!
+								</p>
+							</div>
+						</div>
+					</div>
                 </div>
              </div>
           `;
        },
 
        renderizar(){
-          const data = this.gerarObjeto();
-          const html = this.gerarHTML(data);
+          const html = this.gerarHTML();
           $('#descricao').after(html);
          
           /*const time = setInterval(() => {
@@ -346,7 +361,7 @@ function duvidasRapidas(){
     const duvidasRapidas = {
        gerarObjeto(){
 
-             let nome_produto = /*ILUMINIM_UTILS.produto.nome().toLowerCase();*/ '';
+             let nome_produto = PRODUCT_NAME.toLowerCase();
 
              //termosIncludes: [] //TERMOS QUE PODE ESTÁ INCLUSO
              //termosNotIncludes: [] //TERMOS QUE NÃO PODE ESTÁ INCLUSO
@@ -720,7 +735,7 @@ function duvidasRapidas(){
 
        renderizar(){
              const html = this.gerarHTML();
-             const alertaDuvidasCookie = /*ILUMINIM_UTILS.pegarCookie('duvidas-rapidas-alerta')*/ '';
+             const alertaDuvidasCookie = utils.getCookie('duvidas-rapidas-alerta');
 
              if(!html) return;
 
@@ -752,7 +767,7 @@ function duvidasRapidas(){
 
              $(document).on('click', '.duvidas-rapidas-alerta-fechar', event => {
                 $(event.target).parents('.duvidas-rapidas-alerta').remove();
-                //ILUMINIM_UTILS.setarCookie('duvidas-rapidas-alerta', 'true', 24);
+                utils.setCookie('duvidas-rapidas-alerta', 'true', 24);
              });
        }
     }
@@ -844,230 +859,215 @@ function cuidadoMaximoComSuaEncomenda(){
 
 function iluminimLEDExplica(){
     let iluminimLEDExplica = {
-       gerarObjeto(){
+		gerarObjeto(){
+			let nome_produto = PRODUCT_NAME.toLowerCase();
 
-             let nome_produto = /* ILUMINIM_UTILS.produto.nome().toLowerCase();*/ '';
+			//termosIncludes: [] //TERMOS QUE PODE ESTÁ INCLUSO
+			//termosNotIncludes: [] //TERMOS QUE NÃO PODE ESTÁ INCLUSO
 
-             //termosIncludes: [] //TERMOS QUE PODE ESTÁ INCLUSO
-             //termosNotIncludes: [] //TERMOS QUE NÃO PODE ESTÁ INCLUSO
-
-             let duvidas = [
-                {
-                   termosIncludes: ['fita', 'led'],
-                   termosNotIncludes: ['rgb'],
-                   titulo: 'Qual a diferença entre a fita led 3528 e 5050:',
-                   descricao_resumo: 'Conheças as diferenças entre a Fita LED 3528 e 5050 e as suas principais características.',
-                   descricao_completa: `
-                         A fita LED 3528 possui medida de 8 mm e seu consumo médio é de 5w por metro, o que gera aproximadamente 220 lm/m. Pode ser cortada no tamanho que você desejar e costuma ter espaços para corte a cada três LEDs. Seus LEDs são menores, com cerca de 3,5 mm por 2,8 mm.
-                         </br>
-                         </br>
-                         A fita LED 5050 possui medida de 10 mm de largura e é consideravelmente mais potente em relação ao modelo anterior, pois além de ter LEDs triplos, seus LEDs são maiores, medindo 5 mm por 5 mm. Seu consumo médio é de cerca de 15w por metro, três vezes maior do que a fita LED 3528.
-                   `,
-                },
-                {
-                   termosIncludes: ['fita', 'led'],
-                   termosNotIncludes: ['rgb'],
-                   titulo: 'O que é branco frio e branco quente?',
-                   descricao_resumo: 'Saiba o que é temperatura de cor e como aplicá-la corretamente em sua casa ou ambiente comercial.',
-                   descricao_completa: `
-                         O branco frio varia de 6.000 K a 6.500 K, e é o tipo de luz mais claro e tem um tom azulado. A luz fria é frequentemente usada em locais de trabalho, como escritórios e armazéns onde predominam cores vivas como branco, azul ou violeta. Também é comumente usado em residências, em cozinhas e corredores.
-                         </br>
-                         </br>
-                         O branco quente varia de 3.500 K a 4.000 K, e tem uma tonalidade amarelada. É ideal para uso residencial — quartos, salas de estar, lounges —, onde recriam ambientes relaxantes. É conhecido como a tonalidade mais amarelada da luz.
-                   `,
-                },
-
-
-                {
-                   termosIncludes: ['spot', 'trilho'],
-                   termosNotIncludes: ['metro'],
-                   titulo: 'Como instalar o Spot LED Trilho?',
-                   descricao_resumo: 'Aprenda a instalar o Spot LED Trilho na sua residência ou ambiente comercial!',
-                   descricao_completa: `
-                         A instalação é bem simples, basta encaixar os spots no trilho eletrificado e fixá-lo no teto. Atente-se para a posição dos móveis na hora de definir o local de cada lâmpada. O Spot é direcionável, o que possibilita que a luz seja direcionada para os locais que se deseja mais iluminação.
-                   `,
-                },
-                {
-                   termosIncludes: ['spot', 'trilho'],
-                   termosNotIncludes: ['metro'],
-                   titulo: 'Como usar o Spot LED Trilho na decoração?',
-                   descricao_resumo: 'Saiba como utilizar o Spot LED Trilho na decoração e iluminação de ambientes internos!',
-                   descricao_completa: `
-                         Uma boa dica para deixar o local com ar mais arrumado é usar o trilho eletrificado do mesmo tom do teto, geralmente o branco. Já, se você busca um estilo mais modernou ou industrial, os trilhos e spots pretos podem ser uma boa opção!
-                   `,
-                },
+			let duvidas = [
+				{
+				termosIncludes: ['fita', 'led'],
+				termosNotIncludes: ['rgb'],
+				titulo: 'Qual a diferença entre a fita led 3528 e 5050:',
+				descricao_resumo: 'Conheças as diferenças entre a Fita LED 3528 e 5050 e as suas principais características.',
+				descricao_completa: `
+						A fita LED 3528 possui medida de 8 mm e seu consumo médio é de 5w por metro, o que gera aproximadamente 220 lm/m. Pode ser cortada no tamanho que você desejar e costuma ter espaços para corte a cada três LEDs. Seus LEDs são menores, com cerca de 3,5 mm por 2,8 mm.
+						</br>
+						</br>
+						A fita LED 5050 possui medida de 10 mm de largura e é consideravelmente mais potente em relação ao modelo anterior, pois além de ter LEDs triplos, seus LEDs são maiores, medindo 5 mm por 5 mm. Seu consumo médio é de cerca de 15w por metro, três vezes maior do que a fita LED 3528.
+				`,
+				},
+				{
+				termosIncludes: ['fita', 'led'],
+				termosNotIncludes: ['rgb'],
+				titulo: 'O que é branco frio e branco quente?',
+				descricao_resumo: 'Saiba o que é temperatura de cor e como aplicá-la corretamente em sua casa ou ambiente comercial.',
+				descricao_completa: `
+						O branco frio varia de 6.000 K a 6.500 K, e é o tipo de luz mais claro e tem um tom azulado. A luz fria é frequentemente usada em locais de trabalho, como escritórios e armazéns onde predominam cores vivas como branco, azul ou violeta. Também é comumente usado em residências, em cozinhas e corredores.
+						</br>
+						</br>
+						O branco quente varia de 3.500 K a 4.000 K, e tem uma tonalidade amarelada. É ideal para uso residencial — quartos, salas de estar, lounges —, onde recriam ambientes relaxantes. É conhecido como a tonalidade mais amarelada da luz.
+				`,
+				},
 
 
-                {
-                   termosIncludes: ['refletor', 'led'],
-                   termosNotIncludes: [],
-                   titulo: 'O Refletor LED ilumina quantos metros?',
-                   descricao_resumo: 'Saiba a distância que a luminosidade dos Refletores de LED alcançam.',
-                   descricao_completa: `
-                         A distância depende do modelo de Refletor e sua tecnologia, porém geralmente seguem este padrão:
-                         </br>
-                         </br>
-                         <ul>
-                            <li>10W até 1 metro;</li>
-                            <li>20W até 2 metros;</li>
-                            <li>30W até 3 metros;</li>
-                            <li>50W até 4 metros;</li>
-                            <li>100W até 8 metros;</li>
-                            <li>150W até 12 metros;</li>
-                            <li>200W até 16 metros.</li>
-                         </ul>
-                   `,
-                },
-                {
-                   termosIncludes: ['refletor', 'led'],
-                   termosNotIncludes: [],
-                   titulo: 'O que considerar na compra de um Refletor LED?',
-                   descricao_resumo: 'Entenda o que é importante saber na hora de adquirir um refletor.',
-                   descricao_completa: `
-                         Os pontos que deve ser levado em consideração na hora de adquirir um refletor LED são:
-                         </br>
-                         </br>
-                         <ul>
-                            <li>escolher o modelo de acordo com a sua necessidade (modelos como Sensor de Presença ou Solar, por exemplo);</li>
-                            <li>ter em mente o local que será instalado;</li>
-                            <li>quantidade de luz emitida por Watt;</li>
-                            <li>fornecedores especializados em soluções de LED (como a Iluminim);</li>
-                            <li>evite adquirir refletores de baixa qualidade.</li>
-                         </ul>
-                   `,
-                },
-             ]
+				{
+				termosIncludes: ['spot', 'trilho'],
+				termosNotIncludes: ['metro'],
+				titulo: 'Como instalar o Spot LED Trilho?',
+				descricao_resumo: 'Aprenda a instalar o Spot LED Trilho na sua residência ou ambiente comercial!',
+				descricao_completa: `
+						A instalação é bem simples, basta encaixar os spots no trilho eletrificado e fixá-lo no teto. Atente-se para a posição dos móveis na hora de definir o local de cada lâmpada. O Spot é direcionável, o que possibilita que a luz seja direcionada para os locais que se deseja mais iluminação.
+				`,
+				},
+				{
+				termosIncludes: ['spot', 'trilho'],
+				termosNotIncludes: ['metro'],
+				titulo: 'Como usar o Spot LED Trilho na decoração?',
+				descricao_resumo: 'Saiba como utilizar o Spot LED Trilho na decoração e iluminação de ambientes internos!',
+				descricao_completa: `
+						Uma boa dica para deixar o local com ar mais arrumado é usar o trilho eletrificado do mesmo tom do teto, geralmente o branco. Já, se você busca um estilo mais modernou ou industrial, os trilhos e spots pretos podem ser uma boa opção!
+				`,
+				},
 
 
-             let duvidas_filtradas = [];
+				{
+				termosIncludes: ['refletor', 'led'],
+				termosNotIncludes: [],
+				titulo: 'O Refletor LED ilumina quantos metros?',
+				descricao_resumo: 'Saiba a distância que a luminosidade dos Refletores de LED alcançam.',
+				descricao_completa: `
+						A distância depende do modelo de Refletor e sua tecnologia, porém geralmente seguem este padrão:
+						</br>
+						</br>
+						<ul>
+							<li>10W até 1 metro;</li>
+							<li>20W até 2 metros;</li>
+							<li>30W até 3 metros;</li>
+							<li>50W até 4 metros;</li>
+							<li>100W até 8 metros;</li>
+							<li>150W até 12 metros;</li>
+							<li>200W até 16 metros.</li>
+						</ul>
+				`,
+				},
+				{
+				termosIncludes: ['refletor', 'led'],
+				termosNotIncludes: [],
+				titulo: 'O que considerar na compra de um Refletor LED?',
+				descricao_resumo: 'Entenda o que é importante saber na hora de adquirir um refletor.',
+				descricao_completa: `
+						Os pontos que deve ser levado em consideração na hora de adquirir um refletor LED são:
+						</br>
+						</br>
+						<ul>
+							<li>escolher o modelo de acordo com a sua necessidade (modelos como Sensor de Presença ou Solar, por exemplo);</li>
+							<li>ter em mente o local que será instalado;</li>
+							<li>quantidade de luz emitida por Watt;</li>
+							<li>fornecedores especializados em soluções de LED (como a Iluminim);</li>
+							<li>evite adquirir refletores de baixa qualidade.</li>
+						</ul>
+				`,
+				},
+			]
 
-             duvidas.forEach(item=> {
+			let duvidas_filtradas = [];
 
-                let countIncludes = 0;
-                let countNotIncludes = 0;
+			duvidas.forEach(item=> {
 
-                let { termosIncludes, termosNotIncludes } = item;
+				let countIncludes = 0;
+				let countNotIncludes = 0;
 
-                termosIncludes.forEach(termo=> {
+				let { termosIncludes, termosNotIncludes } = item;
 
-                   if( nome_produto.includes(termo) ){
-                         countIncludes = countIncludes + 1;
-                   }
+				termosIncludes.forEach(termo=> {
 
-                });
+				if( nome_produto.includes(termo) ){
+						countIncludes = countIncludes + 1;
+				}
 
-                if( termosNotIncludes.length > 0 ){
-                   termosNotIncludes.forEach(termo=> {
+				});
 
-                         if( nome_produto.includes(termo) ){
-                            countNotIncludes = countNotIncludes + 1;
-                         }
+				if( termosNotIncludes.length > 0 ){
+				termosNotIncludes.forEach(termo=> {
 
-                   });
-                }
+						if( nome_produto.includes(termo) ){
+							countNotIncludes = countNotIncludes + 1;
+						}
 
-                if(countNotIncludes == 0){
+				});
+				}
 
-                   if(countIncludes == termosIncludes.length){
-                         
-                         duvidas_filtradas.push(item);
+				if(countNotIncludes == 0){
 
-                   }
+				if(countIncludes == termosIncludes.length){
+						
+						duvidas_filtradas.push(item);
 
-                }
+				}
 
-             });
+				}
 
-             return duvidas_filtradas;
+			});
 
-       },
+			return duvidas_filtradas;
+		},
 
-       gerarHTML(){
+		gerarHTML(){
+			let duvidas = this.gerarObjeto();
 
-             let duvidas = this.gerarObjeto();
+			if(!duvidas) return;
 
-             if(!duvidas) return;
+			let html = duvidas.map((item, index)=> {
+				let id = Date.now();
+				let { titulo, descricao_completa, descricao_resumo } = item;
 
-             let html = duvidas.map((item, index)=> {
+				$('body').append(`
+					<div class="modal modal-personalizado fade" id="modal_${id}_${index}">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">${titulo}</h5>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
 
-                let id = Date.now();
-                let { titulo, descricao_completa, descricao_resumo } = item;
+								<div class="modal-body">
+									<div class="descricao-iluminim-led-explica">
+										${descricao_completa}
+									</div>
+								</div>
 
-                $('body').append(`
-                   <div class="modal modal-personalizado fade" id="modal_${id}_${index}">
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary btn-custom" data-dismiss="modal">Fechar</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				`);
 
-                         <div class="modal-dialog" role="document">
+				return `
+					<div class="item-led-explica" data-toggle="modal" data-hash="#modal_${id}_${index}" data-target="#modal_${id}_${index}">
+						<div class="led-explica-icone"><i class="fas fa-bars"></i></div>
+						<div class="led-explica-conteudo">
+							<div class="led-explica-titulo">${ titulo }</div>
+							<div class="led-explica-resumo-descricao">
+							${ descricao_resumo }
+							</div>
+							<a href="#!">+ Leia mais</a>
+						</div>
+					</div>
+				`;
 
-                            <div class="modal-content">
+			}).join('');
 
-                               <div class="modal-header">
-                                     <h5 class="modal-title" id="exampleModalLongTitle">${titulo}</h5>
-                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                     <span aria-hidden="true">&times;</span>
-                                     </button>
-                               </div>
+			return html;
+		},
 
-                               <div class="modal-body">
-                                     <div class="descricao-iluminim-led-explica">
-                                        ${descricao_completa}
-                                     </div>
-                               </div>
+		renderizar(){
+			let html = this.gerarHTML();
 
-                               <div class="modal-footer">
-                                     <button type="button" class="btn btn-secondary btn-custom" data-dismiss="modal">Fechar</button>
-                               </div>
+			if(!html) return;
 
-                            </div>
-
-                         </div>
-
-                   </div>
-                `);
-
-                return `
-                   <div class="item-led-explica" data-toggle="modal" data-hash="#modal_${id}_${index}" data-target="#modal_${id}_${index}">
-                         
-                         <div class="led-explica-icone"><i class="fas fa-bars"></i></div>
-                         <div class="led-explica-conteudo">
-                            <div class="led-explica-titulo">${ titulo }</div>
-                            <div class="led-explica-resumo-descricao">
-                               ${ descricao_resumo }
-                            </div>
-                            <a href="#!">+ Leia mais</a>
-                         </div>
-                   </div>
-                `;
-
-             }).join('');
-
-             return html;
-
-       },
-
-       renderizar(){
-
-             let html = this.gerarHTML();
-
-             if(!html) return;
-
-             $('#descricao').after(`
-                <div class="descricao-conteudo-accordion iluminim-led-explica">
-                   <div class="descricao-titulo iluminim-led-explica-titulo">
-                         <span class="descricao-icone">
-                            <svg fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 480c-123.5 0-224-100.5-224-224s100.5-224 224-224s224 100.5 224 224S379.5 480 256 480zM256 184c13.25 0 24-10.74 24-24c0-13.25-10.75-24-24-24S232 146.7 232 160C232 173.3 242.7 184 256 184zM304 352h-32V240C272 231.2 264.8 224 256 224H224C215.2 224 208 231.2 208 240S215.2 256 224 256h16v96h-32C199.2 352 192 359.2 192 368C192 376.8 199.2 384 208 384h96c8.836 0 16-7.164 16-16C320 359.2 312.8 352 304 352z"></path></svg>
-                         </span>
-                         <span>Iluminim LED Explica</span>
-                         <a href="https://blog.iluminim.com.br/" target="_blank" rel="noopener">+ Veja outros conteúdos</a>
-                   </div>
-                   <div class="descricao-conteudo iluminim-led-explica-conteudo">
-                         <div class="lista-iluminim-led-explica">
-                            ${html}
-                         </div>
-                   </div>
-                </div>
-             `);
-
-       }
+			$('#descricao').after(`
+				<div class="descricao-conteudo-accordion iluminim-led-explica">
+				<div class="descricao-titulo iluminim-led-explica-titulo">
+					<span class="descricao-icone">
+						<svg fill="currentColor" width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM256 480c-123.5 0-224-100.5-224-224s100.5-224 224-224s224 100.5 224 224S379.5 480 256 480zM256 184c13.25 0 24-10.74 24-24c0-13.25-10.75-24-24-24S232 146.7 232 160C232 173.3 242.7 184 256 184zM304 352h-32V240C272 231.2 264.8 224 256 224H224C215.2 224 208 231.2 208 240S215.2 256 224 256h16v96h-32C199.2 352 192 359.2 192 368C192 376.8 199.2 384 208 384h96c8.836 0 16-7.164 16-16C320 359.2 312.8 352 304 352z"></path></svg>
+					</span>
+					<span>Iluminim LED Explica</span>
+					<a href="https://blog.iluminim.com.br/" target="_blank" rel="noopener">+ Veja outros conteúdos</a>
+				</div>
+				<div class="descricao-conteudo iluminim-led-explica-conteudo">
+					<div class="lista-iluminim-led-explica">
+						${html}
+					</div>
+				</div>
+				</div>
+			`);
+		}
     }
 
     iluminimLEDExplica.renderizar();
@@ -2315,48 +2315,31 @@ function compareOsModelos(){
 		},
 
 		gerarHTML(){
-
 			let prodSku = /* ILUMINIM_UTILS.produto.sku() */ '';
-
 			let objeto = this.gerarObjeto();
 			
 			let itemFiltrado = objeto.filter(item=> {
-
 				let produtoFiltrado = item.aplicacoes.filter(sku=> {
-
 					if( ['LT-', 'LUM-', 'T5C-30-'].includes(sku) ){
 
-					if(/*ILUMINIM_UTILS.produto.nome().includes('Tubular')*/ prodSku){
-
+					if(prodSku){
 						return item;
-
 					}
-
 				
-					}else {
-
-					if(prodSku == sku || (prodSku.includes(`${sku}-KIT`) || prodSku.includes(`${sku}-60X60`) || prodSku.includes(`${sku}-62X62`)) ){
-						
-						return item;
-
+					} else {
+						if(prodSku == sku || (prodSku.includes(`${sku}-KIT`) || prodSku.includes(`${sku}-60X60`) || prodSku.includes(`${sku}-62X62`)) ){
+							return item;
+						}
 					}
-
-					}
-
 				});
 		
 				if(produtoFiltrado.length > 0){
-					
 					let naoAplicar = (produtoFiltrado[0].naoAplicar || []).filter(sku=> prodSku.includes(sku));
 
 					if( naoAplicar.length == 0 ){
-
-					return item;
-					
+						return item;
 					}
-		
 				}
-			
 			});
 		
 			if(itemFiltrado.length == 0){
@@ -2364,9 +2347,6 @@ function compareOsModelos(){
 			}
 		
 			let { imagem, comparacao, produtos } = itemFiltrado[0];
-
-			
-		
 			let htmlItems = produtos.map(item=> {
 		
 				let comparacaoValuesHTML = item.comparacaoValues.map(value=> `<div class="caracteristica-item">${value}</div>`).join('');

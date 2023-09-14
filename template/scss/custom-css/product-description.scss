@@ -1,3 +1,17 @@
+section#product-description .descricao-conteudo-accordion tbody {
+    border: none;
+}
+
+section#product-description .descricao-conteudo-accordion tbody > tr {
+    border-left: 1px solid #e9e9e9;
+    border-right: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+section#product-description .descricao-conteudo-accordion tbody > tr:first-child {
+    border-top: 1px solid #e9e9e9;
+}
+
 section#product-description .descrica-tarja {
     background: #e54100;
     text-align: center;
@@ -95,6 +109,17 @@ section#product-description .descricao-titulo {
     padding-left: 50px
 }
 
+
+section#product-description .descricao-titulo > a {
+    font-weight: 500;
+    text-transform: none;
+    text-decoration: underline;
+    letter-spacing: -0.4px;
+    margin: 0 0 0 10px;
+    font-size: 15px;
+    line-height: 20px;
+}
+
 section#product-description .descricao-ativa {
     display: block
 }
@@ -108,8 +133,8 @@ section#product-description .descricao-conteudo-accordion.accordion-active .desc
 }
 
 section#product-description .descricao-conteudo-accordion.cuidado-maximo-com-sua-encomenda .item-cuidado-maximo-encomenda {
-    width: 250px;
-    margin: 0 auto
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 section#product-description .descricao-conteudo-accordion.cuidado-maximo-com-sua-encomenda .item-icone img {
@@ -126,13 +151,22 @@ section#product-description .descricao-conteudo-accordion.cuidado-maximo-com-sua
 }
 
 section#product-description .descricao-conteudo-accordion.cuidado-maximo-com-sua-encomenda .item-descricao {
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: -0.5px;
     color: #444
 }
 
+section#product-description  .cuidado-maximo-com-sua-encomenda .carousel-target {
+    display: flex;
+}
+
+section#product-description .cuidado-maximo-com-sua-encomenda  .item-cuidado-maximo-encomenda {
+    text-align: center;
+    flex-grow: 1;
+}
+
 section#product-description .descricao-conteudo-accordion.cuidado-maximo-com-sua-encomenda .carousel-target {
-    padding: 35px 0;
+    padding: 30px 20px;
     border: 1px solid #e9e9e9
 }
 
@@ -485,7 +519,9 @@ section#product-description #icon-beneficios .st7 {
 }
 
 section#product-description .bloco-beneficios-led .item-beneficio-led {
-    padding: 20px 0 22px 0
+    padding: 20px 0 22px;
+    text-align: center;
+    flex-grow: 1;
 }
 
 section#product-description .bloco-beneficios-led .item-beneficio-led .item-beneficio-titulo {
@@ -508,13 +544,15 @@ section#product-description .bloco-beneficios-led .item-beneficio-led .item-bene
 
 section#product-description .bloco-beneficios-led .item-beneficio-led .item-beneficio-texto span {
     display: block;
-    font-size: 13px;
+    font-size: 12px;
     letter-spacing: -0.5px;
     color: #444
 }
 
 section#product-description .bloco-beneficios-led .carousel-target {
-    border-top: 1px solid #ddd
+    border: 1px solid #e9e9e9;
+    display: flex;
+    justify-content: space-between;
 }
 
 section#product-description .pagina-produto .descricao-conteudo-accordion[data-referencia="Confira o que dizem nossos clientes"] .descricao-conteudo>*>strong {
@@ -540,6 +578,259 @@ section#product-description .pagina-produto .descricao-conteudo-accordion[data-r
 section#product-description div#descricao {
     margin: 0;
 }
+
+section#product-specs {
+    display: none;
+}
+
+section#product-description {
+    margin-bottom: 0;
+}
+
+section#product-description > .container > p.lead {
+    display: none;
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-conteudo-wrapper {
+    display: inline-grid;
+    position: relative;
+    padding: 10px 0 0 0
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas:after {
+    display: none
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas {
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0;
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas:after {
+    display: none
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas li {
+    color: var(--cor-vermelho-2);
+    display: inline-block;
+    font-size: 13px;
+    padding: 9px 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all .3s;
+    border: 1px solid var(--cor-vermelho-2) !important;
+    white-space: nowrap
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas li:hover {
+    color: #fff;
+    background: var(--cor-vermelho-2);
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-alerta {
+    background: var(--cor-vermelho-2);
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: #fff;
+    padding: 8px 30px 8px 10px;
+    position: absolute;
+    right: -266px;
+    top: 1px;
+    width: 250px;
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-alerta .duvidas-rapidas-alerta-fechar {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    font-size: 27px;
+    height: 16px;
+    line-height: 15px;
+    padding: 2px;
+    cursor: pointer;
+    transition: all .3s
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-alerta strong {
+    display: block;
+    font-size: 12px;
+    line-height: 1;
+    margin: 0 0 2px;
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-alerta p {
+    font-size: 11px;
+    line-height: 12px;
+    margin: 3px 0 0 0
+}
+
+section#product-description .duvidas-rapidas .duvidas-rapidas-alerta:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid var(--cor-secundaria);
+    position: absolute;
+    left: -10px;
+    top: calc(50% - 10px)
+}
+
+section#product-description .duvidas-rapidas-alerta .duvidas-rapidas-alerta-fechar:hover {
+    opacity: .8
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia .txtfirst:before {
+    content: url(https://cdn.awsli.com.br/257/257163/arquivos/icon-garantia-26-09-crgg.png);
+    float: left;
+    margin-right: 16px;
+    margin-top: -2px
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia li.garantia-ilm p {
+    font-size: 15px;
+    line-height: 19px
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia h5.titulo-garantia {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 600
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia .first-garantia {
+    margin-bottom: 30px;
+    margin-top: 0
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia .txtnth a {
+    font-size: 15px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: block
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia .garatia-txt {
+    display: inline-block
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia .maior-mercado {
+    display: inline-block;
+    font-weight: 700;
+    color: #c92223
+}
+
+section#product-description .descricao-duvidas-rapidas .descricao-duvidas-rapidas-garantia {
+    padding: 0 10px
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas::-webkit-scrollbar {
+    height: 8px
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas::-webkit-scrollbar-thumb {
+    height: 4px;
+    border-top: 3px solid rgba(0,0,0,0);
+    background-clip: padding-box;
+    background-color: rgba(0,0,0,0.15)
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none
+}
+
+section#product-description .duvidas-rapidas .lista-duvidas-rapidas::-webkit-scrollbar-corner {
+    background-color: transparent
+}
+
+section#product-description .block-seo-rating {
+    margin: 0;
+}
+
+article#content.page.page--products .sections.pb-1.pb-sm-2.pb-lg-4 {
+    padding: 0;
+}
+
+
+
+
+
+.modal .descricao-iluminim-led-explica ul li {
+    margin-bottom: 20px;
+    list-style: disc
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica {
+    display: flex;
+    justify-content: space-between
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica {
+    padding: 30px 40px;
+    border: 1px solid #e9e9e9
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica {
+    display: flex
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica .led-explica-titulo {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -.4px
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica .led-explica-resumo-descricao {
+    margin: 5px 0 5px 0;
+    font-size: 15px;
+    color: #8c8c8c
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica a {
+    font-size: 16px;
+    text-decoration: underline
+}
+
+section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica .led-explica-icone i {
+    font-family: 'FontAwesome' !important;
+    font-style: initial;
+    padding: 8px 10px;
+    display: inline-block;
+    background: var(--cor-vermelho-1);
+    color: #fff;
+    border-radius: 5px;
+    margin: 3px 12px 0 0;
+    font-size: 16px
+}
+
+@media(max-width: 767px) {
+    section#product-description .iluminim-led-explica .lista-iluminim-led-explica {
+        display:block;
+        padding: 15px !important
+    }
+
+    section#product-description .iluminim-led-explica .lista-iluminim-led-explica>*:first-child {
+        margin-bottom: 40px
+    }
+
+    section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica a,
+    section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica .led-explica-resumo-descricao,
+    section#product-description .iluminim-led-explica .lista-iluminim-led-explica .item-led-explica .led-explica-titulo {
+        font-size: 14px
+    }
+}
+
+
+
+
+
+
 
 @media(max-width: 767px) {
     section#product-description .descricao-icone {
@@ -570,6 +861,17 @@ section#product-description div#descricao {
         margin: 0 0 8px 0 !important;
         padding-right: 10px !important;
         padding-left: 10px !important
+    }
+
+    section#product-description .duvidas-rapidas .lista-duvidas-rapidas {
+        overflow:unset !important;
+        flex-wrap: wrap
+    }
+
+    section#product-description .duvidas-rapidas .lista-duvidas-rapidas li {
+        box-sizing: border-box;
+        font-size: 13px !important;
+        width: auto
     }
 }
 
@@ -11987,12 +12289,13 @@ left: 131px;
 /* DESCRIÇÃO LUMINÁRIA PLAFON LED */
 @media screen {
     .descricao-plafon-led .descricao-bloco.descricao-bloco-1 h1, .descricao-plafon-led .descricao-bloco.descricao-bloco-1 h2{
-        text-align: center;
         color: #972728;
-        font-size: 65px;
+        font-size: 60px;
         letter-spacing: -2px;
-        margin: 70px 0 60px 0;
         line-height: 65px;
+        margin: 70px 0 60px;
+        text-align: center;
+        font-weight: 800;
     }
 
     .descricao-plafon-led .descricao-bloco {

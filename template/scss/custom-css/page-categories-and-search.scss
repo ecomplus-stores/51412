@@ -293,6 +293,7 @@ body#page-categories .full-banners {
     margin: 0 0 15px 0;
 }
 
+
 @media (max-width: 767px) {
     #search-engine .search-engine__retail > .row {
         display: grid;
@@ -371,5 +372,9 @@ body#page-categories .full-banners {
 
     .retail-grid .product-showcase-empty {
         padding: 50px 0 60px 0;
+    }
+
+    .retail-grid .search-engine__info.px-lg-4 {
+        padding: 0 !important;
     }
 }

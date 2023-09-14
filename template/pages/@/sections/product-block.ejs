@@ -10,6 +10,10 @@ const lastSalesQttMax = 12987;
 const lastSalesQtt = Math.floor(Math.random() * (lastSalesQttMax - lastSalesQttMin + 1)) + lastSalesQttMin;
 %>
 
+<script>
+    window.PRODUCT_NAME = "<%- _.state.name %>";
+</script>
+
 <div id="product-block" class="product-block">
   <div class="container">
     <section
