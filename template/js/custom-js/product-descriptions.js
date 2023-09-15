@@ -369,9 +369,7 @@ function avaliacoesPersonalizadas(){
 function duvidasRapidas(){
     const duvidasRapidas = {
        gerarObjeto(){
-
              let nome_produto = $('body#page-products .product-info h1.product__name').text().toLowerCase();
-
              //termosIncludes: [] //TERMOS QUE PODE ESTÁ INCLUSO
              //termosNotIncludes: [] //TERMOS QUE NÃO PODE ESTÁ INCLUSO
 
