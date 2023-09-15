@@ -1,3 +1,8 @@
+
+section#product-description .swiper img.lozad {
+    opacity: 1;
+}
+
 section#product-description .descricao-conteudo-accordion tbody {
     border: none;
 }
@@ -833,8 +838,30 @@ section#product-description .iluminim-led-explica .lista-iluminim-led-explica .i
 
 
 @media(max-width: 767px) {
+    section#product-description .descrica-tarja {
+        border-radius: 5px;
+    }
+    
+    section#product-description .descricao-titulo {
+        border-radius: 5px;
+        padding: 8px 8px 8px 34px;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px !important;
+    }
+    
+    section#product-description .descricao-icone svg {
+        width: 16px;
+    }
+
     section#product-description .descricao-icone {
         left:1px
+    }
+    
+    section#product-description .descricao-icone svg {
+        width: 16px;
     }
 
     section#product-description .bloco-beneficios-led .owl-stage-outer {
@@ -872,6 +899,29 @@ section#product-description .iluminim-led-explica .lista-iluminim-led-explica .i
         box-sizing: border-box;
         font-size: 13px !important;
         width: auto
+    }
+
+    section#product-description .descrica-tarja .descricao-tarja-titulo {
+        font-size: 22px;
+        padding: 0 20px;
+        line-height: 1;
+    }
+    
+    section#product-description .descrica-tarja .descricao-tarja-titulo span {
+        display: block;
+        margin: 4px 0 4px 0;
+    }
+
+    section#product-description div#descricao {
+        padding: 15px 15px 0 15px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 3px 0 rgba(0,0,0,.05);
+        margin: 0 0 15px 0 !important;
+    }
+
+    section#product-description .descrica-tarja {
+        border-radius: 5px;
     }
 }
 
@@ -12504,6 +12554,7 @@ left: 131px;
             color: #bc0000;
             padding: 0 150px;
             line-height: 55px;
+            font-weight: 800;
         }
 
         .descricao-luminaria-arandela-led strong {
@@ -12602,7 +12653,7 @@ left: 131px;
         }
 
         .descricao-luminaria-arandela-led {
-            margin: 90px 0 50px 0;
+            margin: 50px 0 50px 0;
         }
 
         .descricao-luminaria-arandela-led .descricao-bloco.descricao-bloco-3 .descricao-bloco-3-textos {
@@ -12634,8 +12685,11 @@ left: 131px;
         .descricao-luminaria-arandela-led .descricao-bloco.descricao-bloco-4 .descricao-carousel-imagens {
             width: 1000px;
             margin: 0 auto;
-            overflow: hidden;
             position: relative;
+        }
+
+        .descricao-luminaria-arandela-led .descricao-bloco.descricao-bloco-4 .descricao-carousel-imagens:not(.swiper) {
+            /*display: none;*/
         }
 
         .descricao-luminaria-arandela-led .descricao-bloco.descricao-bloco-4 .descricao-carousel-imagens .owl-nav {

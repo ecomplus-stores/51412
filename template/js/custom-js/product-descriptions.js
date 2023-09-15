@@ -76,21 +76,30 @@ const JSNovasDescricoes = {
     },
  
     descricaoArandelaLED(){
-	
-		if( $('.descricao-luminaria-arandela-led .descricao-carousel-imagens').length > 0){
-			// $('.descricao-luminaria-arandela-led .descricao-carousel-imagens').owlCarousel({
-			// 	loop:false,
-			// 	margin:0,
-			// 	nav:true,
-			// 	navText: ['<img src="https://cdn.awsli.com.br/257/257163/arquivos/seta-esquerda-desc-arandela-29-07-21.png">', '<img src="https://cdn.awsli.com.br/257/257163/arquivos/seta-direita-desc-arandela-29-07-21.png">'],
-			// 	responsive:{
-			// 		1024:{
-			// 		items: 1
-			// 		}
-			// 	}
-			// });
+		if ($('.descricao-luminaria-arandela-led .descricao-carousel-imagens').length > 0){
+			$('.descricao-luminaria-arandela-led .descricao-carousel-imagens').addClass('swiper');
+			$('.descricao-luminaria-arandela-led .descricao-carousel-imagens > *').addClass('swiper-slide');
+			$('.descricao-luminaria-arandela-led .descricao-carousel-imagens').html(`
+				<div class="swiper-clip">
+					<div class="swiper-wrapper">
+						${$('.descricao-luminaria-arandela-led .descricao-carousel-imagens').html()}
+					</div>
+			
+					<div class="swiper-button-next"></div>
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+				</div>
+			`);
+
+			new Swiper($('.descricao-luminaria-arandela-led .descricao-carousel-imagens')[0], {
+				navigation: {
+					nextEl: $('.descricao-luminaria-arandela-led .swiper-button-next')[0],
+					prevEl: $('.descricao-luminaria-arandela-led .swiper-button-prev')[0],
+				},
+				margin: 0,
+				slidesPerView: 1,
+			});
 		}
- 
     },
  
     refletorLEDVerde(){
@@ -206,7 +215,7 @@ function adicionarBeneficiosLED(){
                          <div class="item-beneficio-texto">
                                <span>A maior garantia em</span>
                                <span>LED do mercado</span>
-                               <span>com até 99 MESES.</span>
+                               <span>com até 6 MESES.</span>
                          </div>
                       </div>
              
@@ -333,7 +342,7 @@ function avaliacoesPersonalizadas(){
 
        renderizar(){
           const html = this.gerarHTML();
-          $('#descricao').after(html);
+          $('#descricao').append(html);
          
           /*const time = setInterval(() => {
                 if($('div#_trustvox_widget strong.ts-average').length > 0){
@@ -624,7 +633,7 @@ function duvidasRapidas(){
                    termosIncludes: [],
                    termosNotIncludes: [],
                    titulo: 'Garantia',
-                   descricao: `<div class="descricao-duvidas-rapidas-garantia textos-duvidas"> <div class="first-garantia"> <div class="txtfirst"> <h5 class="titulo-garantia">Compra Garantida</h5> <p>Se houver algum problema ou se não receber o produto que comprou, devolveremos o dinheiro.</p></div></div><div class="nth-garantia"> <div class="txtnth"> <h5 class="titulo-garantia">Você sempre terá a nossa ajuda</h5> <p>Estaremos ao seu lado até você receber o que comprou e nos avisar que está tudo correto. Se tiver algum problema, basta nos avisar.</p><a href="/pagina/compra-garantida.html">Conheça mais o Compra Garantida</a> </div></div><div class="last-garantia"> <div class="txtlast"> <h5 class="titulo-garantia">Garantia do vendedor</h5> <div><div class="garatia-txt">99 MESES</div> DE GARANTIA COMPROVADA, <div class="maior-mercado">A MAIOR DO MERCADO.</div><div>PRODUTO COM NOTA FISCAL</div></div></div></div></div>`
+                   descricao: `<div class="descricao-duvidas-rapidas-garantia textos-duvidas"> <div class="first-garantia"> <div class="txtfirst"> <h5 class="titulo-garantia">Compra Garantida</h5> <p>Se houver algum problema ou se não receber o produto que comprou, devolveremos o dinheiro.</p></div></div><div class="nth-garantia"> <div class="txtnth"> <h5 class="titulo-garantia">Você sempre terá a nossa ajuda</h5> <p>Estaremos ao seu lado até você receber o que comprou e nos avisar que está tudo correto. Se tiver algum problema, basta nos avisar.</p><a href="/pagina/compra-garantida.html">Conheça mais o Compra Garantida</a> </div></div><div class="last-garantia"> <div class="txtlast"> <h5 class="titulo-garantia">Garantia do vendedor</h5> <div><div class="garatia-txt">6 MESES</div> DE GARANTIA COMPROVADA, <div class="maior-mercado">A MAIOR DO MERCADO.</div><div>PRODUTO COM NOTA FISCAL</div></div></div></div></div>`
                 },
 
                 {
@@ -739,7 +748,7 @@ function duvidasRapidas(){
 
              if(!html) return;
 
-             $('#descricao').after(`
+             $('#descricao').append(`
                 <div class="descricao-conteudo-accordion duvidas-rapidas">
                    <div class="descricao-titulo duvidas-rapidas-titulo">
                          <span class="descricao-icone">
@@ -2476,7 +2485,7 @@ function ajustarDescricao(){
        }
     });
  
-    $('div#descricao img[data-src="https://cdn.awsli.com.br/257/257163/arquivos/itensTITULO.png"]').parent().replaceWith(`
+    $('div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/itensTITULO.png"], div#descricao img[src*="itenstitulo.png"]').parent().replaceWith(`
        <div class="descricao-titulo" data-referencia="Itens Inclusos">
              <span class="descricao-icone">
                 <svg fill="currentColor" width="23" height="23" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M76.29 154.2C73.41 157.7 69.22 159.8 64.72 159.1C60.23 160.2 55.86 158.5 52.69 155.3L4.686 107.3C-1.562 101.1-1.562 90.94 4.686 84.69C10.93 78.44 21.06 78.44 27.31 84.69L62.92 120.3L131.7 37.76C137.4 30.97 147.5 30.05 154.2 35.71C161 41.37 161.9 51.45 156.3 58.24L76.29 154.2zM76.29 314.2C73.41 317.7 69.22 319.8 64.72 319.1C60.23 320.2 55.86 318.5 52.69 315.3L4.686 267.3C-1.562 261.1-1.562 250.9 4.686 244.7C10.93 238.4 21.06 238.4 27.31 244.7L62.92 280.3L131.7 197.8C137.4 190.1 147.5 190.1 154.2 195.7C161 201.4 161.9 211.5 156.3 218.2L76.29 314.2zM191.1 96C191.1 87.16 199.2 80 207.1 80H496C504.8 80 512 87.16 512 96C512 104.8 504.8 112 496 112H207.1C199.2 112 191.1 104.8 191.1 96zM191.1 256C191.1 247.2 199.2 240 207.1 240H496C504.8 240 512 247.2 512 256C512 264.8 504.8 272 496 272H207.1C199.2 272 191.1 264.8 191.1 256zM159.1 416C159.1 407.2 167.2 400 175.1 400H496C504.8 400 512 407.2 512 416C512 424.8 504.8 432 496 432H175.1C167.2 432 159.1 424.8 159.1 416zM63.1 448C46.33 448 31.1 433.7 31.1 416C31.1 398.3 46.33 384 63.1 384C81.67 384 95.1 398.3 95.1 416C95.1 433.7 81.67 448 63.1 448z"></path></svg>
@@ -2485,7 +2494,7 @@ function ajustarDescricao(){
        </div>
     `);
 
-    $('div#descricao img[data-src="https://cdn.awsli.com.br/257/257163/arquivos/caracteristicasTITULO.png"]').parent().replaceWith(`
+    $('div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/caracteristicasTITULO.png"], div#descricao img[src*="caracteristicastitulo.png"]').parent().replaceWith(`
        <div class="descricao-titulo descricao-titulo-caracteristicas-tecnicas" data-referencia="Características Técnicas">
              <span class="descricao-icone">
                 <svg fill="currentColor" width="23" height="23" xmlns="http://www.w3.org/2000/svg" viewBox="16 48 496 416"><path d="M16 72C16 58.75 26.75 48 40 48H88C101.3 48 112 58.75 112 72V120C112 133.3 101.3 144 88 144H40C26.75 144 16 133.3 16 120V72zM80 112V80H48V112H80zM496 80C504.8 80 512 87.16 512 96C512 104.8 504.8 112 496 112H176C167.2 112 160 104.8 160 96C160 87.16 167.2 80 176 80H496zM496 240C504.8 240 512 247.2 512 256C512 264.8 504.8 272 496 272H176C167.2 272 160 264.8 160 256C160 247.2 167.2 240 176 240H496zM496 400C504.8 400 512 407.2 512 416C512 424.8 504.8 432 496 432H176C167.2 432 160 424.8 160 416C160 407.2 167.2 400 176 400H496zM88 208C101.3 208 112 218.7 112 232V280C112 293.3 101.3 304 88 304H40C26.75 304 16 293.3 16 280V232C16 218.7 26.75 208 40 208H88zM48 240V272H80V240H48zM16 392C16 378.7 26.75 368 40 368H88C101.3 368 112 378.7 112 392V440C112 453.3 101.3 464 88 464H40C26.75 464 16 453.3 16 440V392zM80 432V400H48V432H80z"></path></svg>
@@ -2494,7 +2503,7 @@ function ajustarDescricao(){
        </div>
     `);
 
-    $('div#descricao img[data-src="https://cdn.awsli.com.br/257/257163/arquivos/confiratitulo.png"], div#descricao img[data-src="https://cdn.awsli.com.br/257/257163/arquivos/confira.png"]').parent().replaceWith(`
+    $('div#descricao img[src*="confiratitulo.png"], div#descricao img[src="https://cdn.awsli.com.br/257/257163/arquivos/confira.png"]').parent().replaceWith(`
        <div class="descricao-titulo descricao-titulo-o-que-dizem-nossos-clientes" data-referencia="Confira o que dizem nossos clientes">
              <span class="descricao-icone"><svg id="nossos-clientes" width="40" height="40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve"><g id="Camada_1" class="st0"><rect x="-31.5" y="-25.1" class="st1" width="1076.8" height="1076.8"/><rect x="169.3" y="369.8" class="st2" width="697.2" height="562.2"/><rect x="113.8" y="389.9" transform="matrix(0.9094 0.4159 -0.4159 0.9094 226.7675 -50.446)" class="st2" width="230.8" height="210.7"/><rect x="699.7" y="392.2" transform="matrix(0.4683 0.8836 -0.8836 0.4683 862.9684 -452.683)" class="st2" width="215.7" height="196.9"/><rect x="82.2" y="526.3" class="st3" width="301.4" height="42.4"/><rect x="137.6" y="547.5" class="st3" width="38.1" height="399.4"/><rect x="153.7" y="915.1" class="st3" width="718.9" height="31.8"/><rect x="861" y="547.5" class="st3" width="38.1" height="399.4"/><rect x="665.1" y="527.1" class="st3" width="287" height="40.8"/><rect x="323.6" y="442.9" transform="matrix(0.6416 -0.7671 0.7671 0.6416 -197.6527 505.2423)" class="st3" width="236.4" height="42.4"/><rect x="489.1" y="441.9" transform="matrix(-0.6416 -0.7671 0.7671 -0.6416 641.5842 1226.03)" class="st3" width="236.4" height="42.4"/><rect x="3.4" y="431.9" transform="matrix(0.5 -0.866 0.866 0.5 -329.8044 334.9742)" class="st3" width="243.7" height="42.4"/><rect x="789.1" y="431.9" transform="matrix(-0.5 -0.866 0.866 -0.5 972.5751 1467.5474)" class="st3" width="241.6" height="42.2"/><rect x="506.5" y="342.3" class="st3" width="36" height="604.6"/><rect x="168" y="337" class="st3" width="699.8" height="41.3"/><path class="st2" d="M526.2,90.1c1.4-2,30.2-42.1,70.6-37.6c36.6,4.1,57.5,42,63,64.5c13.5,55.3-39.2,127.9-133.2,177.4C430.1,246.5,376.1,174.4,389,119.4c5-21.5,24.2-57.2,60-63.7C476.6,50.7,506.2,64.3,526.2,90.1z"/></g><g id="Camada_2" class="st0"><circle class="st2" cx="500" cy="500" r="470.1"/><text transform="matrix(0.8878 0 0 1 339.0438 759.5255)" class="st4 st5 st6">?</text></g><g id="Camada_3"><image style="display:none;overflow:visible;" width="1000" height="1000" prev-url="Chat.png" transform="matrix(0.8738 0 0 0.8738 60.8081 70.0023)"></image><rect x="73.4" y="176.1" class="st7" width="843.9" height="548.5"/><path class="st7" d="M608.1,694.9c73.1,49.8,146.1,99.5,219.2,149.3c6.4-54,12.7-108,19.1-162C766.9,686.4,687.5,690.6,608.1,694.9z"/><rect x="451.4" y="295.9" class="st8" width="336.7" height="42.4"/><rect x="198.3" y="426.1" class="st8" width="589.8" height="46.6"/><rect x="198.3" y="560.6" class="st8" width="589.8" height="46.6"/></g><g id="Camada_4" class="st0"><image style="overflow:visible;" width="154" height="145" prev-url="Cuidado Máximo.png" transform="matrix(5.9715 0 0 5.9715 40.1929 73.9824)"></image><rect x="40.2" y="74" class="st2" width="919.6" height="255.3"/><rect x="40.2" y="319.4" class="st3" width="919.6" height="40.9"/><rect x="89.2" y="360.3" class="st2" width="823.1" height="579.6"/><rect x="255.6" y="726.5" transform="matrix(0.8163 0.5777 -0.5777 0.8163 508.996 -84.6883)" class="st3" width="264.1" height="62.7"/><rect x="358.8" y="623.1" transform="matrix(-0.5777 0.8163 -0.8163 -0.5777 1455.6456 555.7568)" class="st3" width="450.6" height="62.7"/></g><g id="Camada_5" class="st0"><rect x="140" y="29.5" class="st2" width="583.1" height="941.1"/><rect x="704.8" y="250.2" class="st2" width="155.2" height="720.4"/><path class="st2" d="M723.1,29.5C768.7,103,814.4,176.6,860,250.2c-8.6,20.5-17.2,41.1-25.8,61.6c-62.9-11.5-125.8-22.9-188.7-34.4C671.4,194.8,697.2,112.1,723.1,29.5z"/><path class="st3" d="M719.3,41.8C763,112,806.8,182.1,850.5,252.3c-43.8,0-87.6,0-131.5,0C719.1,182.1,719.2,112,719.3,41.8z"/><image style="overflow:visible;" width="1000" height="1000" prev-url="Descrição.png" transform="matrix(0.8379 0 0 0.8379 81.0644 81.0644)"></image><rect x="312.5" y="386.8" class="st3" width="373.8" height="39.2"/><rect x="312.5" y="556.2" class="st3" width="373.8" height="38.1"/><rect x="312.5" y="720.3" class="st3" width="373.8" height="38.1"/></g><g id="Camada_6" class="st0"><polygon class="st7" points="496.6,55.2 641.2,348 964.3,395 730.5,622.9 785.7,944.8 496.6,792.8 207.6,944.8 262.8,622.9 28.9,395 352.1,348 "/><image style="overflow:visible;" width="167" height="137" prev-url="Compare.png" transform="matrix(5.781 0 0 5.781 19.3529 99.8235)"></image><path class="st2" d="M524.8,358.9c5.6-7.3,15.1-21.9,14.3-40.2c-0.9-20.3-13.9-34.8-21.2-42.6c-26.6-28.6-85.6-87.8-165.3-162.9c-20.6-15.3-48.6-11.7-62.8,5.7c-11.6,14.1-12.6,35.6-1.9,52.7c35.9,36.1,71.8,72.2,107.8,108.2c-114.1-0.2-228.2-0.5-342.4-0.7c-18.1,5.1-30.6,21.7-30.4,40.2c0.1,18.1,12.2,34.3,29.7,39.5c114.5,0.5,228.9,0.9,343.4,1.4C360.3,397,324.6,433.7,289,470.4c-8.6,17.5-5.6,38.2,7.1,51.5c14.8,15.5,40.2,18.1,59.3,4.9C411.8,470.9,468.3,414.9,524.8,358.9z"/><path class="st2" d="M477.6,715.3c-5.6-7.3-15.1-21.9-14.3-40.2c0.9-20.3,13.9-34.8,21.2-42.6c26.6-28.6,85.6-87.8,165.3-162.9c20.2-15.4,48.3-12,62.8,5.7c12.3,15,12.9,37.9,0.6,55.1c-35.5,35.3-71,70.6-106.5,105.9c114.1-0.2,228.2-0.5,342.4-0.7c18.1,5.1,30.6,21.7,30.4,40.2c-0.1,18.1-12.2,34.3-29.7,39.5c-115.1-0.1-230.2-0.2-345.3-0.3c36.3,37.3,72.6,74.6,108.8,111.9c8.6,17.5,5.6,38.2-7.1,51.5c-14.8,15.5-40.2,18.1-59.3,4.9C590.5,827.3,534.1,771.3,477.6,715.3z"/></g><g id="Camada_7" class="st0"><image style="overflow:visible;" width="1000" height="1000" prev-url="Sacola.png" transform="matrix(0.8385 0 0 0.8385 80.7486 80.7486)"></image><path class="st2" d="M787.4,334.9c-8.6-9.5-20.3-9.2-21.9-9.2c-46.4,0.2-92.7,0.5-139.1,0.7c-82.4,0.7-164.7,1.4-247.1,2.1c-46.4-0.5-92.7-0.9-139.1-1.4c-2.6,0.1-13.9,0.7-23.3,9.8c-10.2,9.9-10.6,22.3-10.6,24.7c-0.8,169.4-1.5,338.9-2.3,508.3c0.1,1.6,0.6,11.9,9.4,19c10.4,8.4,23.1,4.6,24,4.3c177.2,0.5,354.3,0.9,531.5,1.4c1.5,0,11-0.3,18.1-8.1c7.5-8.4,6.2-18.7,5.9-20.1c0.5-169.9,0.9-339.8,1.4-509.6C794.6,355.1,795.6,344,787.4,334.9z M645.3,534.5c1.2,11.3-5.3,20.5-7.6,23.8c-86.5,125.8-98.3,140.9-121.8,171.2c-3.7,4.8-12.8,16.6-26.8,18.4c-8.1,1-14.9-1.7-18.7-3.5c-4.9-4-12.1-10.1-20.1-18c-36.8-36.3-74.4-93.5-59.6-114.2c2.8-4,8.4-7.7,14.3-9.2c11.3-2.9,21.5,3.2,23.5,4.5c0,0,6.9,4.3,20.4,22.7c0,0,0,0,0,0c1.7,2.4,3.1,4.1,3.5,4.6c1.5,1.8,15.4,18.5,23.5,29.2c2.4,3.2,5.9,7.9,9.9,13.9c14.3-26.8,42.7-66.8,99.6-146.9c4.2-5.9,14.1-19.5,28.9-21c2.6-0.3,12.2-0.9,20.6,5.8C635.7,516.1,644.1,523,645.3,534.5z"/><path class="st2" d="M439.4,335.6c-0.2-40.5-0.5-80.9-0.7-121.4c7.3-32.1,36.1-54.6,67.8-53.9c29.1,0.7,55.1,20.8,63.5,49.7c-0.5,42.3-0.9,84.7-1.4,127c19.8,0.2,39.5,0.5,59.3,0.7c0.2-36.2,0.4-72.5,0.5-108.7c2.3-75.2-57.8-135.9-126.1-135.9c-60.3,0-115.4,47.5-124.9,112.6c0.2,43.8,0.4,87.5,0.6,131.3C398.4,336.5,418.9,336.1,439.4,335.6z"/></g></svg></span>
              <span>Confira o que dizem nossos clientes</span>
@@ -2502,10 +2511,10 @@ function ajustarDescricao(){
     `);            
     
     $(`
-       div#descricao img[data-src*="/arquivos/os-beneficios-do-led"], 
-       div#descricao img[data-src*="/arquivos/beneficiosled"],
-       div#descricao img[data-src*="pimgpsh_fullsize_distr"],
-       div#descricao img[data-src*="gratis-pagina-produto-08-04-4545-13-08"]
+       div#descricao img[src*="/arquivos/os-beneficios-do-led"], 
+       div#descricao img[src*="/arquivos/beneficiosled"],
+       div#descricao img[src*="pimgpsh_fullsize_distr"],
+       div#descricao img[src*="gratis-pagina-produto-08-04-4545-13-08"]
     `).remove(); 
 
     $('#descricao .descricao-titulo').each(function(){
@@ -2573,7 +2582,7 @@ function ajustarDescricao(){
         </div>
     `);
 
-    $('#descricao .descricao-conteudo-accordion.accordion-descricao img[data-src*="pimgpsh_fullsize_distr"]').parent().remove(); //REMOVER TARJA FRETE LARANJA FRETE GRÁTIS
+    $('#descricao .descricao-conteudo-accordion.accordion-descricao img[src*="pimgpsh_fullsize_distr"]').parent().remove(); //REMOVER TARJA FRETE LARANJA FRETE GRÁTIS
 
     $('#descricao *').each(function(){ //REMOVENDO ITENS VAZIO;
        var text = $(this).html();
@@ -2607,7 +2616,7 @@ function ajustarDescricao(){
        </tr>
        <tr style="box-sizing: border-box;">
           <td class="index" style="box-sizing: border-box; padding: 8px; line-height: 1.42857; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); background-color: rgb(249, 249, 249);"><b>Garantia</b></td>
-          <td style="box-sizing: border-box; padding: 8px; line-height: 1.42857; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); background-color: rgb(249, 249, 249);">99 MESES</td>
+          <td style="box-sizing: border-box; padding: 8px; line-height: 1.42857; vertical-align: top; border-top: 1px solid rgb(221, 221, 221); background-color: rgb(249, 249, 249);">6 MESES</td>
        </tr>
     `);
 
